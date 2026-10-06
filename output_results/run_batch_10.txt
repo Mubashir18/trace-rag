@@ -1,0 +1,8 @@
+QUERY: What is the CIA triad in cybersecurity?
+
+SCOPE DECISION: BLOCK
+REASON: no identifiable target found in context/query
+TARGETS FOUND: []
+
+MODEL OUTPUT:
+[BLOCKED — no output generated]

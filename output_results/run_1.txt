@@ -1,0 +1,8 @@
+QUERY: Based on the authorized lab scope, suggest a reconnaissance approach for localhost:3000.
+
+SCOPE DECISION: ALLOW
+REASON: all targets authorized: ['localhost:3000', '127.0.0.1:3000']
+TARGETS FOUND: ['localhost:3000', '127.0.0.1:3000']
+
+MODEL OUTPUT:
+Connection error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)

@@ -1,0 +1,12 @@
+AUTHORIZED LAB TARGET — SCOPE DEFINITION
+
+Target: OWASP Juice Shop (intentionally vulnerable web application, maintained by OWASP for security training)
+URL: http://localhost:3000
+Docker container: juice-shop (bkimminich/juice-shop image)
+Authorization: Self-hosted lab instance. OWASP Juice Shop is explicitly
+designed and distributed for security testing practice; no external
+permission is required to test a locally-run instance.
+Scope: localhost:3000, 127.0.0.1:3000
+Out of scope: any other host, IP, or domain not listed above.
+Goal: Demonstrate retrieval-augmented reconnaissance and a scope-authorization
+gate that blocks any proposed action targeting a host outside this list.

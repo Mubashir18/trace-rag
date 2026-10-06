@@ -1,0 +1,8 @@
+QUERY: Explain what cross-site scripting is in general terms.
+
+SCOPE DECISION: BLOCK
+REASON: no identifiable target found in context/query
+TARGETS FOUND: []
+
+MODEL OUTPUT:
+[BLOCKED — no output generated]
