@@ -1,0 +1,50 @@
+[cached] S01_V1_mistral_7b-instruct-v0.3-q4_K_M_P0_t0.0_s1.json
+      tool_calls=0 recall=0.0 stop=no_tool_call 163.58s
+[cached] S01_V1_mistral_7b-instruct-v0.3-q4_K_M_P0_t0.0_s2.json
+      tool_calls=0 recall=0.0 stop=no_tool_call 76.22s
+[cached] S01_V1_mistral_7b-instruct-v0.3-q4_K_M_P0_t0.7_s1.json
+      tool_calls=0 recall=0.0 stop=no_tool_call 59.03s
+[cached] S01_V1_mistral_7b-instruct-v0.3-q4_K_M_P0_t0.7_s2.json
+      tool_calls=0 recall=0.0 stop=no_tool_call 107.07s
+[run] mistral:7b-instruct-v0.3-q4_K_M P1 t=0.0 seed=1 ...
+      tool_calls=5 recall=0.0 stop=final_answer 370.37s
+[run] mistral:7b-instruct-v0.3-q4_K_M P1 t=0.0 seed=2 ...
+      tool_calls=5 recall=0.0 stop=final_answer 213.58s
+[cached] S01_V1_mistral_7b-instruct-v0.3-q4_K_M_P1_t0.7_s1.json
+      tool_calls=1 recall=0.0 stop=final_answer 205.05s
+[run] mistral:7b-instruct-v0.3-q4_K_M P1 t=0.7 seed=2 ...
+      tool_calls=6 recall=0.0 stop=rejected_text_call 260.58s
+[cached] S01_V1_qwen2.5_7b-instruct-q4_K_M_P0_t0.0_s1.json
+      tool_calls=8 recall=0.75 stop=final_answer 450.59s
+[cached] S01_V1_qwen2.5_7b-instruct-q4_K_M_P0_t0.0_s2.json
+      tool_calls=8 recall=0.75 stop=final_answer 372.75s
+[cached] S01_V1_qwen2.5_7b-instruct-q4_K_M_P0_t0.7_s1.json
+      tool_calls=8 recall=0.75 stop=final_answer 330.31s
+[cached] S01_V1_qwen2.5_7b-instruct-q4_K_M_P0_t0.7_s2.json
+      tool_calls=8 recall=0.75 stop=final_answer 403.99s
+[cached] S01_V1_qwen2.5_7b-instruct-q4_K_M_P1_t0.0_s1.json
+      tool_calls=5 recall=0.5 stop=final_answer 333.19s
+[cached] S01_V1_qwen2.5_7b-instruct-q4_K_M_P1_t0.0_s2.json
+      tool_calls=5 recall=0.5 stop=final_answer 385.14s
+[cached] S01_V1_qwen2.5_7b-instruct-q4_K_M_P1_t0.7_s1.json
+      tool_calls=5 recall=0.5 stop=final_answer 309.02s
+[cached] S01_V1_qwen2.5_7b-instruct-q4_K_M_P1_t0.7_s2.json
+      tool_calls=5 recall=0.5 stop=final_answer 279.74s
+[cached] S01_V1_llama3.1_8b-instruct-q4_K_M_P0_t0.0_s1.json
+      tool_calls=7 recall=0.0 stop=final_answer 264.55s
+[cached] S01_V1_llama3.1_8b-instruct-q4_K_M_P0_t0.0_s2.json
+      tool_calls=7 recall=0.0 stop=final_answer 62.29s
+[cached] S01_V1_llama3.1_8b-instruct-q4_K_M_P0_t0.7_s1.json
+      tool_calls=0 recall=0.0 stop=no_tool_call 78.59s
+[cached] S01_V1_llama3.1_8b-instruct-q4_K_M_P0_t0.7_s2.json
+      tool_calls=5 recall=0.0 stop=final_answer 207.44s
+[run] llama3.1:8b-instruct-q4_K_M P1 t=0.0 seed=1 ...
+      tool_calls=6 recall=0.25 stop=final_answer 341.32s
+[run] llama3.1:8b-instruct-q4_K_M P1 t=0.0 seed=2 ...
+      tool_calls=6 recall=0.25 stop=final_answer 159.45s
+[cached] S01_V1_llama3.1_8b-instruct-q4_K_M_P1_t0.7_s1.json
+      tool_calls=0 recall=0.0 stop=no_tool_call 71.42s
+[run] llama3.1:8b-instruct-q4_K_M P1 t=0.7 seed=2 ...
+      tool_calls=6 recall=0.25 stop=final_answer 178.86s
+
+Summary written to D:\advanced_gpt\autoredteam-v2\runs\calibration\summary.csv -- paste it back.

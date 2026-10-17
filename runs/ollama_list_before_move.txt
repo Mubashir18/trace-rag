@@ -1,0 +1,6 @@
+﻿NAME                               ID              SIZE      MODIFIED     
+llama3.1:8b-instruct-q4_K_M        46e0c10c039e    4.9 GB    4 hours ago     
+qwen2.5:7b-instruct-q4_K_M         845dbda0ea48    4.7 GB    4 hours ago     
+mistral:7b-instruct-v0.3-q4_K_M    6577803aa9a0    4.4 GB    4 hours ago     
+mistral:latest                     6577803aa9a0    4.4 GB    5 days ago      
+KhanzadaWormX:latest               058cc834c72b    4.4 GB    4 months ago    

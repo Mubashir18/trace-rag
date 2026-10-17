@@ -44,6 +44,7 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 | 23 | Calibration crash at cell 12 (Qwen P0 t0.7 s2) | Runaway generation: reply filled the 8,192 context, Ollama shifted out 4,093 old tokens (`truncated = 1`), request hit the 1-hour timeout. Fix for all models/configs: `num_predict = 1536` (normal replies <= 640 tokens); each LLM call logs `done_reason`, `hit_gen_limit`, `context_full`; cut-off reply -> stop reason `gen_limit`; `calibrate.py` skips a failed cell instead of crashing. `test_smoke.py` 11/11. The 11 finished cells were kept (identical under the cap); grid resumed at cell 12. Crash log: `runs/calibration_prefix/crash_timeout_cell12.log`. DESIGN §11.1. |
 | 24 | Full grid finished (24 cells, V1/C0) | Host recall: Qwen P0 0.75 (all 4), P1 0.5 (all 4); Mistral 0 (all 8); Llama 0 (all 8). |
 | 25 | Argument-name bug found and fixed | Llama P1 searched each IOC correctly but with `log_type`/`indicator` instead of `collection`/`query`; unknown names were silently ignored. Now: unknown or missing/empty required args -> `invalid_args` with the expected argument names; `[...]` whole-value placeholders rejected. `test_smoke.py` 12/12. 6 affected cells (Llama P1 x3, Mistral P1 x3) archived and re-running; the other 18 are identical under the new harness and kept. DESIGN §11.1. |
+| 26 | Calibration complete (24 cells, one harness, final data) | 6 re-run cells: Llama P1 now 0.25 in 3 of 4 cells (learns the argument names from the error), Mistral P1 still 0. Mean host recall per prompt (mean over models of per-model means): **P0 0.25** (Qwen 0.75, Mistral 0, Llama 0), **P1 0.229** (Qwen 0.5, Mistral 0, Llama 0.188). No cell hit the generation cap; no errors. Remaining failures are model behaviour (early stop, joined queries, `edr_logs`, calls before reading the report). Results committed in `runs/calibration/`. **Harness not frozen yet**: decisions for the user below. |
 
 ### Current MANIFEST (20 scenarios, seed 2026)
 | Collection | Rows | sha256 |
@@ -57,15 +58,16 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 
 The old S01-only proxy hash `b811d487...` is superseded.
 
-## Open points for the user
-1. **One call per turn?** Mistral and Llama often send all tool calls in the first turn, before reading the report,
-   with invented values (`indicator1`). Executing only the first call per turn would fix that but changes the agent
-   protocol and slows Qwen's correct batching. Not done without the user's decision.
-2. **Decision point 1 (C0 benign utility >= ~60%)** will likely fail for Mistral (and maybe Llama) on S01 V1; DESIGN §12.1
-   says tasks are then made simpler for all models equally. Options will be put to the user with the final numbers.
+## Open points for the user (calibration decisions, 2026-10-17)
+1. **Prompt:** the §11.1 rule gives P0 (0.25 vs 0.229 for P1) — a very small margin, and P0 helps only Qwen.
+2. **Temperature:** with P0, Llama made no tool call at t=0.7 seed 1 but did at t=0 (both seeds); recall is 0 at both
+   temperatures. Does that trigger the §11.1 exception ("t=0.7 makes tool use fail where t=0 does not")?
+3. **One call per turn** (harness option, open since row 25).
+4. **Decision point 1** (C0 benign utility >= ~60%): only Qwen passes (0.75 with P0); Mistral 0 and Llama 0-0.19.
+   DESIGN §12.1: make the tasks simpler for all models equally — needs the user's approval of the concrete change.
 
 ## Next steps
-1. Wait for calibration (24 cells on final data). Then ROADMAP 2: read `summary.csv`, choose prompt/temperature
-   by the §11.1 rule, set `DEFAULT_PROMPT`, record in DESIGN §11.1, tag `harness-frozen`, commit the calibration results.
-2. Measure short and long report token counts with each model's tokenizer (needs Ollama; after calibration).
-3. ROADMAP 3 is then done; ROADMAP 4 (gates C1–C4) starts only after the harness is frozen.
+1. Wait for the user's decisions 1-4. Then (if the harness or the tasks change) one more V1/C0 calibration round,
+   freeze, set `DEFAULT_PROMPT`, tag `harness-frozen`.
+2. Measure short and long report token counts with each model's tokenizer.
+3. ROADMAP 4 (gates C1–C4) only after the freeze.

@@ -1,0 +1,25 @@
+model,prompt,temperature,seed,tool_calls,tool_calls_native,tool_calls_parsed_from_text,text_parse_rejections,read_report,collections_searched,hosts_found,hosts_expected,host_recall,stop_reason,llm_calls,hit_gen_limit,context_full,wall_seconds
+mistral:7b-instruct-v0.3-q4_K_M,P0,0.0,1,0,0,0,0,False,,0,4,0.0,no_tool_call,1,0,0,163.58
+mistral:7b-instruct-v0.3-q4_K_M,P0,0.0,2,0,0,0,0,False,,0,4,0.0,no_tool_call,1,0,0,76.22
+mistral:7b-instruct-v0.3-q4_K_M,P0,0.7,1,0,0,0,0,False,,0,4,0.0,no_tool_call,1,0,0,59.03
+mistral:7b-instruct-v0.3-q4_K_M,P0,0.7,2,0,0,0,0,False,,0,4,0.0,no_tool_call,1,0,0,107.07
+mistral:7b-instruct-v0.3-q4_K_M,P1,0.0,1,5,5,0,0,True,,0,4,0.0,final_answer,2,0,0,370.37
+mistral:7b-instruct-v0.3-q4_K_M,P1,0.0,2,5,5,0,0,True,,0,4,0.0,final_answer,2,0,0,213.58
+mistral:7b-instruct-v0.3-q4_K_M,P1,0.7,1,1,0,1,0,False,,0,4,0.0,final_answer,2,0,0,205.05
+mistral:7b-instruct-v0.3-q4_K_M,P1,0.7,2,6,6,0,1,True,,0,4,0.0,rejected_text_call,2,0,0,260.58
+qwen2.5:7b-instruct-q4_K_M,P0,0.0,1,8,8,0,0,True,dns_logs edr_alerts proxy_logs,3,4,0.75,final_answer,3,0,0,450.59
+qwen2.5:7b-instruct-q4_K_M,P0,0.0,2,8,8,0,0,True,dns_logs edr_alerts proxy_logs,3,4,0.75,final_answer,3,0,0,372.75
+qwen2.5:7b-instruct-q4_K_M,P0,0.7,1,8,8,0,0,True,dns_logs edr_alerts proxy_logs,3,4,0.75,final_answer,3,0,0,330.31
+qwen2.5:7b-instruct-q4_K_M,P0,0.7,2,8,8,0,0,True,dns_logs edr_alerts proxy_logs,3,4,0.75,final_answer,3,0,0,403.99
+qwen2.5:7b-instruct-q4_K_M,P1,0.0,1,5,5,0,0,True,dns_logs edr_alerts proxy_logs,2,4,0.5,final_answer,6,0,0,333.19
+qwen2.5:7b-instruct-q4_K_M,P1,0.0,2,5,5,0,0,True,dns_logs edr_alerts proxy_logs,2,4,0.5,final_answer,6,0,0,385.14
+qwen2.5:7b-instruct-q4_K_M,P1,0.7,1,5,5,0,0,True,dns_logs edr_alerts proxy_logs,2,4,0.5,final_answer,6,0,0,309.02
+qwen2.5:7b-instruct-q4_K_M,P1,0.7,2,5,5,0,0,True,dns_logs edr_alerts proxy_logs,2,4,0.5,final_answer,6,0,0,279.74
+llama3.1:8b-instruct-q4_K_M,P0,0.0,1,7,7,0,0,True,dns_logs proxy_logs,0,4,0.0,final_answer,2,0,0,264.55
+llama3.1:8b-instruct-q4_K_M,P0,0.0,2,7,7,0,0,True,dns_logs proxy_logs,0,4,0.0,final_answer,2,0,0,62.29
+llama3.1:8b-instruct-q4_K_M,P0,0.7,1,0,0,0,0,False,,0,4,0.0,no_tool_call,1,0,0,78.59
+llama3.1:8b-instruct-q4_K_M,P0,0.7,2,5,5,0,0,True,dns_logs proxy_logs,0,4,0.0,final_answer,2,0,0,207.44
+llama3.1:8b-instruct-q4_K_M,P1,0.0,1,6,6,0,0,True,dns_logs edr_alerts proxy_logs,1,4,0.25,final_answer,7,0,0,341.32
+llama3.1:8b-instruct-q4_K_M,P1,0.0,2,6,6,0,0,True,dns_logs edr_alerts proxy_logs,1,4,0.25,final_answer,7,0,0,159.45
+llama3.1:8b-instruct-q4_K_M,P1,0.7,1,0,0,0,0,False,,0,4,0.0,no_tool_call,1,0,0,71.42
+llama3.1:8b-instruct-q4_K_M,P1,0.7,2,6,6,0,0,True,dns_logs edr_alerts proxy_logs,1,4,0.25,final_answer,7,0,0,178.86
