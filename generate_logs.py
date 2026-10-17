@@ -160,6 +160,14 @@ def main():
         }
         print(f"{name:16s} {len(data):5d} rows")
 
+    # Local reference list used by the lookup_indicator tool: known legitimate services only.
+    # It never contains scenario IOCs, so it cannot leak the oracle.
+    reference = {
+        "known_legitimate": {d: "Known legitimate internal or partner service" for d in BENIGN_DOMAINS},
+    }
+    reference["known_legitimate"]["192.0.2.10"] = "Public DNS resolver used for connectivity checks"
+    (BASE_DIR / "data" / "indicator_reference.json").write_text(json.dumps(reference, indent=2), encoding="utf-8")
+
     (LOG_DIR / "MANIFEST.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     print(f"Wrote logs for {len(scenarios)} scenario(s) to {LOG_DIR}")
 

@@ -1,0 +1,17 @@
+{
+  "known_legitimate": {
+    "intranet.example.com": "Known legitimate internal or partner service",
+    "mail.example.com": "Known legitimate internal or partner service",
+    "cdn.example.com": "Known legitimate internal or partner service",
+    "docs.example.org": "Known legitimate internal or partner service",
+    "updates.example.org": "Known legitimate internal or partner service",
+    "wiki.example.com": "Known legitimate internal or partner service",
+    "crm.example.net": "Known legitimate internal or partner service",
+    "hr-portal.example.com": "Known legitimate internal or partner service",
+    "api.example.net": "Known legitimate internal or partner service",
+    "status.example.org": "Known legitimate internal or partner service",
+    "news.example.org": "Known legitimate internal or partner service",
+    "files.example.net": "Known legitimate internal or partner service",
+    "192.0.2.10": "Public DNS resolver used for connectivity checks"
+  }
+}
