@@ -38,7 +38,7 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 | 18 | Harness fixes (same for all models/configs) | `search_logs`: description says one indicator per call, one substring; unknown collection lists the role's collections; empty query is an error (`*` still matches all); native calls with placeholder args are not executed (`invalid_args`). `test_smoke.py` 10/10. DESIGN §11.1 (2026-10-17). |
 | 19 | Calibration restarted from scratch | Old 16 cells moved to `runs/calibration_prefix/` (local, git-ignored). Full 24-cell grid restarted detached with the fixed harness. |
 
-| 20 | Ollama model store check | Store is **already on D:** (Machine env `OLLAMA_MODELS = D:dvanced_gpt`: blobs 13.0 GB, 5 manifests); `%USERPROFILE%\.ollama\models` does not exist. No copy, no delete, no `setx` (a user-level OLLAMA_MODELS would override the machine one and point Ollama at an empty folder). Ollama stopped and restarted: `ollama list` identical before/after (tags, IDs, sizes; saved in `runs/ollama_list_*.txt`). Free space: C: 11.12 GB, D: 152.97 GB. |
+| 20 | Ollama model store check | Store is **already on D:** (Machine env `OLLAMA_MODELS = D:\advanced_gpt`: blobs 13.0 GB, 5 manifests); `%USERPROFILE%\.ollama\models` does not exist. No copy, no delete, no `setx` (a user-level OLLAMA_MODELS would override the machine one and point Ollama at an empty folder). Ollama stopped and restarted: `ollama list` identical before/after (tags, IDs, sizes; saved in `runs/ollama_list_*.txt`). Free space: C: 11.12 GB, D: 152.97 GB. |
 | 21 | Final data generated | `generate_logs.py` run twice: byte-identical. `build_reports.py`: 100 short + 25 long rendered, identical on rebuild. `validate_scenarios.py` incl. **log checks: all 20 pass**. `test_smoke.py` pass. S01: planted rows identical to the S01-only logs; IOC hits = WS-009, WS-014, WS-022, WS-031 (all S01's own rows) = expected. |
 | 22 | Calibration restarted on final data | 4 cells made on the old logs archived to `runs/calibration_prefix/restart1_old_logs/`; full 24-cell grid restarted detached; watcher running. |
 
@@ -55,7 +55,7 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 The old S01-only proxy hash `b811d487...` is superseded.
 
 ## Open points for the user
-1. Optional: should the model store be moved from `D:dvanced_gpt` to a separate `D:ollamamodels` (tidier, same drive)? Not needed for disk space.
+1. Optional: should the model store be moved from `D:\advanced_gpt` to a separate `D:\ollama\models` (tidier, same drive)? Not needed for disk space.
 
 ## Next steps
 1. Wait for calibration (24 cells on final data). Then ROADMAP 2: read `summary.csv`, choose prompt/temperature
