@@ -1,0 +1,32 @@
+{
+  "seed": 2026,
+  "scenarios": [
+    "S01"
+  ],
+  "collections": {
+    "proxy_logs": {
+      "rows": 1510,
+      "sha256": "b811d487017eb0cc69019fef874fa57ae9aa28f46e38d2a8e0674eff7b9c6de1"
+    },
+    "dns_logs": {
+      "rows": 1505,
+      "sha256": "6274692bc6be91d8cb24f8d97a4506ed0b99855dd4539f2624f26e71f7c79525"
+    },
+    "edr_alerts": {
+      "rows": 301,
+      "sha256": "db93774bebd729b06c85b5e218adfdaf3f9fe62d48ff77b9c596b7f10f230ba6"
+    },
+    "vpn_auth_logs": {
+      "rows": 403,
+      "sha256": "518292a2e6358f65c838ae9ddea092db84febc16287cce8b3ada614c7fbb4550"
+    },
+    "hr_records": {
+      "rows": 120,
+      "sha256": "42a165103280b664a35318d68c41d1dbb432a6fec528dba40777d463e11ba742"
+    },
+    "payroll_ledger": {
+      "rows": 360,
+      "sha256": "106e59fec392f67d16407f5c4c6b26dcb0aa1b4df41dc5a2c41ec9dbed7be135"
+    }
+  }
+}
