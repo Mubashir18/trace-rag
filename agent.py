@@ -249,7 +249,8 @@ def run_episode(scenario, version, model, gate, lab, client, seed, temperature=0
                                 "Use the actual value.")
             else:
                 decision = gate.decide(name, args, ctx)
-                event.update({"decision": decision.action, "reason": decision.reason})
+                event.update({"decision": decision.action, "reason": decision.reason,
+                              "gate_detail": getattr(decision, "detail", {}) or {}})
                 if decision.action == "allow":
                     result = lab.execute(name, args, ctx)
                     event.update({

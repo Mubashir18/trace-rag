@@ -41,6 +41,7 @@ Nothing. Calibration finished (24/24 cells, `runs/calibration/`).
 | 25 | Argument-name bug found and fixed | Llama P1 searched each IOC correctly but with `log_type`/`indicator` instead of `collection`/`query`; unknown names were silently ignored. Now: unknown or missing/empty required args -> `invalid_args` with the expected argument names; `[...]` whole-value placeholders rejected. `test_smoke.py` 12/12. 6 affected cells (Llama P1 x3, Mistral P1 x3) archived and re-running; the other 18 are identical under the new harness and kept. DESIGN §11.1. |
 | 26 | Calibration complete (24 cells, one harness, final data) | 6 re-run cells: Llama P1 now 0.25 in 3 of 4 cells (learns the argument names from the error), Mistral P1 still 0. Mean host recall per prompt (mean over models of per-model means): **P0 0.25** (Qwen 0.75, Mistral 0, Llama 0), **P1 0.229** (Qwen 0.5, Mistral 0, Llama 0.188). No cell hit the generation cap; no errors. Remaining failures are model behaviour (early stop, joined queries, `edr_logs`, calls before reading the report). Results committed in `runs/calibration/`. **Harness not frozen yet**: decisions for the user below. |
 | 27 | ROADMAP 2 done: harness frozen | Rule (DESIGN §11.1): **P0** (mean recall 0.250 vs P1 0.229), **t=0.7** (Llama's single no-tool seed at t=0.7 not treated as the exception; recall 0 at both temperatures). `DEFAULT_PROMPT = "P0"`; `run_one.py` uses it. Tag `harness-frozen`. Smoke tests pass. Mean time per cell 237 s; no errors. |
+| 28 | ROADMAP 4 started: gates C2, C3 (oracle) | `gates.py`: Labels/oracle labels, C2 permission, C3 + task scope; decision detail logged per event (`gate_detail`). `test_gates.py`: 510 in-scope reads allowed, 40 attacks (C2 blocks only not_permitted, C3 all), V5 grants allowed, end-to-end block -> all pass; smoke tests pass. C1 port, C4 provenance rule and inferred labels written as a spec in DESIGN §5.2 — **waiting for approval**. |
 
 ### Current MANIFEST (20 scenarios, seed 2026)
 | Collection | Rows | sha256 |
@@ -100,7 +101,11 @@ answer format is not the problem.
 ## Open points for the user
 1. **Low C0 utility for Mistral and Llama** (S01 V1, frozen harness: Qwen 0.75, Llama 0, Mistral 0). No model dropped,
    no task changed. User chose option A (2026-10-17): continue with ROADMAP 4; decision point 1 and any remedy (B or C, see the diagnosis above) in ROADMAP 6.
+2. **Gate spec (DESIGN §5.2), four questions:** labeller model (same as agent vs fixed); C2-inferred is identical to
+   C2-oracle by construction (keep both names?); C1 port as proposed?; C4 "review" or "block" for argument values
+   with no source.
 
 ## Next steps
-1. ROADMAP 4: gates C1 (port of v1 regex), C2 permission, C3 + task scope, C4 + provenance; oracle and inferred labels; unit tests.
+1. After approval of DESIGN §5.2: implement C1, C4, inferred labels (+ label cache), C2-C4 inferred variants, tests.
 2. Measure short and long report token counts with each model's tokenizer (open item of ROADMAP 3).
+3. ROADMAP 5: scorer.py.

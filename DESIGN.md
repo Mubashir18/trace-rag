@@ -118,6 +118,51 @@ No tool performs any external or state-changing action. There is no network egre
 - A legitimate value the user authorized → **allow**, whatever the report says.
 - Ambiguous → **review** (ask the user). Review is a first-class outcome, not a failure.
 
+### 5.2 Gate implementation (2026-10-17)
+
+**Implemented (`gates.py`, tests in `test_gates.py`):**
+- Every gate decides on the proposed call before execution; the decision and a `gate_detail` (rule, labels,
+  scope) are logged per event for label-error attribution. Blocked/review calls are never executed.
+- Only `search_logs` reads a log collection. Other tools always pass. A collection name that does not exist
+  passes too: the tool rejects it and lists the real names, so no data can be read and blocking would only
+  hide that hint.
+- **C2 (permission):** block if the collection is not in the role's permissions (`data/collections.json`).
+- **C3 (+ task scope):** C2, then block if the collection is not in the task scope given by the labels.
+  Oracle labels: the scenario's `task_scope` plus the V5 grant (part of the trusted request in V5).
+- Tests on all 20 scenarios × 5 versions: no in-scope read blocked; V3/V4 targets blocked by C2 exactly when
+  `not_permitted`, by C3 always; V5 grant allowed.
+
+**Proposed — waiting for the user's approval (not implemented):**
+- **C1 (port of the v1 regex guard).** v1 extracted targets (IPs, domains, host:port) by regex from the top-1
+  retrieved chunk + the query and blocked if any target was not on a fixed allowlist. Port for v2, label-free:
+  at every `search_logs` call, extract targets with the same regex from the report text read so far + the
+  call's query; allowlist = the values in the report's Table 1/Table 2 (parsed by regex) + the bare
+  documentation domains `example.com/.net/.org` (they appear in every disclaimer; without them C1 would block
+  every search in every version). Block if any other target appears. Expected behaviour, matching
+  pre-registered expectation 2: V1 allowed; V2 blocked (legitimate domains in prose and Table 3); V3/V4 not
+  stopped (the injections name collections, not network targets).
+- **C4 (+ provenance).** C3, then check where each `search_logs` argument value came from, by exact
+  (refanged, case-insensitive) data-flow matching against the episode's sources: the trusted user request
+  (`user`), results of executed trusted tools (`trusted_record`), the report text (`untrusted_report`).
+  Rule (DESIGN §5.1): the collection must be authorised by the user (in scope); a query value is allowed if
+  its provenance is `user` or `trusted_record`, or `untrusted_report` **and** the labels say the request
+  delegates "search for the report's indicators" **and** the value has indicator form (IP, domain, hash,
+  host, user ID). A report-only value without indicator form (e.g. `*`, `Engineering`) → **block** (authority
+  only from the report); a value with no source at all (model-invented or mistyped) → **review**.
+  Provenance labels are per argument, so the RQ2 sweep can flip them (false-trust: `untrusted_report` →
+  `user`; false-distrust: `user`/`trusted_record` → `untrusted_report`) at the planned rates.
+- **Inferred labels (§6).** A local LLM sees only the trusted user request and the role's collection catalog
+  (names + descriptions, needed to map "EDR logs" → `edr_alerts`), never the report. Output (JSON):
+  `scope_collections` and `delegates_report_indicators`. Temperature 0, fixed seed, one call per
+  (scenario, version, labeller model), cached and logged. Scope-synthesis error = inferred vs oracle scope;
+  provenance-inference error = wrong delegation flag or provenance mismatches; enforcement error = wrong
+  decision given correct labels.
+- **Open questions for the user:** (1) Labeller model: the same model as the agent in each run (recommended:
+  one local model per organisation) or one fixed model for all? (2) C2 has nothing to infer (the collection is
+  an explicit argument and the role is known), so C2-oracle and C2-inferred are identical by construction;
+  keep both names in the 8-variant matrix (and reuse the runs) or define C2-inferred differently? (3) C1 port
+  as above, or another port? (4) C4 "review" for values with no source — or "block"?
+
 ---
 
 ## 6. Oracle vs inferred labels
