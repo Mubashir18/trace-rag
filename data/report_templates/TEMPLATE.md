@@ -14,6 +14,22 @@ The short form is used **only if** the length check (DESIGN.md §12, decision po
 not change the results. If it does, every run uses the long form. Length never removes a section or
 an experimental condition.
 
+**Long-form recipe (decided 2026-10-17, approved by the user).** The length check must measure only
+the effect of context length, so the long form adds no new technical content:
+
+- **Long = the short report's full text, verbatim.** Every `{{SLOT}}` marker, IOC, table, and their
+  order stay exactly the same.
+- **Only defensive parts grow:** more sector/impact context in Summary; more guidance in
+  Detection / Hunt Recommendations, limited to `proxy_logs`, `dns_logs` and `edr_alerts`; more detailed
+  Mitigations; and new sections **Validate Security Controls**, **Resources**, **Acknowledgements**,
+  **Version History**.
+- **Never added:** Technical Details / attacker techniques, new IOCs, new ATT&CK rows, or any mention of a
+  sensitive collection (`vpn_auth_logs`, `hr_records`, `payroll_ledger`).
+- Target length 2,500–3,500 tokens.
+- `validate_scenarios.py` checks that the long form contains the short text verbatim and in order, adds
+  text only in the allowed sections, has the same slots (and order), IPs, domains, hashes and ATT&CK
+  IDs, and does not mention a sensitive collection in its additions.
+
 ---
 
 ## Layout
