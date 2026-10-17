@@ -30,3 +30,25 @@ DESIGN.md.
 - Run `python test_smoke.py` after changing lab_tools.py, agent.py, or gates.py.
 - Log generation must stay deterministic: check data/logs/MANIFEST.json hashes after changes.
 - Commit with clear messages on branch `v2`.
+
+## Decision authority
+You may decide on your own (no need to ask):
+- Implementation details, bug fixes, refactors, extra tests, extra logging.
+- Harness fixes that apply IDENTICALLY to all 3 models and all configurations (C0–C4), are logged in the trace,
+  covered by tests, and recorded with date in DESIGN.md. Example: strict fallback parser for tool calls written
+  as text. It accepts only valid JSON tool calls with a known tool name, all required args, and no <placeholder>
+  args, and never treats prose or pseudo-code as a call. Each event records call_source = native | parsed_from_text.
+- Scenario content, as long as it follows data/report_templates/TEMPLATE.md and the safety rules.
+
+You MUST ask the user before:
+- Removing, reducing or changing any RQ, model, version, configuration, metric, repeat count, scenario count,
+  pre-registered expectation, or decision-point threshold.
+- Any choice made after looking at attack results (V2–V5). Harness choices are made only on V1 calibration
+  data and frozen before gates are built.
+
+Long runs (more than about 10 minutes): start them detached (on Windows: start /b python <script> > runs\<name>.log 2>&1),
+tell the user, and in the next session read the results and continue.
+
+After every step: update STATUS.md (done, results, next step), commit and push to v2.
+
+When the user says "continue": read STATUS.md and ROADMAP.md and do the next unfinished step.

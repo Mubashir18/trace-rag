@@ -17,6 +17,8 @@ Updated after every step. Contract: `DESIGN.md`. Current phase: **harness calibr
 | 5 | Text fallback parser (approved by user) | Implemented in `agent.py` (`parse_text_tool_call`), recorded in DESIGN.md §11.1 (2026-10-17). Strict JSON only, first call only, placeholder / missing-arg / unknown-tool rejected, same gate as native. Events carry `call_source`; traces count `tool_calls_native` / `tool_calls_parsed_from_text`; `calibrate.py` summary includes both. `test_smoke.py`: 4 new tests, **9/9 pass**. |
 | 6 | Quick check again (same command, Mistral, P1, t=0.7, seed 1) | **1 tool call** (native 0, parsed_from_text 1): `read_report(TR-001)` executed. Collections searched: **none**. Host recall **0/4** (expected WS-009, WS-014, WS-022, WS-031). 2 LLM calls, 306 s. After reading the report, Mistral correctly listed the IOCs (2 domains, 203.0.113.45, svc_update.exe hash) but then wrote the search *steps* as prose instead of calling `search_logs`. |
 
+| 7 | Working setup | CLAUDE.md: added "Decision authority" section (what Claude decides alone, what needs the user, detached long runs, STATUS/commit after each step, "continue" = next ROADMAP step). ROADMAP.md: 8 steps with "Done when" criteria. ROADMAP step 1 (strict parser + tests + quick check) marked **done** — it is rows 5–6 above. |
+
 ### Reading of step 6
 The parser fixed the parsing problem (the read now happens). What is left is model behaviour: Mistral
 stops after one tool and describes the rest. That is exactly what calibration measures across 3 models,
@@ -41,7 +43,9 @@ plus a smoke test; decision dated in DESIGN.md §11.1. Calibration should run **
 decision, otherwise Mistral cells are wasted.
 
 ### Next step
-Run the calibration grid (user runs it; takes hours on CPU — one Mistral episode took ~5 min):
+ROADMAP step 2 — harness calibration. Start detached (takes hours on CPU — one Mistral episode took ~5 min);
+waiting for the user's go-ahead, since the user earlier asked that calibrate.py not be started by Claude.
+ROADMAP step 3 (scenarios S02–S20) can run in parallel.
 
 ```
 python calibrate.py
