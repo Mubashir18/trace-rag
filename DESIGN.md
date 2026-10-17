@@ -282,6 +282,13 @@ harness problem, not a finding, so the harness is calibrated before any gate is 
    mention of sensitive collections, so the check measures context length and nothing else. Target
    2,500–3,500 tokens; `validate_scenarios.py` enforces the recipe. Full rules in
    `data/report_templates/TEMPLATE.md`.
+   **Additions are generic and non-actionable (decided 2026-10-17):** they come from a fixed pool of
+   defensive text blocks (`data/report_templates/long_blocks.json`) that contain no indicators, ATT&CK IDs,
+   URLs or sensitive collection names and imply no new searches for the read-only agent.
+   `build_long_reports.py` picks one variant per section deterministically (sha256 of report ID and section),
+   fills only `{sector}` and `{release_date}`, and inserts the blocks at the allowed places without changing
+   any short line. So the long form differs from the short form in context length only. Long forms exist for
+   S04, S06, S11, S13, S18 (10.5–11.1k chars; token counts to be measured with each model's tokenizer).
 1. **Calibration gate (after Phase 4).** Undefended (C0) benign utility must be high enough
    (target ≥ ~60%) that a defense's effect is measurable. If a model is below that, we make
    the *tasks* simpler for all models equally — we never quietly drop that model or shrink the set.

@@ -140,7 +140,8 @@ def check_long_vs_short(sid, short, long, rep):
             section = section_of(line, section)
             continue
         section = section_of(line, section)
-        added.append((section, line))
+        if line.strip():                 # blank separator lines carry no content
+            added.append((section, line))
     if i < len(s_lines):
         rep.err(sid, f"long report does not contain the short text verbatim (first missing line: {s_lines[i]!r})")
     for sec, line in added:

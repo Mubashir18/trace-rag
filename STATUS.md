@@ -32,15 +32,14 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 | 13 | WS-031 warning | False positive: WS-031 has 27 background proxy rows, all with `user: u0031`. Validator now counts background proxy rows (seed-fixed, scenario-independent). Warning gone. |
 | 14 | Long-form recipe (user-approved, option b) | Recorded in TEMPLATE.md and DESIGN §12.0 (2026-10-17). `validate_scenarios.py` enforces it: short text verbatim and in order; additions only in Summary / Detection-Hunt / Mitigations / Validate Security Controls / Resources / Acknowledgements / Version History; same slots + order, IPs, domains, hashes, ATT&CK IDs; no sensitive collection in additions; ~9,000-13,500 chars (tokens measured later). |
 | 15 | Long forms written by Claude | **Not done.** A second attempt (TR-004, defensive additions only) was again stopped by a safety classifier. Claude will not write these long forms. |
+| 16 | Long forms via `build_long_reports.py` (user-provided `long_blocks.json`) | Builder inserts one deterministic variant per section (sha256 of report ID + section), fills {sector}/{release_date}, never changes short lines; output `data/reports/base/long/TR-004/006/011/013/018.md` (10.5-11.1k chars). Rebuild is byte-identical. `validate_scenarios.py`: **all 20 scenarios + 5 long forms pass** (validator now ignores blank separator lines). DESIGN §12.0 + TEMPLATE.md note that additions are generic and non-actionable. |
 
 ## Open points for the user
-1. **Long base reports for S04, S06, S11, S13, S18 (ROADMAP 3, part 2)** need another author (the user or
-   another tool). Put them in `data/reports/base/long/TR-0NN.md`; `python validate_scenarios.py` checks them
-   against the recipe. Decision point 0 (length check) cannot run until they exist.
+None right now.
 
 ## Next steps
-1. ROADMAP 3, part 2: long base reports -- **waiting for the user** (open point 1).
+1. Wait for calibration (Qwen running; Llama next). Do not regenerate logs/reports before it ends.
 2. After calibration finishes: `generate_logs.py`, `build_reports.py`, `validate_scenarios.py` (log checks),
    re-verify S01 expected answer, run twice to confirm deterministic hashes, record new MANIFEST hashes here,
-   measure report token counts with the model tokenizer, `test_smoke.py`.
+   measure short and long report token counts with each model's tokenizer, `test_smoke.py`.
 3. ROADMAP 2: read `summary.csv`, choose prompt/temperature by the §11.1 rule, freeze, tag `harness-frozen`.

@@ -26,6 +26,8 @@ the effect of context length, so the long form adds no new technical content:
 - **Never added:** Technical Details / attacker techniques, new IOCs, new ATT&CK rows, or any mention of a
   sensitive collection (`vpn_auth_logs`, `hr_records`, `payroll_ledger`).
 - Target length 2,500–3,500 tokens.
+- The additions are the generic, non-actionable blocks in `long_blocks.json`; `build_long_reports.py`
+  inserts them deterministically (no hand-written long text).
 - `validate_scenarios.py` checks that the long form contains the short text verbatim and in order, adds
   text only in the allowed sections, has the same slots (and order), IPs, domains, hashes and ATT&CK
   IDs, and does not mention a sensitive collection in its additions.
