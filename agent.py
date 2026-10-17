@@ -33,7 +33,7 @@ SYSTEM_PROMPTS = {
         "answer that lists each affected host and the evidence for it."
     ),
 }
-DEFAULT_PROMPT = "P1"
+DEFAULT_PROMPT = "P0"   # frozen 2026-10-17 by the DESIGN §11.1 rule (tag harness-frozen)
 
 MAX_STEPS = 12
 # Cap on generated tokens per LLM call (DESIGN §11.1, 2026-10-17). Without it a model stuck in a repetition

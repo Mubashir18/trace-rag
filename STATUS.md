@@ -1,17 +1,12 @@
 # TRACE-RAG v2 — Status
 
 Updated after every step. Contract: `DESIGN.md`. Plan: `ROADMAP.md`.
-Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in progress)**.
+Current phase: **harness frozen (ROADMAP 2 done); next ROADMAP 4 (gates)**.
 
 ---
 
 ## Running now
-- **Calibration** (`calibrate.py`, full grid, 24 cells) started 2026-10-17 in a separate minimized window
-  (`cmd /c start "calibration" /min ... venv\Scripts\python.exe -u calibrate.py > runs\calibration.log`).
-  Survives the Claude session. Progress: `runs\calibration.log`; results: `runs/calibration/summary.csv`.
-- Runs on the **final** logs/reports (row 21). **Until it finishes: do not touch `data/logs/` or `data/reports/rendered/`** (no `generate_logs.py`,
-  no `build_reports.py`, no other Ollama job). The running process reads them.
-- Restarted 2026-10-17 (twice: after the harness fixes, rows 17-19, and on the final data, rows 20-22); earlier cells archived in `runs/calibration_prefix/`.
+Nothing. Calibration finished (24/24 cells, `runs/calibration/`).
 
 ## 2026-10-17 — log
 
@@ -45,6 +40,7 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 | 24 | Full grid finished (24 cells, V1/C0) | Host recall: Qwen P0 0.75 (all 4), P1 0.5 (all 4); Mistral 0 (all 8); Llama 0 (all 8). |
 | 25 | Argument-name bug found and fixed | Llama P1 searched each IOC correctly but with `log_type`/`indicator` instead of `collection`/`query`; unknown names were silently ignored. Now: unknown or missing/empty required args -> `invalid_args` with the expected argument names; `[...]` whole-value placeholders rejected. `test_smoke.py` 12/12. 6 affected cells (Llama P1 x3, Mistral P1 x3) archived and re-running; the other 18 are identical under the new harness and kept. DESIGN §11.1. |
 | 26 | Calibration complete (24 cells, one harness, final data) | 6 re-run cells: Llama P1 now 0.25 in 3 of 4 cells (learns the argument names from the error), Mistral P1 still 0. Mean host recall per prompt (mean over models of per-model means): **P0 0.25** (Qwen 0.75, Mistral 0, Llama 0), **P1 0.229** (Qwen 0.5, Mistral 0, Llama 0.188). No cell hit the generation cap; no errors. Remaining failures are model behaviour (early stop, joined queries, `edr_logs`, calls before reading the report). Results committed in `runs/calibration/`. **Harness not frozen yet**: decisions for the user below. |
+| 27 | ROADMAP 2 done: harness frozen | Rule (DESIGN §11.1): **P0** (mean recall 0.250 vs P1 0.229), **t=0.7** (Llama's single no-tool seed at t=0.7 not treated as the exception; recall 0 at both temperatures). `DEFAULT_PROMPT = "P0"`; `run_one.py` uses it. Tag `harness-frozen`. Smoke tests pass. Mean time per cell 237 s; no errors. |
 
 ### Current MANIFEST (20 scenarios, seed 2026)
 | Collection | Rows | sha256 |
@@ -58,16 +54,10 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 
 The old S01-only proxy hash `b811d487...` is superseded.
 
-## Open points for the user (calibration decisions, 2026-10-17)
-1. **Prompt:** the §11.1 rule gives P0 (0.25 vs 0.229 for P1) — a very small margin, and P0 helps only Qwen.
-2. **Temperature:** with P0, Llama made no tool call at t=0.7 seed 1 but did at t=0 (both seeds); recall is 0 at both
-   temperatures. Does that trigger the §11.1 exception ("t=0.7 makes tool use fail where t=0 does not")?
-3. **One call per turn** (harness option, open since row 25).
-4. **Decision point 1** (C0 benign utility >= ~60%): only Qwen passes (0.75 with P0); Mistral 0 and Llama 0-0.19.
-   DESIGN §12.1: make the tasks simpler for all models equally — needs the user's approval of the concrete change.
+## Open points for the user
+1. **Low C0 utility for Mistral and Llama** (S01 V1, frozen harness: Qwen 0.75, Llama 0, Mistral 0). No model dropped,
+   no task changed. Options are listed in Claude's reply of 2026-10-17; decision point 1 is formally checked in ROADMAP 6.
 
 ## Next steps
-1. Wait for the user's decisions 1-4. Then (if the harness or the tasks change) one more V1/C0 calibration round,
-   freeze, set `DEFAULT_PROMPT`, tag `harness-frozen`.
-2. Measure short and long report token counts with each model's tokenizer.
-3. ROADMAP 4 (gates C1–C4) only after the freeze.
+1. ROADMAP 4: gates C1 (port of v1 regex), C2 permission, C3 + task scope, C4 + provenance; oracle and inferred labels; unit tests.
+2. Measure short and long report token counts with each model's tokenizer (open item of ROADMAP 3).

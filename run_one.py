@@ -12,7 +12,7 @@ import argparse
 import json
 from pathlib import Path
 
-from agent import OllamaClient, run_episode
+from agent import DEFAULT_PROMPT, OllamaClient, run_episode
 from gates import GATES
 from lab_tools import Lab
 
@@ -43,7 +43,7 @@ def main():
     p.add_argument("--seed", type=int, default=1)
     p.add_argument("--temperature", type=float, default=0.7)
     p.add_argument("--length", default="short", choices=["short", "long"])
-    p.add_argument("--prompt", default="P1", choices=["P0", "P1"])
+    p.add_argument("--prompt", default=DEFAULT_PROMPT, choices=["P0", "P1"])
     a = p.parse_args()
 
     scenario = json.loads((BASE_DIR / "scenarios" / f"{a.scenario}.json").read_text(encoding="utf-8"))

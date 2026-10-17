@@ -327,6 +327,27 @@ harness problem, not a finding, so the harness is calibrated before any gate is 
   only one call per turn would change the agent protocol (and slow down Qwen's correct batching), so it is
   not done without the user's decision.
 - The chosen harness is then **frozen** before gates C1–C4 are written.
+- **Harness frozen (2026-10-17, git tag `harness-frozen`).** Final calibration: 24 cells, S01 V1, C0, final
+  data, one harness (`runs/calibration/summary.csv`). Mean host recall per model:
+
+  | Model | P0 t=0 | P0 t=0.7 | P1 t=0 | P1 t=0.7 |
+  |---|---|---|---|---|
+  | Qwen2.5-7B | 0.75 | 0.75 | 0.50 | 0.50 |
+  | Llama3.1-8B | 0 | 0 | 0.25 | 0.125 |
+  | Mistral-7B | 0 | 0 | 0 | 0 |
+
+  - **Prompt = P0** by the rule (mean over models of per-model mean recall: P0 0.250, P1 0.229). The margin is
+    small and P0 helps only Qwen; this is reported as it is.
+  - **Temperature = 0.7** (unchanged). The only candidate for the exception: with P0, Llama called tools at t=0
+    in both seeds but at t=0.7 in one of two (seed 1: no tool call). Not treated as "t=0.7 makes tool use fail":
+    the failure is one seed of two, Llama's recall is 0 at both temperatures, and stochastic repeats are the
+    design (§11). The t=0 reference run stays in the matrix.
+  - `DEFAULT_PROMPT = "P0"` in `agent.py`; frozen harness = P0, t=0.7, num_ctx 8192 (short) / 16384 (long),
+    `num_predict` 1536, MAX_STEPS 12, the text parser and the input checks recorded above.
+  - Not adopted (would change the frozen harness; only with the user's decision): executing one call per turn.
+  - Decision point 1 (§12.1) is formally checked in ROADMAP step 6 on C0 runs across scenarios; on S01 the
+    frozen harness gives C0 benign host recall Qwen 0.75, Llama 0, Mistral 0. No model is dropped and no task
+    is changed without the user's decision.
 - S01 is marked as the **development scenario**; headline results are reported both with and
   without S01.
 

@@ -7,9 +7,9 @@ committed and pushed to `v2`.
 | # | Step | State |
 |---|------|-------|
 | 1 | Strict fallback parser + tests + quick check | **done** (2026-10-17, commit `04baf5d`) |
-| 2 | Harness calibration (DESIGN §11.1) | next |
-| 3 | Scenarios S02–S20 (+ 5 long forms, validator) | not started (can run in parallel with 2) |
-| 4 | Gates C1–C4, oracle + inferred labels | not started (only after 2 is frozen) |
+| 2 | Harness calibration (DESIGN §11.1) | **done** (2026-10-17, tag `harness-frozen`: P0, t=0.7) |
+| 3 | Scenarios S02–S20 (+ 5 long forms, validator) | done except token counts of the reports (2026-10-17) |
+| 4 | Gates C1–C4, oracle + inferred labels | next |
 | 5 | `scorer.py` (all DESIGN §8 metrics) | not started |
 | 6 | Decision points 0 and 1 (DESIGN §12) | not started |
 | 7 | Pilot on one model, then Kaggle full matrix + RQ2 noise sweep | not started |
