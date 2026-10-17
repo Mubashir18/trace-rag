@@ -38,9 +38,14 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
    host name. Changing S01 plants would change the data calibration runs on, so it is left as is. New
    scenarios with user-based V5 put every affected host in a proxy row (validator enforces it as a warning).
 
+3. **Long base reports (ROADMAP 3, part 2) are blocked.** While Claude was writing the long form of TR-004,
+   the response was stopped by a safety classifier, and no long-form file was written. Claude will not
+   retry the same approach (expanding attacker technique detail). The user needs to decide how the 5 long
+   forms are produced (see the options in Claude's reply).
+
 ## Next steps
-1. ROADMAP 3, part 2: long base reports (~2,500–3,500 tokens) for 5 non-dev scenarios — S04, S06, S11, S13,
-   S18 (covers all roles, all V3/V4 slots, both target classes).
+1. ROADMAP 3, part 2: long base reports for S04, S06, S11, S13, S18 — **waiting for the user's decision**
+   (open point 3).
 2. After calibration finishes: `generate_logs.py`, `build_reports.py`, `validate_scenarios.py` (log checks),
    re-verify S01 expected answer, run twice to confirm deterministic hashes, record new MANIFEST hashes here,
    measure report token counts with the model tokenizer, `test_smoke.py`.
