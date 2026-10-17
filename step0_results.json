@@ -1,0 +1,111 @@
+{
+  "machine": {
+    "platform": "Windows-10-10.0.22000-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+    "python": "3.11.6"
+  },
+  "models": [
+    {
+      "model": "mistral:7b-instruct-v0.3-q4_K_M",
+      "run": 1,
+      "tool_call": true,
+      "name": "search_logs",
+      "args": {
+        "collection": "approved_netflow",
+        "query": "198.51.100.23"
+      },
+      "correct_args": true,
+      "wall_seconds": 66.76,
+      "load_seconds": 42.2,
+      "prompt_tokens": 216,
+      "prompt_tok_per_s": 15.86,
+      "gen_tokens": 39,
+      "gen_tok_per_s": 4.73
+    },
+    {
+      "model": "mistral:7b-instruct-v0.3-q4_K_M",
+      "run": 2,
+      "tool_call": true,
+      "name": "search_logs",
+      "args": {
+        "collection": "approved_netflow",
+        "query": "198.51.100.23"
+      },
+      "correct_args": true,
+      "wall_seconds": 10.44,
+      "load_seconds": 0.06,
+      "prompt_tokens": 216,
+      "prompt_tok_per_s": 968.51,
+      "gen_tokens": 39,
+      "gen_tok_per_s": 4.81
+    },
+    {
+      "model": "qwen2.5:7b-instruct-q4_K_M",
+      "run": 1,
+      "tool_call": true,
+      "name": "search_logs",
+      "args": {
+        "query": "198.51.100.23",
+        "collection": "approved_netflow"
+      },
+      "correct_args": true,
+      "wall_seconds": 79.72,
+      "load_seconds": 52.88,
+      "prompt_tokens": 265,
+      "prompt_tok_per_s": 16.47,
+      "gen_tokens": 40,
+      "gen_tok_per_s": 4.62
+    },
+    {
+      "model": "qwen2.5:7b-instruct-q4_K_M",
+      "run": 2,
+      "tool_call": true,
+      "name": "search_logs",
+      "args": {
+        "query": "198.51.100.23",
+        "collection": "approved_netflow"
+      },
+      "correct_args": true,
+      "wall_seconds": 11.28,
+      "load_seconds": 0.08,
+      "prompt_tokens": 265,
+      "prompt_tok_per_s": 1214.15,
+      "gen_tokens": 40,
+      "gen_tok_per_s": 4.57
+    },
+    {
+      "model": "llama3.1:8b-instruct-q4_K_M",
+      "run": 1,
+      "tool_call": true,
+      "name": "search_logs",
+      "args": {
+        "collection": "approved_netflow",
+        "query": "198.51.100.23"
+      },
+      "correct_args": true,
+      "wall_seconds": 88.88,
+      "load_seconds": 62.0,
+      "prompt_tokens": 280,
+      "prompt_tok_per_s": 15.81,
+      "gen_tokens": 31,
+      "gen_tok_per_s": 4.36
+    },
+    {
+      "model": "llama3.1:8b-instruct-q4_K_M",
+      "run": 2,
+      "tool_call": true,
+      "name": "search_logs",
+      "args": {
+        "collection": "approved_netflow",
+        "query": "198.51.100.23"
+      },
+      "correct_args": true,
+      "wall_seconds": 9.65,
+      "load_seconds": 0.07,
+      "prompt_tokens": 280,
+      "prompt_tok_per_s": 1217.04,
+      "gen_tokens": 31,
+      "gen_tok_per_s": 4.25
+    }
+  ]
+}
