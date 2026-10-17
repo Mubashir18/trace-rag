@@ -1,5 +1,6 @@
 {"action": "allowed", "bytes": 22257, "dest_host": "files.example.net", "host": "WS-011", "timestamp": "2026-09-01T02:09:55Z", "url_path": "/", "user": "u0011"}
 {"action": "allowed", "bytes": 96668, "dest_host": "files.example.net", "host": "WS-043", "timestamp": "2026-09-01T02:19:17Z", "url_path": "/", "user": "u0043"}
+{"_scenario": "S12", "action": "allowed", "bytes": 6532, "dest_host": "ashvale-connect.example.com", "host": "WS-036", "timestamp": "2026-09-01T03:54:49Z", "url_path": "/relay", "user": "u0036"}
 {"action": "allowed", "bytes": 199891, "dest_host": "docs.example.org", "host": "WS-020", "timestamp": "2026-09-01T04:00:25Z", "url_path": "/", "user": "u0020"}
 {"action": "allowed", "bytes": 43889, "dest_host": "intranet.example.com", "host": "WS-014", "timestamp": "2026-09-01T04:00:52Z", "url_path": "/api/v1/status", "user": "u0014"}
 {"action": "allowed", "bytes": 102094, "dest_host": "192.0.2.5", "host": "WS-059", "timestamp": "2026-09-01T04:48:30Z", "url_path": "/api/v1/status", "user": "u0059"}
@@ -27,6 +28,7 @@
 {"action": "allowed", "bytes": 216246, "dest_host": "status.example.org", "host": "WS-056", "timestamp": "2026-09-01T15:54:30Z", "url_path": "/index", "user": "u0056"}
 {"action": "allowed", "bytes": 22432, "dest_host": "files.example.net", "host": "WS-019", "timestamp": "2026-09-01T16:34:29Z", "url_path": "/", "user": "u0019"}
 {"_scenario": "S01", "action": "allowed", "bytes": 4969, "dest_host": "cdn-sync.example.net", "host": "WS-022", "timestamp": "2026-09-01T16:39:15Z", "url_path": "/api/poll", "user": "u0022"}
+{"_scenario": "S03", "action": "allowed", "bytes": 5464, "dest_host": "203.0.113.118", "host": "WS-028", "timestamp": "2026-09-01T16:45:16Z", "url_path": "/gate", "user": "u0028"}
 {"action": "allowed", "bytes": 188410, "dest_host": "updates.example.org", "host": "WS-051", "timestamp": "2026-09-01T17:03:02Z", "url_path": "/", "user": "u0051"}
 {"action": "allowed", "bytes": 145921, "dest_host": "192.0.2.3", "host": "WS-003", "timestamp": "2026-09-01T17:37:42Z", "url_path": "/download", "user": "u0003"}
 {"action": "allowed", "bytes": 4411, "dest_host": "192.0.2.5", "host": "WS-019", "timestamp": "2026-09-01T18:12:18Z", "url_path": "/api/v1/status", "user": "u0019"}
@@ -39,6 +41,7 @@
 {"action": "allowed", "bytes": 71295, "dest_host": "cdn.example.com", "host": "WS-060", "timestamp": "2026-09-01T21:40:25Z", "url_path": "/index", "user": "u0060"}
 {"action": "allowed", "bytes": 24663, "dest_host": "news.example.org", "host": "WS-028", "timestamp": "2026-09-01T22:54:40Z", "url_path": "/api/v1/status", "user": "u0028"}
 {"action": "allowed", "bytes": 51959, "dest_host": "192.0.2.7", "host": "WS-038", "timestamp": "2026-09-01T23:36:58Z", "url_path": "/api/v1/status", "user": "u0038"}
+{"_scenario": "S07", "action": "allowed", "bytes": 1434, "dest_host": "build-cache-mirror.example.org", "host": "WS-013", "timestamp": "2026-09-02T00:04:58Z", "url_path": "/pkg/worker.tar", "user": "u0013"}
 {"action": "allowed", "bytes": 173483, "dest_host": "wiki.example.com", "host": "WS-032", "timestamp": "2026-09-02T01:36:01Z", "url_path": "/login", "user": "u0032"}
 {"action": "allowed", "bytes": 60769, "dest_host": "news.example.org", "host": "WS-030", "timestamp": "2026-09-02T03:06:34Z", "url_path": "/index", "user": "u0030"}
 {"action": "allowed", "bytes": 128776, "dest_host": "files.example.net", "host": "WS-039", "timestamp": "2026-09-02T05:07:59Z", "url_path": "/index", "user": "u0039"}
@@ -49,12 +52,15 @@
 {"action": "allowed", "bytes": 105969, "dest_host": "status.example.org", "host": "WS-010", "timestamp": "2026-09-02T07:28:11Z", "url_path": "/index", "user": "u0010"}
 {"action": "allowed", "bytes": 233583, "dest_host": "192.0.2.4", "host": "WS-042", "timestamp": "2026-09-02T07:37:37Z", "url_path": "/login", "user": "u0042"}
 {"action": "allowed", "bytes": 147028, "dest_host": "crm.example.net", "host": "WS-050", "timestamp": "2026-09-02T07:45:10Z", "url_path": "/", "user": "u0050"}
+{"_scenario": "S17", "action": "allowed", "bytes": 326, "dest_host": "dm-c2-gw.example.net", "host": "WS-045", "timestamp": "2026-09-02T07:47:29Z", "url_path": "/poll", "user": "u0045"}
 {"action": "allowed", "bytes": 26237, "dest_host": "192.0.2.6", "host": "WS-038", "timestamp": "2026-09-02T07:52:42Z", "url_path": "/api/v1/status", "user": "u0038"}
 {"action": "allowed", "bytes": 141520, "dest_host": "wiki.example.com", "host": "WS-034", "timestamp": "2026-09-02T10:23:05Z", "url_path": "/api/v1/status", "user": "u0034"}
 {"action": "allowed", "bytes": 17797, "dest_host": "wiki.example.com", "host": "WS-046", "timestamp": "2026-09-02T12:06:34Z", "url_path": "/", "user": "u0046"}
 {"action": "allowed", "bytes": 26807, "dest_host": "192.0.2.7", "host": "WS-024", "timestamp": "2026-09-02T12:12:14Z", "url_path": "/", "user": "u0024"}
 {"action": "allowed", "bytes": 55481, "dest_host": "192.0.2.9", "host": "WS-018", "timestamp": "2026-09-02T12:22:35Z", "url_path": "/login", "user": "u0018"}
 {"action": "allowed", "bytes": 9948, "dest_host": "192.0.2.7", "host": "WS-004", "timestamp": "2026-09-02T13:31:42Z", "url_path": "/index", "user": "u0004"}
+{"_scenario": "S07", "action": "allowed", "bytes": 5010, "dest_host": "sm-pool-relay.example.net", "host": "WS-056", "timestamp": "2026-09-02T13:36:14Z", "url_path": "/stratum", "user": "u0056"}
+{"_scenario": "S02", "action": "allowed", "bytes": 7848, "dest_host": "ledgerpatch-dist.example.net", "host": "WS-003", "timestamp": "2026-09-02T14:07:00Z", "url_path": "/dist/lfplugin_setup.exe", "user": "u0003"}
 {"action": "allowed", "bytes": 35205, "dest_host": "192.0.2.10", "host": "WS-045", "timestamp": "2026-09-02T14:16:10Z", "url_path": "/login", "user": "u0045"}
 {"action": "allowed", "bytes": 81931, "dest_host": "crm.example.net", "host": "WS-029", "timestamp": "2026-09-02T14:18:26Z", "url_path": "/", "user": "u0029"}
 {"action": "allowed", "bytes": 47969, "dest_host": "files.example.net", "host": "WS-003", "timestamp": "2026-09-02T14:28:36Z", "url_path": "/", "user": "u0003"}
@@ -65,10 +71,12 @@
 {"action": "allowed", "bytes": 12058, "dest_host": "crm.example.net", "host": "WS-026", "timestamp": "2026-09-02T15:47:26Z", "url_path": "/index", "user": "u0026"}
 {"action": "allowed", "bytes": 159887, "dest_host": "mail.example.com", "host": "WS-011", "timestamp": "2026-09-02T15:56:36Z", "url_path": "/index", "user": "u0011"}
 {"action": "allowed", "bytes": 201856, "dest_host": "wiki.example.com", "host": "WS-008", "timestamp": "2026-09-02T16:02:53Z", "url_path": "/index", "user": "u0008"}
+{"_scenario": "S14", "action": "allowed", "bytes": 7335, "dest_host": "fw-ext-update.example.net", "host": "WS-015", "timestamp": "2026-09-02T16:21:21Z", "url_path": "/crx", "user": "u0015"}
 {"action": "allowed", "bytes": 89066, "dest_host": "cdn.example.com", "host": "WS-046", "timestamp": "2026-09-02T16:32:24Z", "url_path": "/index", "user": "u0046"}
 {"action": "allowed", "bytes": 112373, "dest_host": "updates.example.org", "host": "WS-043", "timestamp": "2026-09-02T17:10:30Z", "url_path": "/", "user": "u0043"}
 {"action": "allowed", "bytes": 69519, "dest_host": "hr-portal.example.com", "host": "WS-031", "timestamp": "2026-09-02T17:14:20Z", "url_path": "/download", "user": "u0031"}
 {"action": "allowed", "bytes": 82020, "dest_host": "192.0.2.4", "host": "WS-055", "timestamp": "2026-09-02T18:05:57Z", "url_path": "/", "user": "u0055"}
+{"_scenario": "S10", "action": "allowed", "bytes": 2560, "dest_host": "rf-exfil-store.example.net", "host": "WS-050", "timestamp": "2026-09-02T18:07:23Z", "url_path": "/up", "user": "u0050"}
 {"action": "allowed", "bytes": 64519, "dest_host": "status.example.org", "host": "WS-044", "timestamp": "2026-09-02T18:16:57Z", "url_path": "/index", "user": "u0044"}
 {"action": "allowed", "bytes": 30527, "dest_host": "crm.example.net", "host": "WS-059", "timestamp": "2026-09-02T18:20:40Z", "url_path": "/login", "user": "u0059"}
 {"action": "allowed", "bytes": 143509, "dest_host": "192.0.2.2", "host": "WS-008", "timestamp": "2026-09-02T18:48:54Z", "url_path": "/api/v1/status", "user": "u0008"}
@@ -81,10 +89,12 @@
 {"action": "allowed", "bytes": 139988, "dest_host": "api.example.net", "host": "WS-044", "timestamp": "2026-09-02T21:47:26Z", "url_path": "/download", "user": "u0044"}
 {"action": "allowed", "bytes": 222881, "dest_host": "192.0.2.9", "host": "WS-054", "timestamp": "2026-09-02T22:13:25Z", "url_path": "/", "user": "u0054"}
 {"action": "allowed", "bytes": 60870, "dest_host": "192.0.2.9", "host": "WS-025", "timestamp": "2026-09-02T22:31:36Z", "url_path": "/download", "user": "u0025"}
+{"_scenario": "S08", "action": "allowed", "bytes": 7040, "dest_host": "secure-docshare.example.net", "host": "WS-005", "timestamp": "2026-09-02T22:40:43Z", "url_path": "/view", "user": "u0005"}
 {"action": "allowed", "bytes": 73746, "dest_host": "intranet.example.com", "host": "WS-006", "timestamp": "2026-09-02T23:21:43Z", "url_path": "/api/v1/status", "user": "u0006"}
 {"action": "allowed", "bytes": 42722, "dest_host": "192.0.2.8", "host": "WS-020", "timestamp": "2026-09-03T00:27:15Z", "url_path": "/index", "user": "u0020"}
 {"action": "allowed", "bytes": 172571, "dest_host": "192.0.2.11", "host": "WS-051", "timestamp": "2026-09-03T01:45:38Z", "url_path": "/", "user": "u0051"}
 {"action": "allowed", "bytes": 40334, "dest_host": "api.example.net", "host": "WS-030", "timestamp": "2026-09-03T02:03:56Z", "url_path": "/", "user": "u0030"}
+{"_scenario": "S09", "action": "allowed", "bytes": 3328, "dest_host": "203.0.113.148", "host": "WS-033", "timestamp": "2026-09-03T02:04:32Z", "url_path": "/k", "user": "u0033"}
 {"action": "allowed", "bytes": 75373, "dest_host": "api.example.net", "host": "WS-028", "timestamp": "2026-09-03T02:57:17Z", "url_path": "/index", "user": "u0028"}
 {"action": "allowed", "bytes": 139397, "dest_host": "192.0.2.7", "host": "WS-005", "timestamp": "2026-09-03T03:01:52Z", "url_path": "/", "user": "u0005"}
 {"action": "allowed", "bytes": 226606, "dest_host": "192.0.2.9", "host": "WS-030", "timestamp": "2026-09-03T03:17:12Z", "url_path": "/", "user": "u0030"}
@@ -105,8 +115,10 @@
 {"action": "allowed", "bytes": 180348, "dest_host": "cdn.example.com", "host": "WS-053", "timestamp": "2026-09-03T07:34:36Z", "url_path": "/index", "user": "u0053"}
 {"action": "allowed", "bytes": 73966, "dest_host": "updates.example.org", "host": "WS-010", "timestamp": "2026-09-03T07:40:29Z", "url_path": "/index", "user": "u0010"}
 {"action": "allowed", "bytes": 105050, "dest_host": "wiki.example.com", "host": "WS-015", "timestamp": "2026-09-03T08:07:24Z", "url_path": "/index", "user": "u0015"}
+{"_scenario": "S11", "action": "allowed", "bytes": 7937, "dest_host": "hp-drop.example.net", "host": "WS-040", "timestamp": "2026-09-03T08:09:45Z", "url_path": "/c", "user": "u0040"}
 {"action": "allowed", "bytes": 150706, "dest_host": "cdn.example.com", "host": "WS-046", "timestamp": "2026-09-03T08:53:04Z", "url_path": "/download", "user": "u0046"}
 {"action": "allowed", "bytes": 150103, "dest_host": "news.example.org", "host": "WS-012", "timestamp": "2026-09-03T08:57:39Z", "url_path": "/index", "user": "u0012"}
+{"_scenario": "S12", "action": "allowed", "bytes": 1911, "dest_host": "ashvale-connect.example.com", "host": "WS-036", "timestamp": "2026-09-03T09:08:04Z", "url_path": "/relay", "user": "u0036"}
 {"action": "allowed", "bytes": 83702, "dest_host": "wiki.example.com", "host": "WS-042", "timestamp": "2026-09-03T09:10:45Z", "url_path": "/api/v1/status", "user": "u0042"}
 {"action": "allowed", "bytes": 215483, "dest_host": "192.0.2.4", "host": "WS-044", "timestamp": "2026-09-03T09:59:18Z", "url_path": "/index", "user": "u0044"}
 {"action": "allowed", "bytes": 165316, "dest_host": "status.example.org", "host": "WS-003", "timestamp": "2026-09-03T10:00:09Z", "url_path": "/", "user": "u0003"}
@@ -129,6 +141,7 @@
 {"action": "allowed", "bytes": 162459, "dest_host": "docs.example.org", "host": "WS-036", "timestamp": "2026-09-03T17:24:49Z", "url_path": "/index", "user": "u0036"}
 {"action": "allowed", "bytes": 22497, "dest_host": "api.example.net", "host": "WS-007", "timestamp": "2026-09-03T18:20:38Z", "url_path": "/index", "user": "u0007"}
 {"action": "allowed", "bytes": 46480, "dest_host": "cdn.example.com", "host": "WS-014", "timestamp": "2026-09-03T19:11:24Z", "url_path": "/index", "user": "u0014"}
+{"_scenario": "S19", "action": "allowed", "bytes": 8984, "dest_host": "203.0.113.203", "host": "WS-060", "timestamp": "2026-09-03T19:20:09Z", "url_path": "/b", "user": "u0060"}
 {"action": "allowed", "bytes": 190998, "dest_host": "192.0.2.5", "host": "WS-058", "timestamp": "2026-09-03T19:34:13Z", "url_path": "/download", "user": "u0058"}
 {"action": "allowed", "bytes": 121404, "dest_host": "192.0.2.6", "host": "WS-032", "timestamp": "2026-09-03T19:54:48Z", "url_path": "/", "user": "u0032"}
 {"action": "allowed", "bytes": 168544, "dest_host": "mail.example.com", "host": "WS-010", "timestamp": "2026-09-03T20:25:25Z", "url_path": "/index", "user": "u0010"}
@@ -142,6 +155,7 @@
 {"action": "allowed", "bytes": 231459, "dest_host": "crm.example.net", "host": "WS-028", "timestamp": "2026-09-04T00:47:01Z", "url_path": "/api/v1/status", "user": "u0028"}
 {"action": "allowed", "bytes": 16280, "dest_host": "192.0.2.4", "host": "WS-057", "timestamp": "2026-09-04T01:04:00Z", "url_path": "/download", "user": "u0057"}
 {"action": "allowed", "bytes": 191826, "dest_host": "192.0.2.2", "host": "WS-046", "timestamp": "2026-09-04T01:20:42Z", "url_path": "/", "user": "u0046"}
+{"_scenario": "S02", "action": "allowed", "bytes": 2539, "dest_host": "qm-relay.example.org", "host": "WS-017", "timestamp": "2026-09-04T01:52:59Z", "url_path": "/beacon", "user": "u0017"}
 {"action": "allowed", "bytes": 101918, "dest_host": "192.0.2.10", "host": "WS-002", "timestamp": "2026-09-04T02:04:55Z", "url_path": "/index", "user": "u0002"}
 {"action": "allowed", "bytes": 71103, "dest_host": "files.example.net", "host": "WS-049", "timestamp": "2026-09-04T02:20:14Z", "url_path": "/download", "user": "u0049"}
 {"action": "allowed", "bytes": 173707, "dest_host": "hr-portal.example.com", "host": "WS-049", "timestamp": "2026-09-04T02:22:29Z", "url_path": "/login", "user": "u0049"}
@@ -186,6 +200,7 @@
 {"action": "allowed", "bytes": 199252, "dest_host": "192.0.2.7", "host": "WS-012", "timestamp": "2026-09-04T18:57:20Z", "url_path": "/index", "user": "u0012"}
 {"action": "allowed", "bytes": 202906, "dest_host": "wiki.example.com", "host": "WS-022", "timestamp": "2026-09-04T20:01:26Z", "url_path": "/download", "user": "u0022"}
 {"action": "allowed", "bytes": 70884, "dest_host": "192.0.2.8", "host": "WS-058", "timestamp": "2026-09-04T20:03:39Z", "url_path": "/download", "user": "u0058"}
+{"_scenario": "S06", "action": "allowed", "bytes": 8834, "dest_host": "patient-login-check.example.com", "host": "WS-024", "timestamp": "2026-09-04T20:15:46Z", "url_path": "/auth", "user": "u0024"}
 {"action": "allowed", "bytes": 20548, "dest_host": "crm.example.net", "host": "WS-050", "timestamp": "2026-09-04T21:42:23Z", "url_path": "/api/v1/status", "user": "u0050"}
 {"action": "allowed", "bytes": 113809, "dest_host": "192.0.2.10", "host": "WS-056", "timestamp": "2026-09-04T22:14:50Z", "url_path": "/", "user": "u0056"}
 {"action": "allowed", "bytes": 22465, "dest_host": "192.0.2.10", "host": "WS-020", "timestamp": "2026-09-04T22:37:02Z", "url_path": "/index", "user": "u0020"}
@@ -199,6 +214,7 @@
 {"action": "allowed", "bytes": 50636, "dest_host": "192.0.2.2", "host": "WS-051", "timestamp": "2026-09-05T01:38:12Z", "url_path": "/login", "user": "u0051"}
 {"action": "allowed", "bytes": 110247, "dest_host": "192.0.2.4", "host": "WS-042", "timestamp": "2026-09-05T02:02:33Z", "url_path": "/index", "user": "u0042"}
 {"action": "allowed", "bytes": 245758, "dest_host": "api.example.net", "host": "WS-024", "timestamp": "2026-09-05T02:30:37Z", "url_path": "/index", "user": "u0024"}
+{"_scenario": "S10", "action": "allowed", "bytes": 8399, "dest_host": "parcel-reschedule.example.com", "host": "WS-029", "timestamp": "2026-09-05T02:50:55Z", "url_path": "/track", "user": "u0029"}
 {"action": "allowed", "bytes": 152971, "dest_host": "hr-portal.example.com", "host": "WS-028", "timestamp": "2026-09-05T02:56:15Z", "url_path": "/api/v1/status", "user": "u0028"}
 {"action": "allowed", "bytes": 71866, "dest_host": "192.0.2.11", "host": "WS-048", "timestamp": "2026-09-05T03:18:12Z", "url_path": "/index", "user": "u0048"}
 {"action": "allowed", "bytes": 26611, "dest_host": "hr-portal.example.com", "host": "WS-011", "timestamp": "2026-09-05T03:55:47Z", "url_path": "/index", "user": "u0011"}
@@ -223,14 +239,17 @@
 {"action": "allowed", "bytes": 195256, "dest_host": "cdn.example.com", "host": "WS-049", "timestamp": "2026-09-05T12:31:06Z", "url_path": "/", "user": "u0049"}
 {"action": "allowed", "bytes": 241109, "dest_host": "192.0.2.6", "host": "WS-037", "timestamp": "2026-09-05T12:33:54Z", "url_path": "/index", "user": "u0037"}
 {"action": "allowed", "bytes": 36025, "dest_host": "192.0.2.7", "host": "WS-052", "timestamp": "2026-09-05T12:47:13Z", "url_path": "/download", "user": "u0052"}
+{"_scenario": "S12", "action": "allowed", "bytes": 5876, "dest_host": "remote-assist-portal.example.net", "host": "WS-020", "timestamp": "2026-09-05T13:29:54Z", "url_path": "/join", "user": "u0020"}
 {"action": "allowed", "bytes": 195572, "dest_host": "crm.example.net", "host": "WS-001", "timestamp": "2026-09-05T14:13:46Z", "url_path": "/login", "user": "u0001"}
 {"action": "allowed", "bytes": 221407, "dest_host": "files.example.net", "host": "WS-004", "timestamp": "2026-09-05T14:16:56Z", "url_path": "/login", "user": "u0004"}
 {"action": "allowed", "bytes": 110703, "dest_host": "192.0.2.4", "host": "WS-026", "timestamp": "2026-09-05T14:27:05Z", "url_path": "/download", "user": "u0026"}
 {"action": "allowed", "bytes": 31794, "dest_host": "192.0.2.7", "host": "WS-026", "timestamp": "2026-09-05T14:28:16Z", "url_path": "/", "user": "u0026"}
+{"_scenario": "S17", "action": "allowed", "bytes": 504, "dest_host": "meet-join-client.example.com", "host": "WS-021", "timestamp": "2026-09-05T14:47:53Z", "url_path": "/download/setup", "user": "u0021"}
 {"action": "allowed", "bytes": 228792, "dest_host": "api.example.net", "host": "WS-036", "timestamp": "2026-09-05T15:21:08Z", "url_path": "/api/v1/status", "user": "u0036"}
 {"action": "allowed", "bytes": 223953, "dest_host": "192.0.2.3", "host": "WS-034", "timestamp": "2026-09-05T16:17:17Z", "url_path": "/download", "user": "u0034"}
 {"action": "allowed", "bytes": 205031, "dest_host": "192.0.2.4", "host": "WS-028", "timestamp": "2026-09-05T16:23:52Z", "url_path": "/", "user": "u0028"}
 {"action": "allowed", "bytes": 59790, "dest_host": "api.example.net", "host": "WS-045", "timestamp": "2026-09-05T16:25:37Z", "url_path": "/api/v1/status", "user": "u0045"}
+{"_scenario": "S04", "action": "allowed", "bytes": 5385, "dest_host": "bc-sync-node.example.com", "host": "WS-035", "timestamp": "2026-09-05T17:08:02Z", "url_path": "/hb", "user": "u0035"}
 {"action": "allowed", "bytes": 92517, "dest_host": "docs.example.org", "host": "WS-015", "timestamp": "2026-09-05T17:16:04Z", "url_path": "/api/v1/status", "user": "u0015"}
 {"action": "allowed", "bytes": 3353, "dest_host": "192.0.2.5", "host": "WS-051", "timestamp": "2026-09-05T17:38:25Z", "url_path": "/api/v1/status", "user": "u0051"}
 {"action": "allowed", "bytes": 104789, "dest_host": "files.example.net", "host": "WS-008", "timestamp": "2026-09-05T17:41:55Z", "url_path": "/index", "user": "u0008"}
@@ -249,6 +268,7 @@
 {"action": "allowed", "bytes": 144483, "dest_host": "docs.example.org", "host": "WS-012", "timestamp": "2026-09-05T21:28:05Z", "url_path": "/download", "user": "u0012"}
 {"_scenario": "S01", "action": "allowed", "bytes": 5984, "dest_host": "203.0.113.45", "host": "WS-022", "timestamp": "2026-09-05T21:54:10Z", "url_path": "/api/poll", "user": "u0022"}
 {"action": "allowed", "bytes": 182593, "dest_host": "192.0.2.10", "host": "WS-033", "timestamp": "2026-09-05T21:57:44Z", "url_path": "/api/v1/status", "user": "u0033"}
+{"_scenario": "S05", "action": "allowed", "bytes": 3499, "dest_host": "203.0.113.127", "host": "WS-042", "timestamp": "2026-09-05T22:01:13Z", "url_path": "/upload", "user": "u0042"}
 {"action": "allowed", "bytes": 33872, "dest_host": "hr-portal.example.com", "host": "WS-052", "timestamp": "2026-09-05T22:15:49Z", "url_path": "/download", "user": "u0052"}
 {"action": "allowed", "bytes": 107864, "dest_host": "cdn.example.com", "host": "WS-057", "timestamp": "2026-09-05T22:37:13Z", "url_path": "/", "user": "u0057"}
 {"action": "allowed", "bytes": 128412, "dest_host": "192.0.2.8", "host": "WS-041", "timestamp": "2026-09-05T22:59:47Z", "url_path": "/", "user": "u0041"}
@@ -256,6 +276,7 @@
 {"action": "allowed", "bytes": 234765, "dest_host": "news.example.org", "host": "WS-022", "timestamp": "2026-09-05T23:22:35Z", "url_path": "/index", "user": "u0022"}
 {"action": "allowed", "bytes": 123418, "dest_host": "192.0.2.9", "host": "WS-043", "timestamp": "2026-09-05T23:30:36Z", "url_path": "/download", "user": "u0043"}
 {"action": "allowed", "bytes": 163118, "dest_host": "hr-portal.example.com", "host": "WS-056", "timestamp": "2026-09-05T23:34:50Z", "url_path": "/login", "user": "u0056"}
+{"_scenario": "S15", "action": "allowed", "bytes": 6799, "dest_host": "br-stage.example.org", "host": "WS-010", "timestamp": "2026-09-06T00:04:12Z", "url_path": "/s2", "user": "u0010"}
 {"action": "allowed", "bytes": 239844, "dest_host": "192.0.2.6", "host": "WS-002", "timestamp": "2026-09-06T00:52:29Z", "url_path": "/login", "user": "u0002"}
 {"action": "allowed", "bytes": 82890, "dest_host": "192.0.2.8", "host": "WS-037", "timestamp": "2026-09-06T01:06:25Z", "url_path": "/download", "user": "u0037"}
 {"action": "allowed", "bytes": 86172, "dest_host": "intranet.example.com", "host": "WS-006", "timestamp": "2026-09-06T01:52:39Z", "url_path": "/", "user": "u0006"}
@@ -267,6 +288,7 @@
 {"action": "allowed", "bytes": 60360, "dest_host": "intranet.example.com", "host": "WS-016", "timestamp": "2026-09-06T03:34:32Z", "url_path": "/login", "user": "u0016"}
 {"action": "allowed", "bytes": 13667, "dest_host": "192.0.2.2", "host": "WS-001", "timestamp": "2026-09-06T03:39:18Z", "url_path": "/", "user": "u0001"}
 {"action": "allowed", "bytes": 72757, "dest_host": "192.0.2.6", "host": "WS-041", "timestamp": "2026-09-06T03:52:18Z", "url_path": "/api/v1/status", "user": "u0041"}
+{"_scenario": "S09", "action": "allowed", "bytes": 1836, "dest_host": "th-cdnjs-loader.example.net", "host": "WS-016", "timestamp": "2026-09-06T04:08:03Z", "url_path": "/lib/jq.min.js", "user": "u0016"}
 {"action": "allowed", "bytes": 69031, "dest_host": "cdn.example.com", "host": "WS-032", "timestamp": "2026-09-06T05:07:21Z", "url_path": "/download", "user": "u0032"}
 {"action": "allowed", "bytes": 34687, "dest_host": "status.example.org", "host": "WS-054", "timestamp": "2026-09-06T05:32:19Z", "url_path": "/", "user": "u0054"}
 {"action": "allowed", "bytes": 67922, "dest_host": "api.example.net", "host": "WS-005", "timestamp": "2026-09-06T05:48:59Z", "url_path": "/api/v1/status", "user": "u0005"}
@@ -289,11 +311,13 @@
 {"action": "allowed", "bytes": 153116, "dest_host": "wiki.example.com", "host": "WS-007", "timestamp": "2026-09-06T12:56:06Z", "url_path": "/api/v1/status", "user": "u0007"}
 {"action": "allowed", "bytes": 37648, "dest_host": "192.0.2.9", "host": "WS-028", "timestamp": "2026-09-06T13:13:42Z", "url_path": "/index", "user": "u0028"}
 {"action": "allowed", "bytes": 186899, "dest_host": "192.0.2.8", "host": "WS-004", "timestamp": "2026-09-06T13:39:02Z", "url_path": "/api/v1/status", "user": "u0004"}
+{"_scenario": "S04", "action": "allowed", "bytes": 4649, "dest_host": "203.0.113.121", "host": "WS-052", "timestamp": "2026-09-06T14:07:42Z", "url_path": "/hb", "user": "u0052"}
 {"action": "allowed", "bytes": 168261, "dest_host": "wiki.example.com", "host": "WS-011", "timestamp": "2026-09-06T14:09:21Z", "url_path": "/index", "user": "u0011"}
 {"action": "allowed", "bytes": 107931, "dest_host": "api.example.net", "host": "WS-004", "timestamp": "2026-09-06T14:51:29Z", "url_path": "/login", "user": "u0004"}
 {"action": "allowed", "bytes": 131248, "dest_host": "crm.example.net", "host": "WS-008", "timestamp": "2026-09-06T14:56:59Z", "url_path": "/", "user": "u0008"}
 {"action": "allowed", "bytes": 68783, "dest_host": "news.example.org", "host": "WS-004", "timestamp": "2026-09-06T15:19:54Z", "url_path": "/download", "user": "u0004"}
 {"action": "allowed", "bytes": 210583, "dest_host": "192.0.2.3", "host": "WS-056", "timestamp": "2026-09-06T15:40:18Z", "url_path": "/login", "user": "u0056"}
+{"_scenario": "S07", "action": "allowed", "bytes": 1867, "dest_host": "203.0.113.139", "host": "WS-056", "timestamp": "2026-09-06T15:48:18Z", "url_path": "/stratum", "user": "u0056"}
 {"action": "allowed", "bytes": 123838, "dest_host": "files.example.net", "host": "WS-039", "timestamp": "2026-09-06T15:54:31Z", "url_path": "/", "user": "u0039"}
 {"action": "allowed", "bytes": 75930, "dest_host": "192.0.2.6", "host": "WS-017", "timestamp": "2026-09-06T16:05:24Z", "url_path": "/index", "user": "u0017"}
 {"action": "allowed", "bytes": 217690, "dest_host": "crm.example.net", "host": "WS-026", "timestamp": "2026-09-06T16:49:08Z", "url_path": "/index", "user": "u0026"}
@@ -305,6 +329,7 @@
 {"action": "allowed", "bytes": 110966, "dest_host": "status.example.org", "host": "WS-009", "timestamp": "2026-09-06T18:36:35Z", "url_path": "/login", "user": "u0009"}
 {"action": "allowed", "bytes": 120365, "dest_host": "192.0.2.5", "host": "WS-026", "timestamp": "2026-09-06T19:52:53Z", "url_path": "/login", "user": "u0026"}
 {"action": "allowed", "bytes": 243387, "dest_host": "news.example.org", "host": "WS-047", "timestamp": "2026-09-06T19:59:58Z", "url_path": "/index", "user": "u0047"}
+{"_scenario": "S04", "action": "allowed", "bytes": 8267, "dest_host": "203.0.113.121", "host": "WS-052", "timestamp": "2026-09-06T21:18:01Z", "url_path": "/hb", "user": "u0052"}
 {"action": "allowed", "bytes": 218289, "dest_host": "docs.example.org", "host": "WS-038", "timestamp": "2026-09-06T21:32:34Z", "url_path": "/index", "user": "u0038"}
 {"action": "allowed", "bytes": 195785, "dest_host": "intranet.example.com", "host": "WS-036", "timestamp": "2026-09-06T21:40:09Z", "url_path": "/index", "user": "u0036"}
 {"action": "allowed", "bytes": 28490, "dest_host": "updates.example.org", "host": "WS-048", "timestamp": "2026-09-06T21:46:47Z", "url_path": "/api/v1/status", "user": "u0048"}
@@ -323,10 +348,13 @@
 {"action": "allowed", "bytes": 225565, "dest_host": "updates.example.org", "host": "WS-023", "timestamp": "2026-09-07T02:21:38Z", "url_path": "/api/v1/status", "user": "u0023"}
 {"action": "allowed", "bytes": 73439, "dest_host": "api.example.net", "host": "WS-012", "timestamp": "2026-09-07T02:26:28Z", "url_path": "/download", "user": "u0012"}
 {"action": "allowed", "bytes": 207734, "dest_host": "192.0.2.6", "host": "WS-034", "timestamp": "2026-09-07T03:21:58Z", "url_path": "/index", "user": "u0034"}
+{"_scenario": "S06", "action": "allowed", "bytes": 671, "dest_host": "nj-collector.example.net", "host": "WS-038", "timestamp": "2026-09-07T03:47:08Z", "url_path": "/submit", "user": "u0038"}
 {"action": "allowed", "bytes": 98246, "dest_host": "192.0.2.10", "host": "WS-002", "timestamp": "2026-09-07T04:00:55Z", "url_path": "/login", "user": "u0002"}
+{"_scenario": "S02", "action": "allowed", "bytes": 6977, "dest_host": "qm-relay.example.org", "host": "WS-017", "timestamp": "2026-09-07T04:22:45Z", "url_path": "/beacon", "user": "u0017"}
 {"action": "allowed", "bytes": 177912, "dest_host": "192.0.2.3", "host": "WS-053", "timestamp": "2026-09-07T04:31:03Z", "url_path": "/download", "user": "u0053"}
 {"action": "allowed", "bytes": 86438, "dest_host": "192.0.2.3", "host": "WS-048", "timestamp": "2026-09-07T04:38:46Z", "url_path": "/api/v1/status", "user": "u0048"}
 {"action": "allowed", "bytes": 130965, "dest_host": "docs.example.org", "host": "WS-060", "timestamp": "2026-09-07T04:40:03Z", "url_path": "/", "user": "u0060"}
+{"_scenario": "S02", "action": "allowed", "bytes": 756, "dest_host": "qm-relay.example.org", "host": "WS-017", "timestamp": "2026-09-07T04:47:55Z", "url_path": "/beacon", "user": "u0017"}
 {"action": "allowed", "bytes": 183497, "dest_host": "192.0.2.3", "host": "WS-005", "timestamp": "2026-09-07T05:11:36Z", "url_path": "/api/v1/status", "user": "u0005"}
 {"action": "allowed", "bytes": 102595, "dest_host": "192.0.2.3", "host": "WS-023", "timestamp": "2026-09-07T05:53:05Z", "url_path": "/login", "user": "u0023"}
 {"action": "allowed", "bytes": 134470, "dest_host": "192.0.2.5", "host": "WS-004", "timestamp": "2026-09-07T06:11:06Z", "url_path": "/", "user": "u0004"}
@@ -343,6 +371,7 @@
 {"action": "allowed", "bytes": 101973, "dest_host": "hr-portal.example.com", "host": "WS-010", "timestamp": "2026-09-07T10:29:39Z", "url_path": "/login", "user": "u0010"}
 {"action": "allowed", "bytes": 213861, "dest_host": "news.example.org", "host": "WS-037", "timestamp": "2026-09-07T10:42:58Z", "url_path": "/download", "user": "u0037"}
 {"action": "allowed", "bytes": 212261, "dest_host": "intranet.example.com", "host": "WS-032", "timestamp": "2026-09-07T11:13:45Z", "url_path": "/download", "user": "u0032"}
+{"_scenario": "S12", "action": "allowed", "bytes": 6350, "dest_host": "ashvale-connect.example.com", "host": "WS-036", "timestamp": "2026-09-07T11:39:01Z", "url_path": "/relay", "user": "u0036"}
 {"action": "allowed", "bytes": 175462, "dest_host": "cdn.example.com", "host": "WS-041", "timestamp": "2026-09-07T12:02:32Z", "url_path": "/", "user": "u0041"}
 {"action": "allowed", "bytes": 196022, "dest_host": "192.0.2.2", "host": "WS-023", "timestamp": "2026-09-07T12:07:36Z", "url_path": "/index", "user": "u0023"}
 {"action": "allowed", "bytes": 165701, "dest_host": "status.example.org", "host": "WS-047", "timestamp": "2026-09-07T12:16:00Z", "url_path": "/index", "user": "u0047"}
@@ -352,6 +381,7 @@
 {"action": "allowed", "bytes": 195477, "dest_host": "files.example.net", "host": "WS-040", "timestamp": "2026-09-07T13:28:59Z", "url_path": "/index", "user": "u0040"}
 {"action": "allowed", "bytes": 157239, "dest_host": "192.0.2.8", "host": "WS-008", "timestamp": "2026-09-07T13:41:15Z", "url_path": "/login", "user": "u0008"}
 {"action": "allowed", "bytes": 242149, "dest_host": "192.0.2.6", "host": "WS-011", "timestamp": "2026-09-07T15:33:35Z", "url_path": "/api/v1/status", "user": "u0011"}
+{"_scenario": "S06", "action": "allowed", "bytes": 8922, "dest_host": "nj-collector.example.net", "host": "WS-038", "timestamp": "2026-09-07T16:13:05Z", "url_path": "/submit", "user": "u0038"}
 {"action": "allowed", "bytes": 51104, "dest_host": "wiki.example.com", "host": "WS-051", "timestamp": "2026-09-07T16:24:43Z", "url_path": "/index", "user": "u0051"}
 {"action": "allowed", "bytes": 53807, "dest_host": "192.0.2.9", "host": "WS-011", "timestamp": "2026-09-07T16:34:04Z", "url_path": "/", "user": "u0011"}
 {"action": "allowed", "bytes": 119525, "dest_host": "api.example.net", "host": "WS-006", "timestamp": "2026-09-07T16:56:22Z", "url_path": "/", "user": "u0006"}
@@ -396,6 +426,7 @@
 {"action": "allowed", "bytes": 247401, "dest_host": "docs.example.org", "host": "WS-031", "timestamp": "2026-09-08T10:12:06Z", "url_path": "/", "user": "u0031"}
 {"action": "allowed", "bytes": 209211, "dest_host": "updates.example.org", "host": "WS-036", "timestamp": "2026-09-08T10:23:00Z", "url_path": "/index", "user": "u0036"}
 {"action": "allowed", "bytes": 57163, "dest_host": "api.example.net", "host": "WS-052", "timestamp": "2026-09-08T10:34:14Z", "url_path": "/api/v1/status", "user": "u0052"}
+{"_scenario": "S14", "action": "allowed", "bytes": 7165, "dest_host": "cookie-vault-sync.example.com", "host": "WS-043", "timestamp": "2026-09-08T11:08:28Z", "url_path": "/put", "user": "u0043"}
 {"action": "allowed", "bytes": 172387, "dest_host": "192.0.2.4", "host": "WS-014", "timestamp": "2026-09-08T11:51:50Z", "url_path": "/login", "user": "u0014"}
 {"action": "allowed", "bytes": 50497, "dest_host": "192.0.2.8", "host": "WS-004", "timestamp": "2026-09-08T12:12:22Z", "url_path": "/login", "user": "u0004"}
 {"action": "allowed", "bytes": 230279, "dest_host": "cdn.example.com", "host": "WS-006", "timestamp": "2026-09-08T12:30:39Z", "url_path": "/", "user": "u0006"}
@@ -417,6 +448,7 @@
 {"action": "allowed", "bytes": 58968, "dest_host": "192.0.2.2", "host": "WS-058", "timestamp": "2026-09-08T19:37:34Z", "url_path": "/api/v1/status", "user": "u0058"}
 {"action": "allowed", "bytes": 128235, "dest_host": "192.0.2.6", "host": "WS-041", "timestamp": "2026-09-08T19:56:41Z", "url_path": "/index", "user": "u0041"}
 {"action": "allowed", "bytes": 232311, "dest_host": "cdn.example.com", "host": "WS-027", "timestamp": "2026-09-08T19:57:17Z", "url_path": "/api/v1/status", "user": "u0027"}
+{"_scenario": "S16", "action": "allowed", "bytes": 7111, "dest_host": "wl-sync-bucket.example.net", "host": "WS-037", "timestamp": "2026-09-08T20:53:31Z", "url_path": "/put", "user": "u0037"}
 {"action": "allowed", "bytes": 168673, "dest_host": "wiki.example.com", "host": "WS-031", "timestamp": "2026-09-08T21:08:34Z", "url_path": "/", "user": "u0031"}
 {"action": "allowed", "bytes": 41983, "dest_host": "192.0.2.9", "host": "WS-050", "timestamp": "2026-09-08T22:09:32Z", "url_path": "/download", "user": "u0050"}
 {"action": "allowed", "bytes": 135202, "dest_host": "intranet.example.com", "host": "WS-010", "timestamp": "2026-09-08T23:00:05Z", "url_path": "/", "user": "u0010"}
@@ -430,6 +462,7 @@
 {"action": "allowed", "bytes": 5165, "dest_host": "192.0.2.4", "host": "WS-042", "timestamp": "2026-09-09T04:48:04Z", "url_path": "/", "user": "u0042"}
 {"action": "allowed", "bytes": 239319, "dest_host": "192.0.2.6", "host": "WS-052", "timestamp": "2026-09-09T04:53:45Z", "url_path": "/api/v1/status", "user": "u0052"}
 {"action": "allowed", "bytes": 222550, "dest_host": "crm.example.net", "host": "WS-046", "timestamp": "2026-09-09T05:32:36Z", "url_path": "/login", "user": "u0046"}
+{"_scenario": "S03", "action": "allowed", "bytes": 1053, "dest_host": "203.0.113.118", "host": "WS-028", "timestamp": "2026-09-09T05:45:15Z", "url_path": "/gate", "user": "u0028"}
 {"action": "allowed", "bytes": 172998, "dest_host": "192.0.2.8", "host": "WS-052", "timestamp": "2026-09-09T06:00:11Z", "url_path": "/", "user": "u0052"}
 {"action": "allowed", "bytes": 211947, "dest_host": "192.0.2.4", "host": "WS-036", "timestamp": "2026-09-09T06:08:14Z", "url_path": "/download", "user": "u0036"}
 {"action": "allowed", "bytes": 180699, "dest_host": "192.0.2.9", "host": "WS-015", "timestamp": "2026-09-09T06:41:43Z", "url_path": "/login", "user": "u0015"}
@@ -439,8 +472,10 @@
 {"action": "allowed", "bytes": 84396, "dest_host": "news.example.org", "host": "WS-019", "timestamp": "2026-09-09T07:20:20Z", "url_path": "/download", "user": "u0019"}
 {"action": "allowed", "bytes": 136412, "dest_host": "status.example.org", "host": "WS-059", "timestamp": "2026-09-09T07:40:19Z", "url_path": "/download", "user": "u0059"}
 {"action": "allowed", "bytes": 113756, "dest_host": "wiki.example.com", "host": "WS-045", "timestamp": "2026-09-09T07:58:21Z", "url_path": "/api/v1/status", "user": "u0045"}
+{"_scenario": "S17", "action": "allowed", "bytes": 6923, "dest_host": "dm-c2-gw.example.net", "host": "WS-045", "timestamp": "2026-09-09T08:00:16Z", "url_path": "/poll", "user": "u0045"}
 {"action": "allowed", "bytes": 195077, "dest_host": "192.0.2.8", "host": "WS-008", "timestamp": "2026-09-09T08:15:53Z", "url_path": "/api/v1/status", "user": "u0008"}
 {"action": "allowed", "bytes": 184510, "dest_host": "intranet.example.com", "host": "WS-007", "timestamp": "2026-09-09T08:38:33Z", "url_path": "/", "user": "u0007"}
+{"_scenario": "S19", "action": "allowed", "bytes": 1692, "dest_host": "203.0.113.203", "host": "WS-060", "timestamp": "2026-09-09T08:50:32Z", "url_path": "/b", "user": "u0060"}
 {"action": "allowed", "bytes": 97925, "dest_host": "cdn.example.com", "host": "WS-003", "timestamp": "2026-09-09T09:03:42Z", "url_path": "/api/v1/status", "user": "u0003"}
 {"action": "allowed", "bytes": 213129, "dest_host": "docs.example.org", "host": "WS-029", "timestamp": "2026-09-09T09:19:49Z", "url_path": "/download", "user": "u0029"}
 {"action": "allowed", "bytes": 66216, "dest_host": "192.0.2.4", "host": "WS-015", "timestamp": "2026-09-09T10:16:03Z", "url_path": "/api/v1/status", "user": "u0015"}
@@ -504,6 +539,7 @@
 {"action": "allowed", "bytes": 27906, "dest_host": "api.example.net", "host": "WS-032", "timestamp": "2026-09-10T15:24:48Z", "url_path": "/login", "user": "u0032"}
 {"action": "allowed", "bytes": 82549, "dest_host": "hr-portal.example.com", "host": "WS-059", "timestamp": "2026-09-10T15:51:30Z", "url_path": "/api/v1/status", "user": "u0059"}
 {"action": "allowed", "bytes": 115954, "dest_host": "news.example.org", "host": "WS-052", "timestamp": "2026-09-10T15:58:25Z", "url_path": "/", "user": "u0052"}
+{"_scenario": "S03", "action": "allowed", "bytes": 8919, "dest_host": "browser-refresh-now.example.com", "host": "WS-006", "timestamp": "2026-09-10T16:05:58Z", "url_path": "/update", "user": "u0006"}
 {"action": "allowed", "bytes": 59091, "dest_host": "wiki.example.com", "host": "WS-028", "timestamp": "2026-09-10T16:21:33Z", "url_path": "/index", "user": "u0028"}
 {"action": "allowed", "bytes": 154708, "dest_host": "news.example.org", "host": "WS-057", "timestamp": "2026-09-10T17:03:51Z", "url_path": "/api/v1/status", "user": "u0057"}
 {"action": "allowed", "bytes": 98076, "dest_host": "hr-portal.example.com", "host": "WS-032", "timestamp": "2026-09-10T17:58:16Z", "url_path": "/", "user": "u0032"}
@@ -511,15 +547,19 @@
 {"action": "allowed", "bytes": 120594, "dest_host": "files.example.net", "host": "WS-056", "timestamp": "2026-09-10T18:09:28Z", "url_path": "/api/v1/status", "user": "u0056"}
 {"action": "allowed", "bytes": 196813, "dest_host": "status.example.org", "host": "WS-001", "timestamp": "2026-09-10T19:05:05Z", "url_path": "/", "user": "u0001"}
 {"action": "allowed", "bytes": 145647, "dest_host": "192.0.2.7", "host": "WS-024", "timestamp": "2026-09-10T19:10:30Z", "url_path": "/api/v1/status", "user": "u0024"}
+{"_scenario": "S13", "action": "allowed", "bytes": 3740, "dest_host": "mb-relay-07.example.net", "host": "WS-027", "timestamp": "2026-09-10T19:59:38Z", "url_path": "/p", "user": "u0027"}
 {"action": "allowed", "bytes": 184012, "dest_host": "wiki.example.com", "host": "WS-017", "timestamp": "2026-09-10T20:47:04Z", "url_path": "/login", "user": "u0017"}
+{"_scenario": "S07", "action": "allowed", "bytes": 8016, "dest_host": "sm-pool-relay.example.net", "host": "WS-056", "timestamp": "2026-09-10T20:47:54Z", "url_path": "/stratum", "user": "u0056"}
 {"action": "allowed", "bytes": 186996, "dest_host": "crm.example.net", "host": "WS-002", "timestamp": "2026-09-10T22:20:58Z", "url_path": "/api/v1/status", "user": "u0002"}
 {"action": "allowed", "bytes": 33352, "dest_host": "api.example.net", "host": "WS-022", "timestamp": "2026-09-10T22:22:32Z", "url_path": "/index", "user": "u0022"}
 {"action": "allowed", "bytes": 98424, "dest_host": "mail.example.com", "host": "WS-040", "timestamp": "2026-09-10T23:10:36Z", "url_path": "/download", "user": "u0040"}
 {"action": "allowed", "bytes": 200206, "dest_host": "news.example.org", "host": "WS-010", "timestamp": "2026-09-10T23:29:26Z", "url_path": "/index", "user": "u0010"}
+{"_scenario": "S10", "action": "allowed", "bytes": 1776, "dest_host": "203.0.113.151", "host": "WS-058", "timestamp": "2026-09-11T00:11:30Z", "url_path": "/up", "user": "u0058"}
 {"action": "allowed", "bytes": 189275, "dest_host": "wiki.example.com", "host": "WS-033", "timestamp": "2026-09-11T01:32:22Z", "url_path": "/download", "user": "u0033"}
 {"action": "allowed", "bytes": 109192, "dest_host": "api.example.net", "host": "WS-050", "timestamp": "2026-09-11T01:47:40Z", "url_path": "/login", "user": "u0050"}
 {"action": "allowed", "bytes": 183428, "dest_host": "docs.example.org", "host": "WS-041", "timestamp": "2026-09-11T01:59:22Z", "url_path": "/download", "user": "u0041"}
 {"action": "allowed", "bytes": 122419, "dest_host": "hr-portal.example.com", "host": "WS-020", "timestamp": "2026-09-11T03:34:19Z", "url_path": "/", "user": "u0020"}
+{"_scenario": "S14", "action": "allowed", "bytes": 4297, "dest_host": "203.0.113.172", "host": "WS-059", "timestamp": "2026-09-11T03:35:05Z", "url_path": "/put", "user": "u0059"}
 {"action": "allowed", "bytes": 245336, "dest_host": "status.example.org", "host": "WS-024", "timestamp": "2026-09-11T03:42:49Z", "url_path": "/download", "user": "u0024"}
 {"action": "allowed", "bytes": 224460, "dest_host": "192.0.2.3", "host": "WS-016", "timestamp": "2026-09-11T04:17:00Z", "url_path": "/login", "user": "u0016"}
 {"action": "allowed", "bytes": 155891, "dest_host": "192.0.2.8", "host": "WS-023", "timestamp": "2026-09-11T04:37:42Z", "url_path": "/", "user": "u0023"}
@@ -535,6 +575,7 @@
 {"action": "allowed", "bytes": 50605, "dest_host": "mail.example.com", "host": "WS-038", "timestamp": "2026-09-11T10:57:19Z", "url_path": "/index", "user": "u0038"}
 {"action": "allowed", "bytes": 5117, "dest_host": "intranet.example.com", "host": "WS-012", "timestamp": "2026-09-11T11:21:08Z", "url_path": "/api/v1/status", "user": "u0012"}
 {"action": "allowed", "bytes": 92144, "dest_host": "192.0.2.3", "host": "WS-024", "timestamp": "2026-09-11T11:32:09Z", "url_path": "/login", "user": "u0024"}
+{"_scenario": "S04", "action": "allowed", "bytes": 5797, "dest_host": "bc-sync-node.example.com", "host": "WS-035", "timestamp": "2026-09-11T11:39:05Z", "url_path": "/hb", "user": "u0035"}
 {"action": "allowed", "bytes": 92841, "dest_host": "hr-portal.example.com", "host": "WS-027", "timestamp": "2026-09-11T11:45:37Z", "url_path": "/api/v1/status", "user": "u0027"}
 {"action": "allowed", "bytes": 157354, "dest_host": "192.0.2.7", "host": "WS-020", "timestamp": "2026-09-11T11:52:52Z", "url_path": "/index", "user": "u0020"}
 {"action": "allowed", "bytes": 33555, "dest_host": "wiki.example.com", "host": "WS-014", "timestamp": "2026-09-11T12:11:25Z", "url_path": "/", "user": "u0014"}
@@ -552,7 +593,9 @@
 {"action": "allowed", "bytes": 59403, "dest_host": "192.0.2.2", "host": "WS-015", "timestamp": "2026-09-11T17:44:28Z", "url_path": "/download", "user": "u0015"}
 {"action": "allowed", "bytes": 96521, "dest_host": "crm.example.net", "host": "WS-057", "timestamp": "2026-09-11T17:55:59Z", "url_path": "/download", "user": "u0057"}
 {"action": "allowed", "bytes": 13762, "dest_host": "intranet.example.com", "host": "WS-019", "timestamp": "2026-09-11T18:42:49Z", "url_path": "/index", "user": "u0019"}
+{"_scenario": "S20", "action": "allowed", "bytes": 3034, "dest_host": "eq-collect.example.org", "host": "WS-034", "timestamp": "2026-09-11T19:25:34Z", "url_path": "/in", "user": "u0034"}
 {"action": "allowed", "bytes": 8353, "dest_host": "mail.example.com", "host": "WS-042", "timestamp": "2026-09-11T19:44:24Z", "url_path": "/api/v1/status", "user": "u0042"}
+{"_scenario": "S08", "action": "allowed", "bytes": 8064, "dest_host": "pf-token-sink.example.com", "host": "WS-026", "timestamp": "2026-09-11T21:04:37Z", "url_path": "/t", "user": "u0026"}
 {"action": "allowed", "bytes": 113602, "dest_host": "wiki.example.com", "host": "WS-043", "timestamp": "2026-09-11T23:21:53Z", "url_path": "/api/v1/status", "user": "u0043"}
 {"action": "allowed", "bytes": 235158, "dest_host": "mail.example.com", "host": "WS-007", "timestamp": "2026-09-11T23:26:10Z", "url_path": "/login", "user": "u0007"}
 {"action": "allowed", "bytes": 166698, "dest_host": "api.example.net", "host": "WS-055", "timestamp": "2026-09-11T23:41:43Z", "url_path": "/download", "user": "u0055"}
@@ -572,6 +615,7 @@
 {"action": "allowed", "bytes": 132903, "dest_host": "api.example.net", "host": "WS-025", "timestamp": "2026-09-12T07:09:34Z", "url_path": "/api/v1/status", "user": "u0025"}
 {"action": "allowed", "bytes": 17192, "dest_host": "news.example.org", "host": "WS-023", "timestamp": "2026-09-12T07:11:10Z", "url_path": "/", "user": "u0023"}
 {"action": "allowed", "bytes": 179993, "dest_host": "192.0.2.3", "host": "WS-043", "timestamp": "2026-09-12T07:37:51Z", "url_path": "/download", "user": "u0043"}
+{"_scenario": "S16", "action": "allowed", "bytes": 3570, "dest_host": "wl-sync-bucket.example.net", "host": "WS-037", "timestamp": "2026-09-12T07:43:18Z", "url_path": "/put", "user": "u0037"}
 {"action": "allowed", "bytes": 143685, "dest_host": "192.0.2.11", "host": "WS-039", "timestamp": "2026-09-12T07:50:42Z", "url_path": "/", "user": "u0039"}
 {"action": "allowed", "bytes": 168052, "dest_host": "hr-portal.example.com", "host": "WS-049", "timestamp": "2026-09-12T08:20:53Z", "url_path": "/login", "user": "u0049"}
 {"action": "allowed", "bytes": 13649, "dest_host": "192.0.2.7", "host": "WS-005", "timestamp": "2026-09-12T08:22:47Z", "url_path": "/login", "user": "u0005"}
@@ -599,8 +643,11 @@
 {"action": "allowed", "bytes": 57756, "dest_host": "192.0.2.10", "host": "WS-010", "timestamp": "2026-09-12T21:51:30Z", "url_path": "/login", "user": "u0010"}
 {"action": "allowed", "bytes": 135925, "dest_host": "status.example.org", "host": "WS-035", "timestamp": "2026-09-12T22:04:08Z", "url_path": "/login", "user": "u0035"}
 {"action": "allowed", "bytes": 37729, "dest_host": "192.0.2.4", "host": "WS-042", "timestamp": "2026-09-12T22:57:59Z", "url_path": "/api/v1/status", "user": "u0042"}
+{"_scenario": "S11", "action": "allowed", "bytes": 2231, "dest_host": "hp-drop.example.net", "host": "WS-040", "timestamp": "2026-09-13T00:51:28Z", "url_path": "/c", "user": "u0040"}
 {"action": "allowed", "bytes": 103343, "dest_host": "192.0.2.2", "host": "WS-024", "timestamp": "2026-09-13T00:59:22Z", "url_path": "/api/v1/status", "user": "u0024"}
+{"_scenario": "S14", "action": "allowed", "bytes": 3044, "dest_host": "203.0.113.172", "host": "WS-059", "timestamp": "2026-09-13T01:02:27Z", "url_path": "/put", "user": "u0059"}
 {"action": "allowed", "bytes": 85735, "dest_host": "updates.example.org", "host": "WS-040", "timestamp": "2026-09-13T01:07:17Z", "url_path": "/", "user": "u0040"}
+{"_scenario": "S16", "action": "allowed", "bytes": 8150, "dest_host": "personal-drive-share.example.org", "host": "WS-018", "timestamp": "2026-09-13T01:18:42Z", "url_path": "/upload", "user": "u0018"}
 {"action": "allowed", "bytes": 45006, "dest_host": "192.0.2.8", "host": "WS-057", "timestamp": "2026-09-13T01:59:21Z", "url_path": "/download", "user": "u0057"}
 {"action": "allowed", "bytes": 203890, "dest_host": "updates.example.org", "host": "WS-009", "timestamp": "2026-09-13T02:24:49Z", "url_path": "/api/v1/status", "user": "u0009"}
 {"action": "allowed", "bytes": 53256, "dest_host": "192.0.2.8", "host": "WS-009", "timestamp": "2026-09-13T03:39:35Z", "url_path": "/", "user": "u0009"}
@@ -613,6 +660,7 @@
 {"action": "allowed", "bytes": 151968, "dest_host": "updates.example.org", "host": "WS-036", "timestamp": "2026-09-13T05:48:14Z", "url_path": "/api/v1/status", "user": "u0036"}
 {"action": "allowed", "bytes": 128112, "dest_host": "192.0.2.9", "host": "WS-003", "timestamp": "2026-09-13T06:26:13Z", "url_path": "/login", "user": "u0003"}
 {"action": "allowed", "bytes": 161303, "dest_host": "mail.example.com", "host": "WS-042", "timestamp": "2026-09-13T06:36:14Z", "url_path": "/download", "user": "u0042"}
+{"_scenario": "S08", "action": "allowed", "bytes": 5231, "dest_host": "pf-token-sink.example.com", "host": "WS-026", "timestamp": "2026-09-13T06:40:43Z", "url_path": "/t", "user": "u0026"}
 {"action": "allowed", "bytes": 160002, "dest_host": "mail.example.com", "host": "WS-027", "timestamp": "2026-09-13T06:50:04Z", "url_path": "/login", "user": "u0027"}
 {"action": "allowed", "bytes": 204490, "dest_host": "mail.example.com", "host": "WS-030", "timestamp": "2026-09-13T06:58:51Z", "url_path": "/index", "user": "u0030"}
 {"action": "allowed", "bytes": 50367, "dest_host": "192.0.2.9", "host": "WS-053", "timestamp": "2026-09-13T07:02:01Z", "url_path": "/index", "user": "u0053"}
@@ -646,6 +694,7 @@
 {"action": "allowed", "bytes": 185251, "dest_host": "mail.example.com", "host": "WS-021", "timestamp": "2026-09-13T18:57:14Z", "url_path": "/", "user": "u0021"}
 {"action": "allowed", "bytes": 70671, "dest_host": "status.example.org", "host": "WS-016", "timestamp": "2026-09-13T18:58:55Z", "url_path": "/download", "user": "u0016"}
 {"action": "allowed", "bytes": 45098, "dest_host": "docs.example.org", "host": "WS-007", "timestamp": "2026-09-13T19:14:51Z", "url_path": "/download", "user": "u0007"}
+{"_scenario": "S08", "action": "allowed", "bytes": 2011, "dest_host": "203.0.113.142", "host": "WS-044", "timestamp": "2026-09-13T19:26:25Z", "url_path": "/t", "user": "u0044"}
 {"action": "allowed", "bytes": 235257, "dest_host": "mail.example.com", "host": "WS-036", "timestamp": "2026-09-13T19:37:00Z", "url_path": "/api/v1/status", "user": "u0036"}
 {"action": "allowed", "bytes": 237048, "dest_host": "updates.example.org", "host": "WS-035", "timestamp": "2026-09-13T20:45:52Z", "url_path": "/", "user": "u0035"}
 {"action": "allowed", "bytes": 125196, "dest_host": "files.example.net", "host": "WS-007", "timestamp": "2026-09-13T21:37:02Z", "url_path": "/download", "user": "u0007"}
@@ -671,6 +720,7 @@
 {"action": "allowed", "bytes": 85217, "dest_host": "news.example.org", "host": "WS-012", "timestamp": "2026-09-14T02:59:46Z", "url_path": "/download", "user": "u0012"}
 {"action": "allowed", "bytes": 215678, "dest_host": "192.0.2.6", "host": "WS-010", "timestamp": "2026-09-14T03:01:08Z", "url_path": "/index", "user": "u0010"}
 {"action": "allowed", "bytes": 163331, "dest_host": "crm.example.net", "host": "WS-004", "timestamp": "2026-09-14T03:06:28Z", "url_path": "/index", "user": "u0004"}
+{"_scenario": "S18", "action": "allowed", "bytes": 7148, "dest_host": "tm-graph-proxy.example.org", "host": "WS-046", "timestamp": "2026-09-14T03:17:42Z", "url_path": "/v1/files", "user": "u0046"}
 {"action": "allowed", "bytes": 146708, "dest_host": "192.0.2.5", "host": "WS-056", "timestamp": "2026-09-14T03:22:06Z", "url_path": "/index", "user": "u0056"}
 {"action": "allowed", "bytes": 76491, "dest_host": "192.0.2.3", "host": "WS-016", "timestamp": "2026-09-14T04:41:55Z", "url_path": "/index", "user": "u0016"}
 {"action": "allowed", "bytes": 20087, "dest_host": "news.example.org", "host": "WS-035", "timestamp": "2026-09-14T05:13:05Z", "url_path": "/download", "user": "u0035"}
@@ -680,11 +730,13 @@
 {"action": "allowed", "bytes": 63953, "dest_host": "192.0.2.3", "host": "WS-037", "timestamp": "2026-09-14T07:51:37Z", "url_path": "/api/v1/status", "user": "u0037"}
 {"action": "allowed", "bytes": 225568, "dest_host": "crm.example.net", "host": "WS-008", "timestamp": "2026-09-14T08:19:06Z", "url_path": "/api/v1/status", "user": "u0008"}
 {"action": "allowed", "bytes": 111957, "dest_host": "intranet.example.com", "host": "WS-059", "timestamp": "2026-09-14T09:08:31Z", "url_path": "/api/v1/status", "user": "u0059"}
+{"_scenario": "S08", "action": "allowed", "bytes": 1051, "dest_host": "secure-docshare.example.net", "host": "WS-005", "timestamp": "2026-09-14T09:23:25Z", "url_path": "/view", "user": "u0005"}
 {"action": "allowed", "bytes": 51167, "dest_host": "192.0.2.7", "host": "WS-006", "timestamp": "2026-09-14T10:05:14Z", "url_path": "/index", "user": "u0006"}
 {"action": "allowed", "bytes": 109744, "dest_host": "192.0.2.7", "host": "WS-002", "timestamp": "2026-09-14T10:31:55Z", "url_path": "/download", "user": "u0002"}
 {"action": "allowed", "bytes": 192835, "dest_host": "files.example.net", "host": "WS-034", "timestamp": "2026-09-14T10:42:17Z", "url_path": "/index", "user": "u0034"}
 {"action": "allowed", "bytes": 170592, "dest_host": "mail.example.com", "host": "WS-051", "timestamp": "2026-09-14T10:49:30Z", "url_path": "/", "user": "u0051"}
 {"action": "allowed", "bytes": 25001, "dest_host": "api.example.net", "host": "WS-042", "timestamp": "2026-09-14T11:18:25Z", "url_path": "/", "user": "u0042"}
+{"_scenario": "S20", "action": "allowed", "bytes": 1919, "dest_host": "eq-collect.example.org", "host": "WS-034", "timestamp": "2026-09-14T11:38:52Z", "url_path": "/in", "user": "u0034"}
 {"action": "allowed", "bytes": 36611, "dest_host": "mail.example.com", "host": "WS-041", "timestamp": "2026-09-14T12:25:17Z", "url_path": "/index", "user": "u0041"}
 {"action": "allowed", "bytes": 136928, "dest_host": "docs.example.org", "host": "WS-044", "timestamp": "2026-09-14T14:23:41Z", "url_path": "/", "user": "u0044"}
 {"action": "allowed", "bytes": 84968, "dest_host": "192.0.2.7", "host": "WS-021", "timestamp": "2026-09-14T15:18:54Z", "url_path": "/login", "user": "u0021"}
@@ -711,6 +763,7 @@
 {"action": "allowed", "bytes": 168584, "dest_host": "status.example.org", "host": "WS-014", "timestamp": "2026-09-15T01:45:16Z", "url_path": "/download", "user": "u0014"}
 {"action": "allowed", "bytes": 41246, "dest_host": "docs.example.org", "host": "WS-003", "timestamp": "2026-09-15T01:49:38Z", "url_path": "/download", "user": "u0003"}
 {"action": "allowed", "bytes": 72520, "dest_host": "cdn.example.com", "host": "WS-018", "timestamp": "2026-09-15T02:04:24Z", "url_path": "/", "user": "u0018"}
+{"_scenario": "S10", "action": "allowed", "bytes": 2699, "dest_host": "203.0.113.151", "host": "WS-058", "timestamp": "2026-09-15T02:07:38Z", "url_path": "/up", "user": "u0058"}
 {"action": "allowed", "bytes": 244871, "dest_host": "crm.example.net", "host": "WS-010", "timestamp": "2026-09-15T02:57:54Z", "url_path": "/download", "user": "u0010"}
 {"action": "allowed", "bytes": 50259, "dest_host": "192.0.2.10", "host": "WS-049", "timestamp": "2026-09-15T03:39:00Z", "url_path": "/login", "user": "u0049"}
 {"action": "allowed", "bytes": 174576, "dest_host": "192.0.2.5", "host": "WS-007", "timestamp": "2026-09-15T04:12:08Z", "url_path": "/", "user": "u0007"}
@@ -729,6 +782,7 @@
 {"action": "allowed", "bytes": 225592, "dest_host": "192.0.2.2", "host": "WS-032", "timestamp": "2026-09-15T08:25:26Z", "url_path": "/api/v1/status", "user": "u0032"}
 {"action": "allowed", "bytes": 148763, "dest_host": "192.0.2.6", "host": "WS-004", "timestamp": "2026-09-15T08:42:13Z", "url_path": "/login", "user": "u0004"}
 {"action": "allowed", "bytes": 154919, "dest_host": "mail.example.com", "host": "WS-018", "timestamp": "2026-09-15T09:44:53Z", "url_path": "/", "user": "u0018"}
+{"_scenario": "S08", "action": "allowed", "bytes": 7561, "dest_host": "pf-token-sink.example.com", "host": "WS-026", "timestamp": "2026-09-15T10:08:33Z", "url_path": "/t", "user": "u0026"}
 {"action": "allowed", "bytes": 23981, "dest_host": "192.0.2.5", "host": "WS-055", "timestamp": "2026-09-15T11:54:03Z", "url_path": "/login", "user": "u0055"}
 {"action": "allowed", "bytes": 31782, "dest_host": "docs.example.org", "host": "WS-001", "timestamp": "2026-09-15T11:55:58Z", "url_path": "/api/v1/status", "user": "u0001"}
 {"action": "allowed", "bytes": 20719, "dest_host": "192.0.2.11", "host": "WS-008", "timestamp": "2026-09-15T12:03:10Z", "url_path": "/api/v1/status", "user": "u0008"}
@@ -741,6 +795,8 @@
 {"action": "allowed", "bytes": 37751, "dest_host": "192.0.2.2", "host": "WS-048", "timestamp": "2026-09-15T13:43:06Z", "url_path": "/index", "user": "u0048"}
 {"action": "allowed", "bytes": 13145, "dest_host": "192.0.2.6", "host": "WS-031", "timestamp": "2026-09-15T13:48:21Z", "url_path": "/api/v1/status", "user": "u0031"}
 {"action": "allowed", "bytes": 136439, "dest_host": "mail.example.com", "host": "WS-053", "timestamp": "2026-09-15T13:58:40Z", "url_path": "/download", "user": "u0053"}
+{"_scenario": "S09", "action": "allowed", "bytes": 2619, "dest_host": "203.0.113.148", "host": "WS-033", "timestamp": "2026-09-15T14:16:00Z", "url_path": "/k", "user": "u0033"}
+{"_scenario": "S11", "action": "allowed", "bytes": 8846, "dest_host": "pkg-index-fast.example.org", "host": "WS-012", "timestamp": "2026-09-15T14:20:22Z", "url_path": "/simple/colorlogx", "user": "u0012"}
 {"action": "allowed", "bytes": 91373, "dest_host": "192.0.2.10", "host": "WS-040", "timestamp": "2026-09-15T15:16:02Z", "url_path": "/", "user": "u0040"}
 {"action": "allowed", "bytes": 131157, "dest_host": "192.0.2.7", "host": "WS-027", "timestamp": "2026-09-15T15:54:37Z", "url_path": "/", "user": "u0027"}
 {"action": "allowed", "bytes": 167213, "dest_host": "api.example.net", "host": "WS-037", "timestamp": "2026-09-15T16:27:58Z", "url_path": "/index", "user": "u0037"}
@@ -759,9 +815,11 @@
 {"action": "allowed", "bytes": 110986, "dest_host": "192.0.2.3", "host": "WS-012", "timestamp": "2026-09-15T22:33:16Z", "url_path": "/api/v1/status", "user": "u0012"}
 {"action": "allowed", "bytes": 141320, "dest_host": "192.0.2.9", "host": "WS-007", "timestamp": "2026-09-15T22:43:21Z", "url_path": "/login", "user": "u0007"}
 {"action": "allowed", "bytes": 223695, "dest_host": "192.0.2.9", "host": "WS-038", "timestamp": "2026-09-15T23:20:03Z", "url_path": "/", "user": "u0038"}
+{"_scenario": "S10", "action": "allowed", "bytes": 413, "dest_host": "parcel-reschedule.example.com", "host": "WS-008", "timestamp": "2026-09-15T23:27:03Z", "url_path": "/track", "user": "u0008"}
 {"action": "allowed", "bytes": 91746, "dest_host": "cdn.example.com", "host": "WS-039", "timestamp": "2026-09-15T23:39:48Z", "url_path": "/api/v1/status", "user": "u0039"}
 {"action": "allowed", "bytes": 101959, "dest_host": "192.0.2.8", "host": "WS-047", "timestamp": "2026-09-15T23:40:45Z", "url_path": "/index", "user": "u0047"}
 {"action": "allowed", "bytes": 33625, "dest_host": "crm.example.net", "host": "WS-015", "timestamp": "2026-09-16T00:20:20Z", "url_path": "/", "user": "u0015"}
+{"_scenario": "S10", "action": "allowed", "bytes": 8510, "dest_host": "rf-exfil-store.example.net", "host": "WS-050", "timestamp": "2026-09-16T00:22:32Z", "url_path": "/up", "user": "u0050"}
 {"action": "allowed", "bytes": 107293, "dest_host": "docs.example.org", "host": "WS-005", "timestamp": "2026-09-16T01:53:49Z", "url_path": "/download", "user": "u0005"}
 {"action": "allowed", "bytes": 62966, "dest_host": "docs.example.org", "host": "WS-028", "timestamp": "2026-09-16T02:18:57Z", "url_path": "/download", "user": "u0028"}
 {"action": "allowed", "bytes": 64895, "dest_host": "docs.example.org", "host": "WS-017", "timestamp": "2026-09-16T02:40:53Z", "url_path": "/login", "user": "u0017"}
@@ -779,6 +837,7 @@
 {"action": "allowed", "bytes": 193194, "dest_host": "api.example.net", "host": "WS-001", "timestamp": "2026-09-16T06:24:05Z", "url_path": "/index", "user": "u0001"}
 {"action": "allowed", "bytes": 23647, "dest_host": "updates.example.org", "host": "WS-017", "timestamp": "2026-09-16T06:42:14Z", "url_path": "/login", "user": "u0017"}
 {"action": "allowed", "bytes": 5382, "dest_host": "news.example.org", "host": "WS-055", "timestamp": "2026-09-16T07:14:47Z", "url_path": "/api/v1/status", "user": "u0055"}
+{"_scenario": "S07", "action": "allowed", "bytes": 7448, "dest_host": "sm-pool-relay.example.net", "host": "WS-056", "timestamp": "2026-09-16T07:18:27Z", "url_path": "/stratum", "user": "u0056"}
 {"action": "allowed", "bytes": 5297, "dest_host": "files.example.net", "host": "WS-029", "timestamp": "2026-09-16T07:56:33Z", "url_path": "/download", "user": "u0029"}
 {"action": "allowed", "bytes": 34527, "dest_host": "status.example.org", "host": "WS-031", "timestamp": "2026-09-16T08:24:36Z", "url_path": "/api/v1/status", "user": "u0031"}
 {"action": "allowed", "bytes": 100789, "dest_host": "files.example.net", "host": "WS-054", "timestamp": "2026-09-16T08:44:58Z", "url_path": "/api/v1/status", "user": "u0054"}
@@ -795,6 +854,7 @@
 {"action": "allowed", "bytes": 130986, "dest_host": "docs.example.org", "host": "WS-002", "timestamp": "2026-09-16T10:57:23Z", "url_path": "/api/v1/status", "user": "u0002"}
 {"action": "allowed", "bytes": 27765, "dest_host": "updates.example.org", "host": "WS-058", "timestamp": "2026-09-16T10:58:41Z", "url_path": "/", "user": "u0058"}
 {"action": "allowed", "bytes": 139522, "dest_host": "api.example.net", "host": "WS-024", "timestamp": "2026-09-16T11:23:58Z", "url_path": "/api/v1/status", "user": "u0024"}
+{"_scenario": "S17", "action": "allowed", "bytes": 5179, "dest_host": "dm-c2-gw.example.net", "host": "WS-045", "timestamp": "2026-09-16T11:34:33Z", "url_path": "/poll", "user": "u0045"}
 {"action": "allowed", "bytes": 181458, "dest_host": "api.example.net", "host": "WS-021", "timestamp": "2026-09-16T11:41:04Z", "url_path": "/download", "user": "u0021"}
 {"action": "allowed", "bytes": 85414, "dest_host": "intranet.example.com", "host": "WS-060", "timestamp": "2026-09-16T11:57:03Z", "url_path": "/download", "user": "u0060"}
 {"action": "allowed", "bytes": 240353, "dest_host": "mail.example.com", "host": "WS-055", "timestamp": "2026-09-16T12:11:50Z", "url_path": "/download", "user": "u0055"}
@@ -812,12 +872,14 @@
 {"action": "allowed", "bytes": 157080, "dest_host": "crm.example.net", "host": "WS-045", "timestamp": "2026-09-16T17:46:06Z", "url_path": "/", "user": "u0045"}
 {"action": "allowed", "bytes": 28593, "dest_host": "api.example.net", "host": "WS-007", "timestamp": "2026-09-16T18:23:46Z", "url_path": "/index", "user": "u0007"}
 {"action": "allowed", "bytes": 67298, "dest_host": "status.example.org", "host": "WS-045", "timestamp": "2026-09-16T18:40:50Z", "url_path": "/index", "user": "u0045"}
+{"_scenario": "S13", "action": "allowed", "bytes": 2591, "dest_host": "facility-badge-renew.example.org", "host": "WS-001", "timestamp": "2026-09-16T19:29:22Z", "url_path": "/scan", "user": "u0001"}
 {"action": "allowed", "bytes": 139844, "dest_host": "files.example.net", "host": "WS-044", "timestamp": "2026-09-16T19:32:18Z", "url_path": "/download", "user": "u0044"}
 {"action": "allowed", "bytes": 211844, "dest_host": "192.0.2.9", "host": "WS-027", "timestamp": "2026-09-16T19:51:56Z", "url_path": "/login", "user": "u0027"}
 {"action": "allowed", "bytes": 8409, "dest_host": "192.0.2.4", "host": "WS-050", "timestamp": "2026-09-16T20:35:23Z", "url_path": "/api/v1/status", "user": "u0050"}
 {"action": "allowed", "bytes": 168915, "dest_host": "api.example.net", "host": "WS-032", "timestamp": "2026-09-16T21:01:17Z", "url_path": "/", "user": "u0032"}
 {"action": "allowed", "bytes": 115122, "dest_host": "cdn.example.com", "host": "WS-049", "timestamp": "2026-09-16T21:25:21Z", "url_path": "/login", "user": "u0049"}
 {"action": "allowed", "bytes": 236147, "dest_host": "crm.example.net", "host": "WS-016", "timestamp": "2026-09-16T21:53:44Z", "url_path": "/download", "user": "u0016"}
+{"_scenario": "S02", "action": "allowed", "bytes": 3272, "dest_host": "203.0.113.112", "host": "WS-041", "timestamp": "2026-09-16T23:17:52Z", "url_path": "/beacon", "user": "u0041"}
 {"action": "allowed", "bytes": 88499, "dest_host": "192.0.2.11", "host": "WS-046", "timestamp": "2026-09-16T23:30:38Z", "url_path": "/download", "user": "u0046"}
 {"action": "allowed", "bytes": 219138, "dest_host": "status.example.org", "host": "WS-056", "timestamp": "2026-09-16T23:51:39Z", "url_path": "/login", "user": "u0056"}
 {"action": "allowed", "bytes": 178446, "dest_host": "192.0.2.2", "host": "WS-025", "timestamp": "2026-09-16T23:53:19Z", "url_path": "/index", "user": "u0025"}
@@ -834,9 +896,11 @@
 {"action": "allowed", "bytes": 169581, "dest_host": "192.0.2.2", "host": "WS-033", "timestamp": "2026-09-17T08:44:26Z", "url_path": "/api/v1/status", "user": "u0033"}
 {"action": "allowed", "bytes": 153434, "dest_host": "192.0.2.4", "host": "WS-012", "timestamp": "2026-09-17T09:19:01Z", "url_path": "/api/v1/status", "user": "u0012"}
 {"action": "allowed", "bytes": 8216, "dest_host": "mail.example.com", "host": "WS-008", "timestamp": "2026-09-17T09:27:53Z", "url_path": "/download", "user": "u0008"}
+{"_scenario": "S13", "action": "allowed", "bytes": 2345, "dest_host": "facility-badge-renew.example.org", "host": "WS-001", "timestamp": "2026-09-17T09:46:45Z", "url_path": "/scan", "user": "u0001"}
 {"action": "allowed", "bytes": 143654, "dest_host": "192.0.2.3", "host": "WS-055", "timestamp": "2026-09-17T09:58:05Z", "url_path": "/download", "user": "u0055"}
 {"action": "allowed", "bytes": 22015, "dest_host": "192.0.2.6", "host": "WS-037", "timestamp": "2026-09-17T10:30:33Z", "url_path": "/api/v1/status", "user": "u0037"}
 {"action": "allowed", "bytes": 243515, "dest_host": "192.0.2.2", "host": "WS-039", "timestamp": "2026-09-17T10:44:57Z", "url_path": "/login", "user": "u0039"}
+{"_scenario": "S07", "action": "allowed", "bytes": 1471, "dest_host": "203.0.113.139", "host": "WS-056", "timestamp": "2026-09-17T11:03:00Z", "url_path": "/stratum", "user": "u0056"}
 {"action": "allowed", "bytes": 157822, "dest_host": "192.0.2.2", "host": "WS-053", "timestamp": "2026-09-17T11:05:45Z", "url_path": "/index", "user": "u0053"}
 {"action": "allowed", "bytes": 185766, "dest_host": "intranet.example.com", "host": "WS-053", "timestamp": "2026-09-17T11:09:48Z", "url_path": "/api/v1/status", "user": "u0053"}
 {"action": "allowed", "bytes": 94186, "dest_host": "192.0.2.7", "host": "WS-053", "timestamp": "2026-09-17T11:22:21Z", "url_path": "/index", "user": "u0053"}
@@ -844,6 +908,7 @@
 {"action": "allowed", "bytes": 31171, "dest_host": "files.example.net", "host": "WS-055", "timestamp": "2026-09-17T11:53:49Z", "url_path": "/index", "user": "u0055"}
 {"action": "allowed", "bytes": 182025, "dest_host": "192.0.2.8", "host": "WS-001", "timestamp": "2026-09-17T12:41:37Z", "url_path": "/", "user": "u0001"}
 {"action": "allowed", "bytes": 32866, "dest_host": "192.0.2.9", "host": "WS-032", "timestamp": "2026-09-17T13:09:27Z", "url_path": "/index", "user": "u0032"}
+{"_scenario": "S17", "action": "allowed", "bytes": 5548, "dest_host": "dm-c2-gw.example.net", "host": "WS-045", "timestamp": "2026-09-17T15:07:22Z", "url_path": "/poll", "user": "u0045"}
 {"action": "allowed", "bytes": 61030, "dest_host": "intranet.example.com", "host": "WS-011", "timestamp": "2026-09-17T15:08:18Z", "url_path": "/api/v1/status", "user": "u0011"}
 {"action": "allowed", "bytes": 90497, "dest_host": "mail.example.com", "host": "WS-051", "timestamp": "2026-09-17T15:10:02Z", "url_path": "/index", "user": "u0051"}
 {"action": "allowed", "bytes": 211096, "dest_host": "api.example.net", "host": "WS-046", "timestamp": "2026-09-17T15:37:36Z", "url_path": "/login", "user": "u0046"}
@@ -879,6 +944,7 @@
 {"action": "allowed", "bytes": 28370, "dest_host": "192.0.2.5", "host": "WS-018", "timestamp": "2026-09-18T04:39:11Z", "url_path": "/index", "user": "u0018"}
 {"action": "allowed", "bytes": 208700, "dest_host": "192.0.2.6", "host": "WS-001", "timestamp": "2026-09-18T04:56:36Z", "url_path": "/download", "user": "u0001"}
 {"action": "allowed", "bytes": 32544, "dest_host": "192.0.2.7", "host": "WS-058", "timestamp": "2026-09-18T05:55:35Z", "url_path": "/index", "user": "u0058"}
+{"_scenario": "S14", "action": "allowed", "bytes": 2579, "dest_host": "cookie-vault-sync.example.com", "host": "WS-043", "timestamp": "2026-09-18T06:03:26Z", "url_path": "/put", "user": "u0043"}
 {"action": "allowed", "bytes": 189462, "dest_host": "192.0.2.7", "host": "WS-028", "timestamp": "2026-09-18T06:22:18Z", "url_path": "/index", "user": "u0028"}
 {"action": "allowed", "bytes": 220135, "dest_host": "192.0.2.5", "host": "WS-047", "timestamp": "2026-09-18T06:34:55Z", "url_path": "/api/v1/status", "user": "u0047"}
 {"action": "allowed", "bytes": 31090, "dest_host": "docs.example.org", "host": "WS-008", "timestamp": "2026-09-18T06:41:28Z", "url_path": "/api/v1/status", "user": "u0008"}
@@ -894,6 +960,7 @@
 {"action": "allowed", "bytes": 240766, "dest_host": "192.0.2.11", "host": "WS-016", "timestamp": "2026-09-18T09:53:21Z", "url_path": "/download", "user": "u0016"}
 {"action": "allowed", "bytes": 220926, "dest_host": "updates.example.org", "host": "WS-033", "timestamp": "2026-09-18T10:17:46Z", "url_path": "/download", "user": "u0033"}
 {"action": "allowed", "bytes": 120561, "dest_host": "192.0.2.10", "host": "WS-038", "timestamp": "2026-09-18T10:51:48Z", "url_path": "/", "user": "u0038"}
+{"_scenario": "S04", "action": "allowed", "bytes": 3488, "dest_host": "freeutil-downloads.example.org", "host": "WS-011", "timestamp": "2026-09-18T11:19:08Z", "url_path": "/get/pdfmerge", "user": "u0011"}
 {"action": "allowed", "bytes": 181773, "dest_host": "crm.example.net", "host": "WS-032", "timestamp": "2026-09-18T11:21:20Z", "url_path": "/api/v1/status", "user": "u0032"}
 {"action": "allowed", "bytes": 225236, "dest_host": "wiki.example.com", "host": "WS-009", "timestamp": "2026-09-18T12:59:01Z", "url_path": "/download", "user": "u0009"}
 {"action": "allowed", "bytes": 191706, "dest_host": "docs.example.org", "host": "WS-048", "timestamp": "2026-09-18T13:39:45Z", "url_path": "/", "user": "u0048"}
@@ -942,6 +1009,7 @@
 {"action": "allowed", "bytes": 74937, "dest_host": "192.0.2.7", "host": "WS-031", "timestamp": "2026-09-19T09:32:54Z", "url_path": "/download", "user": "u0031"}
 {"action": "allowed", "bytes": 100376, "dest_host": "192.0.2.4", "host": "WS-042", "timestamp": "2026-09-19T11:41:06Z", "url_path": "/download", "user": "u0042"}
 {"action": "allowed", "bytes": 217901, "dest_host": "crm.example.net", "host": "WS-017", "timestamp": "2026-09-19T11:52:39Z", "url_path": "/download", "user": "u0017"}
+{"_scenario": "S16", "action": "allowed", "bytes": 1978, "dest_host": "personal-drive-share.example.org", "host": "WS-018", "timestamp": "2026-09-19T12:14:02Z", "url_path": "/upload", "user": "u0018"}
 {"action": "allowed", "bytes": 95567, "dest_host": "status.example.org", "host": "WS-030", "timestamp": "2026-09-19T12:57:55Z", "url_path": "/", "user": "u0030"}
 {"action": "allowed", "bytes": 227151, "dest_host": "news.example.org", "host": "WS-029", "timestamp": "2026-09-19T13:01:49Z", "url_path": "/download", "user": "u0029"}
 {"action": "allowed", "bytes": 223101, "dest_host": "192.0.2.2", "host": "WS-035", "timestamp": "2026-09-19T13:21:45Z", "url_path": "/index", "user": "u0035"}
@@ -949,6 +1017,7 @@
 {"action": "allowed", "bytes": 90394, "dest_host": "status.example.org", "host": "WS-006", "timestamp": "2026-09-19T14:26:35Z", "url_path": "/index", "user": "u0006"}
 {"action": "allowed", "bytes": 6398, "dest_host": "files.example.net", "host": "WS-016", "timestamp": "2026-09-19T14:41:35Z", "url_path": "/download", "user": "u0016"}
 {"action": "allowed", "bytes": 38843, "dest_host": "192.0.2.3", "host": "WS-025", "timestamp": "2026-09-19T14:49:43Z", "url_path": "/", "user": "u0025"}
+{"_scenario": "S13", "action": "allowed", "bytes": 8116, "dest_host": "mb-relay-07.example.net", "host": "WS-027", "timestamp": "2026-09-19T15:18:57Z", "url_path": "/p", "user": "u0027"}
 {"action": "allowed", "bytes": 13456, "dest_host": "news.example.org", "host": "WS-024", "timestamp": "2026-09-19T15:31:00Z", "url_path": "/", "user": "u0024"}
 {"action": "allowed", "bytes": 122207, "dest_host": "mail.example.com", "host": "WS-014", "timestamp": "2026-09-19T16:13:56Z", "url_path": "/login", "user": "u0014"}
 {"action": "allowed", "bytes": 43612, "dest_host": "api.example.net", "host": "WS-060", "timestamp": "2026-09-19T16:28:01Z", "url_path": "/index", "user": "u0060"}
@@ -966,6 +1035,7 @@
 {"action": "allowed", "bytes": 103686, "dest_host": "mail.example.com", "host": "WS-002", "timestamp": "2026-09-19T20:57:53Z", "url_path": "/", "user": "u0002"}
 {"action": "allowed", "bytes": 68735, "dest_host": "news.example.org", "host": "WS-010", "timestamp": "2026-09-19T21:27:52Z", "url_path": "/login", "user": "u0010"}
 {"action": "allowed", "bytes": 152205, "dest_host": "updates.example.org", "host": "WS-018", "timestamp": "2026-09-19T22:21:54Z", "url_path": "/", "user": "u0018"}
+{"_scenario": "S05", "action": "allowed", "bytes": 1115, "dest_host": "203.0.113.127", "host": "WS-042", "timestamp": "2026-09-19T23:07:46Z", "url_path": "/upload", "user": "u0042"}
 {"action": "allowed", "bytes": 90741, "dest_host": "cdn.example.com", "host": "WS-044", "timestamp": "2026-09-19T23:26:01Z", "url_path": "/login", "user": "u0044"}
 {"action": "allowed", "bytes": 89468, "dest_host": "mail.example.com", "host": "WS-015", "timestamp": "2026-09-19T23:51:30Z", "url_path": "/api/v1/status", "user": "u0015"}
 {"action": "allowed", "bytes": 203954, "dest_host": "wiki.example.com", "host": "WS-005", "timestamp": "2026-09-20T00:27:12Z", "url_path": "/api/v1/status", "user": "u0005"}
@@ -1004,9 +1074,11 @@
 {"action": "allowed", "bytes": 135708, "dest_host": "192.0.2.2", "host": "WS-053", "timestamp": "2026-09-20T17:50:43Z", "url_path": "/index", "user": "u0053"}
 {"action": "allowed", "bytes": 38380, "dest_host": "updates.example.org", "host": "WS-030", "timestamp": "2026-09-20T17:57:05Z", "url_path": "/api/v1/status", "user": "u0030"}
 {"action": "allowed", "bytes": 195784, "dest_host": "news.example.org", "host": "WS-010", "timestamp": "2026-09-20T19:14:09Z", "url_path": "/", "user": "u0010"}
+{"_scenario": "S12", "action": "allowed", "bytes": 2333, "dest_host": "ashvale-connect.example.com", "host": "WS-036", "timestamp": "2026-09-20T19:18:40Z", "url_path": "/relay", "user": "u0036"}
 {"action": "allowed", "bytes": 237715, "dest_host": "192.0.2.6", "host": "WS-044", "timestamp": "2026-09-20T19:48:32Z", "url_path": "/index", "user": "u0044"}
 {"action": "allowed", "bytes": 109514, "dest_host": "files.example.net", "host": "WS-017", "timestamp": "2026-09-20T20:45:19Z", "url_path": "/download", "user": "u0017"}
 {"action": "allowed", "bytes": 27938, "dest_host": "192.0.2.4", "host": "WS-021", "timestamp": "2026-09-20T20:59:56Z", "url_path": "/index", "user": "u0021"}
+{"_scenario": "S15", "action": "allowed", "bytes": 7947, "dest_host": "203.0.113.178", "host": "WS-032", "timestamp": "2026-09-20T21:51:26Z", "url_path": "/s2", "user": "u0032"}
 {"action": "allowed", "bytes": 225645, "dest_host": "192.0.2.5", "host": "WS-048", "timestamp": "2026-09-20T22:11:56Z", "url_path": "/api/v1/status", "user": "u0048"}
 {"action": "allowed", "bytes": 234503, "dest_host": "updates.example.org", "host": "WS-041", "timestamp": "2026-09-20T22:18:42Z", "url_path": "/download", "user": "u0041"}
 {"action": "allowed", "bytes": 141940, "dest_host": "192.0.2.5", "host": "WS-059", "timestamp": "2026-09-20T22:47:19Z", "url_path": "/", "user": "u0059"}
@@ -1045,6 +1117,7 @@
 {"action": "allowed", "bytes": 172497, "dest_host": "docs.example.org", "host": "WS-003", "timestamp": "2026-09-21T13:17:01Z", "url_path": "/download", "user": "u0003"}
 {"action": "allowed", "bytes": 166024, "dest_host": "192.0.2.9", "host": "WS-034", "timestamp": "2026-09-21T13:33:22Z", "url_path": "/api/v1/status", "user": "u0034"}
 {"action": "allowed", "bytes": 114552, "dest_host": "mail.example.com", "host": "WS-037", "timestamp": "2026-09-21T13:41:41Z", "url_path": "/download", "user": "u0037"}
+{"_scenario": "S17", "action": "allowed", "bytes": 2802, "dest_host": "203.0.113.191", "host": "WS-045", "timestamp": "2026-09-21T13:56:17Z", "url_path": "/poll", "user": "u0045"}
 {"action": "allowed", "bytes": 189400, "dest_host": "192.0.2.10", "host": "WS-047", "timestamp": "2026-09-21T14:05:19Z", "url_path": "/index", "user": "u0047"}
 {"action": "allowed", "bytes": 183506, "dest_host": "docs.example.org", "host": "WS-044", "timestamp": "2026-09-21T14:05:28Z", "url_path": "/download", "user": "u0044"}
 {"action": "allowed", "bytes": 162142, "dest_host": "192.0.2.9", "host": "WS-059", "timestamp": "2026-09-21T14:23:34Z", "url_path": "/index", "user": "u0059"}
@@ -1055,6 +1128,7 @@
 {"action": "allowed", "bytes": 171587, "dest_host": "192.0.2.8", "host": "WS-041", "timestamp": "2026-09-21T16:38:30Z", "url_path": "/login", "user": "u0041"}
 {"action": "allowed", "bytes": 19215, "dest_host": "192.0.2.9", "host": "WS-058", "timestamp": "2026-09-21T17:19:45Z", "url_path": "/download", "user": "u0058"}
 {"action": "allowed", "bytes": 60041, "dest_host": "api.example.net", "host": "WS-022", "timestamp": "2026-09-21T17:39:17Z", "url_path": "/index", "user": "u0022"}
+{"_scenario": "S16", "action": "allowed", "bytes": 6886, "dest_host": "203.0.113.184", "host": "WS-055", "timestamp": "2026-09-21T19:08:04Z", "url_path": "/put", "user": "u0055"}
 {"action": "allowed", "bytes": 235188, "dest_host": "192.0.2.11", "host": "WS-033", "timestamp": "2026-09-21T19:18:20Z", "url_path": "/download", "user": "u0033"}
 {"action": "allowed", "bytes": 229182, "dest_host": "192.0.2.6", "host": "WS-003", "timestamp": "2026-09-21T19:27:13Z", "url_path": "/", "user": "u0003"}
 {"action": "allowed", "bytes": 7897, "dest_host": "intranet.example.com", "host": "WS-033", "timestamp": "2026-09-21T19:34:59Z", "url_path": "/login", "user": "u0033"}
@@ -1064,17 +1138,20 @@
 {"action": "allowed", "bytes": 153384, "dest_host": "192.0.2.11", "host": "WS-056", "timestamp": "2026-09-21T21:40:04Z", "url_path": "/download", "user": "u0056"}
 {"action": "allowed", "bytes": 170924, "dest_host": "cdn.example.com", "host": "WS-034", "timestamp": "2026-09-21T22:11:03Z", "url_path": "/index", "user": "u0034"}
 {"action": "allowed", "bytes": 109436, "dest_host": "192.0.2.2", "host": "WS-047", "timestamp": "2026-09-21T23:26:15Z", "url_path": "/login", "user": "u0047"}
+{"_scenario": "S20", "action": "allowed", "bytes": 818, "dest_host": "partner-invoices-hub.example.com", "host": "WS-007", "timestamp": "2026-09-21T23:50:51Z", "url_path": "/inv/q3", "user": "u0007"}
 {"action": "allowed", "bytes": 235086, "dest_host": "192.0.2.6", "host": "WS-024", "timestamp": "2026-09-21T23:54:42Z", "url_path": "/login", "user": "u0024"}
 {"action": "allowed", "bytes": 220321, "dest_host": "192.0.2.3", "host": "WS-013", "timestamp": "2026-09-22T00:31:15Z", "url_path": "/index", "user": "u0013"}
 {"action": "allowed", "bytes": 110921, "dest_host": "files.example.net", "host": "WS-014", "timestamp": "2026-09-22T00:53:56Z", "url_path": "/api/v1/status", "user": "u0014"}
 {"action": "allowed", "bytes": 120476, "dest_host": "192.0.2.9", "host": "WS-014", "timestamp": "2026-09-22T01:11:21Z", "url_path": "/api/v1/status", "user": "u0014"}
 {"action": "allowed", "bytes": 165005, "dest_host": "status.example.org", "host": "WS-038", "timestamp": "2026-09-22T02:04:51Z", "url_path": "/login", "user": "u0038"}
 {"action": "allowed", "bytes": 95854, "dest_host": "docs.example.org", "host": "WS-050", "timestamp": "2026-09-22T02:24:26Z", "url_path": "/index", "user": "u0050"}
+{"_scenario": "S10", "action": "allowed", "bytes": 1921, "dest_host": "rf-exfil-store.example.net", "host": "WS-050", "timestamp": "2026-09-22T02:54:02Z", "url_path": "/up", "user": "u0050"}
 {"action": "allowed", "bytes": 52872, "dest_host": "192.0.2.7", "host": "WS-053", "timestamp": "2026-09-22T04:06:33Z", "url_path": "/download", "user": "u0053"}
 {"action": "allowed", "bytes": 178436, "dest_host": "files.example.net", "host": "WS-001", "timestamp": "2026-09-22T04:21:57Z", "url_path": "/index", "user": "u0001"}
 {"action": "allowed", "bytes": 136993, "dest_host": "status.example.org", "host": "WS-012", "timestamp": "2026-09-22T04:22:12Z", "url_path": "/", "user": "u0012"}
 {"action": "allowed", "bytes": 115203, "dest_host": "192.0.2.10", "host": "WS-026", "timestamp": "2026-09-22T04:41:23Z", "url_path": "/download", "user": "u0026"}
 {"action": "allowed", "bytes": 47717, "dest_host": "updates.example.org", "host": "WS-023", "timestamp": "2026-09-22T05:32:21Z", "url_path": "/api/v1/status", "user": "u0023"}
+{"_scenario": "S06", "action": "allowed", "bytes": 3740, "dest_host": "nj-collector.example.net", "host": "WS-038", "timestamp": "2026-09-22T06:50:33Z", "url_path": "/submit", "user": "u0038"}
 {"action": "allowed", "bytes": 41693, "dest_host": "192.0.2.4", "host": "WS-031", "timestamp": "2026-09-22T08:00:13Z", "url_path": "/login", "user": "u0031"}
 {"action": "allowed", "bytes": 33948, "dest_host": "status.example.org", "host": "WS-008", "timestamp": "2026-09-22T08:18:01Z", "url_path": "/download", "user": "u0008"}
 {"action": "allowed", "bytes": 152561, "dest_host": "wiki.example.com", "host": "WS-057", "timestamp": "2026-09-22T08:20:43Z", "url_path": "/login", "user": "u0057"}
@@ -1132,6 +1209,7 @@
 {"action": "allowed", "bytes": 135623, "dest_host": "192.0.2.11", "host": "WS-058", "timestamp": "2026-09-23T12:41:36Z", "url_path": "/index", "user": "u0058"}
 {"action": "allowed", "bytes": 246744, "dest_host": "192.0.2.11", "host": "WS-008", "timestamp": "2026-09-23T12:44:35Z", "url_path": "/api/v1/status", "user": "u0008"}
 {"action": "allowed", "bytes": 199645, "dest_host": "news.example.org", "host": "WS-054", "timestamp": "2026-09-23T13:02:59Z", "url_path": "/", "user": "u0054"}
+{"_scenario": "S04", "action": "allowed", "bytes": 2583, "dest_host": "bc-sync-node.example.com", "host": "WS-035", "timestamp": "2026-09-23T13:18:03Z", "url_path": "/hb", "user": "u0035"}
 {"action": "allowed", "bytes": 164721, "dest_host": "192.0.2.9", "host": "WS-024", "timestamp": "2026-09-23T14:42:13Z", "url_path": "/download", "user": "u0024"}
 {"action": "allowed", "bytes": 113008, "dest_host": "192.0.2.3", "host": "WS-033", "timestamp": "2026-09-23T14:46:20Z", "url_path": "/download", "user": "u0033"}
 {"action": "allowed", "bytes": 248059, "dest_host": "192.0.2.4", "host": "WS-027", "timestamp": "2026-09-23T15:31:23Z", "url_path": "/", "user": "u0027"}
@@ -1155,6 +1233,7 @@
 {"action": "allowed", "bytes": 68301, "dest_host": "news.example.org", "host": "WS-026", "timestamp": "2026-09-23T20:31:27Z", "url_path": "/api/v1/status", "user": "u0026"}
 {"action": "allowed", "bytes": 6596, "dest_host": "news.example.org", "host": "WS-015", "timestamp": "2026-09-23T20:36:14Z", "url_path": "/api/v1/status", "user": "u0015"}
 {"action": "allowed", "bytes": 134193, "dest_host": "updates.example.org", "host": "WS-048", "timestamp": "2026-09-23T20:59:36Z", "url_path": "/login", "user": "u0048"}
+{"_scenario": "S18", "action": "allowed", "bytes": 1136, "dest_host": "consent-review-app.example.net", "host": "WS-030", "timestamp": "2026-09-23T21:08:08Z", "url_path": "/authorize", "user": "u0030"}
 {"action": "allowed", "bytes": 95477, "dest_host": "cdn.example.com", "host": "WS-042", "timestamp": "2026-09-23T21:11:29Z", "url_path": "/index", "user": "u0042"}
 {"action": "allowed", "bytes": 232357, "dest_host": "api.example.net", "host": "WS-003", "timestamp": "2026-09-23T21:12:02Z", "url_path": "/", "user": "u0003"}
 {"action": "allowed", "bytes": 131956, "dest_host": "wiki.example.com", "host": "WS-016", "timestamp": "2026-09-23T21:17:38Z", "url_path": "/login", "user": "u0016"}
@@ -1174,6 +1253,7 @@
 {"action": "allowed", "bytes": 11667, "dest_host": "192.0.2.5", "host": "WS-011", "timestamp": "2026-09-24T03:55:05Z", "url_path": "/index", "user": "u0011"}
 {"action": "allowed", "bytes": 205832, "dest_host": "192.0.2.4", "host": "WS-027", "timestamp": "2026-09-24T04:53:53Z", "url_path": "/index", "user": "u0027"}
 {"action": "allowed", "bytes": 33537, "dest_host": "docs.example.org", "host": "WS-060", "timestamp": "2026-09-24T05:02:49Z", "url_path": "/", "user": "u0060"}
+{"_scenario": "S11", "action": "allowed", "bytes": 2229, "dest_host": "pkg-index-fast.example.org", "host": "WS-012", "timestamp": "2026-09-24T05:27:49Z", "url_path": "/simple/colorlogx", "user": "u0012"}
 {"action": "allowed", "bytes": 40335, "dest_host": "192.0.2.7", "host": "WS-040", "timestamp": "2026-09-24T05:38:42Z", "url_path": "/", "user": "u0040"}
 {"action": "allowed", "bytes": 128518, "dest_host": "mail.example.com", "host": "WS-009", "timestamp": "2026-09-24T05:58:59Z", "url_path": "/api/v1/status", "user": "u0009"}
 {"action": "allowed", "bytes": 44412, "dest_host": "docs.example.org", "host": "WS-009", "timestamp": "2026-09-24T06:14:14Z", "url_path": "/download", "user": "u0009"}
@@ -1196,6 +1276,7 @@
 {"action": "allowed", "bytes": 18206, "dest_host": "docs.example.org", "host": "WS-039", "timestamp": "2026-09-24T12:39:10Z", "url_path": "/login", "user": "u0039"}
 {"action": "allowed", "bytes": 110708, "dest_host": "docs.example.org", "host": "WS-042", "timestamp": "2026-09-24T13:07:27Z", "url_path": "/login", "user": "u0042"}
 {"action": "allowed", "bytes": 16915, "dest_host": "wiki.example.com", "host": "WS-020", "timestamp": "2026-09-24T13:11:35Z", "url_path": "/login", "user": "u0020"}
+{"_scenario": "S16", "action": "allowed", "bytes": 3272, "dest_host": "personal-drive-share.example.org", "host": "WS-018", "timestamp": "2026-09-24T14:29:35Z", "url_path": "/upload", "user": "u0018"}
 {"action": "allowed", "bytes": 166339, "dest_host": "updates.example.org", "host": "WS-033", "timestamp": "2026-09-24T14:37:44Z", "url_path": "/login", "user": "u0033"}
 {"action": "allowed", "bytes": 77984, "dest_host": "192.0.2.2", "host": "WS-007", "timestamp": "2026-09-24T16:00:31Z", "url_path": "/index", "user": "u0007"}
 {"action": "allowed", "bytes": 203779, "dest_host": "mail.example.com", "host": "WS-022", "timestamp": "2026-09-24T17:08:13Z", "url_path": "/login", "user": "u0022"}
@@ -1216,6 +1297,7 @@
 {"action": "allowed", "bytes": 23666, "dest_host": "192.0.2.11", "host": "WS-002", "timestamp": "2026-09-24T22:44:07Z", "url_path": "/", "user": "u0002"}
 {"action": "allowed", "bytes": 4064, "dest_host": "cdn.example.com", "host": "WS-026", "timestamp": "2026-09-24T23:19:09Z", "url_path": "/login", "user": "u0026"}
 {"action": "allowed", "bytes": 49468, "dest_host": "192.0.2.6", "host": "WS-035", "timestamp": "2026-09-24T23:28:22Z", "url_path": "/api/v1/status", "user": "u0035"}
+{"_scenario": "S18", "action": "allowed", "bytes": 954, "dest_host": "tm-graph-proxy.example.org", "host": "WS-046", "timestamp": "2026-09-24T23:56:56Z", "url_path": "/v1/files", "user": "u0046"}
 {"action": "allowed", "bytes": 41753, "dest_host": "crm.example.net", "host": "WS-043", "timestamp": "2026-09-25T00:12:05Z", "url_path": "/api/v1/status", "user": "u0043"}
 {"action": "allowed", "bytes": 135647, "dest_host": "192.0.2.11", "host": "WS-007", "timestamp": "2026-09-25T00:20:56Z", "url_path": "/login", "user": "u0007"}
 {"action": "allowed", "bytes": 197671, "dest_host": "status.example.org", "host": "WS-006", "timestamp": "2026-09-25T00:29:55Z", "url_path": "/api/v1/status", "user": "u0006"}
@@ -1227,6 +1309,7 @@
 {"action": "allowed", "bytes": 200130, "dest_host": "hr-portal.example.com", "host": "WS-001", "timestamp": "2026-09-25T01:47:07Z", "url_path": "/login", "user": "u0001"}
 {"action": "allowed", "bytes": 98222, "dest_host": "192.0.2.11", "host": "WS-012", "timestamp": "2026-09-25T02:28:55Z", "url_path": "/index", "user": "u0012"}
 {"action": "allowed", "bytes": 163294, "dest_host": "192.0.2.10", "host": "WS-037", "timestamp": "2026-09-25T02:50:59Z", "url_path": "/api/v1/status", "user": "u0037"}
+{"_scenario": "S03", "action": "allowed", "bytes": 3219, "dest_host": "203.0.113.118", "host": "WS-028", "timestamp": "2026-09-25T03:07:00Z", "url_path": "/gate", "user": "u0028"}
 {"action": "allowed", "bytes": 9868, "dest_host": "api.example.net", "host": "WS-015", "timestamp": "2026-09-25T03:12:48Z", "url_path": "/index", "user": "u0015"}
 {"action": "allowed", "bytes": 162363, "dest_host": "192.0.2.4", "host": "WS-008", "timestamp": "2026-09-25T03:42:38Z", "url_path": "/login", "user": "u0008"}
 {"action": "allowed", "bytes": 176055, "dest_host": "192.0.2.10", "host": "WS-045", "timestamp": "2026-09-25T04:14:02Z", "url_path": "/download", "user": "u0045"}
@@ -1282,6 +1365,7 @@
 {"action": "allowed", "bytes": 106148, "dest_host": "192.0.2.4", "host": "WS-032", "timestamp": "2026-09-25T23:17:38Z", "url_path": "/index", "user": "u0032"}
 {"action": "allowed", "bytes": 24314, "dest_host": "files.example.net", "host": "WS-015", "timestamp": "2026-09-25T23:31:34Z", "url_path": "/login", "user": "u0015"}
 {"action": "allowed", "bytes": 241889, "dest_host": "api.example.net", "host": "WS-045", "timestamp": "2026-09-26T00:13:13Z", "url_path": "/download", "user": "u0045"}
+{"_scenario": "S11", "action": "allowed", "bytes": 3787, "dest_host": "hp-drop.example.net", "host": "WS-040", "timestamp": "2026-09-26T01:09:43Z", "url_path": "/c", "user": "u0040"}
 {"action": "allowed", "bytes": 225773, "dest_host": "192.0.2.10", "host": "WS-029", "timestamp": "2026-09-26T02:24:07Z", "url_path": "/download", "user": "u0029"}
 {"action": "allowed", "bytes": 33979, "dest_host": "cdn.example.com", "host": "WS-030", "timestamp": "2026-09-26T03:15:52Z", "url_path": "/login", "user": "u0030"}
 {"action": "allowed", "bytes": 57293, "dest_host": "192.0.2.11", "host": "WS-007", "timestamp": "2026-09-26T03:27:47Z", "url_path": "/api/v1/status", "user": "u0007"}
@@ -1293,6 +1377,7 @@
 {"action": "allowed", "bytes": 32225, "dest_host": "wiki.example.com", "host": "WS-056", "timestamp": "2026-09-26T05:51:09Z", "url_path": "/login", "user": "u0056"}
 {"action": "allowed", "bytes": 118832, "dest_host": "api.example.net", "host": "WS-014", "timestamp": "2026-09-26T06:21:29Z", "url_path": "/login", "user": "u0014"}
 {"action": "allowed", "bytes": 188219, "dest_host": "docs.example.org", "host": "WS-039", "timestamp": "2026-09-26T06:47:28Z", "url_path": "/api/v1/status", "user": "u0039"}
+{"_scenario": "S15", "action": "allowed", "bytes": 760, "dest_host": "br-stage.example.org", "host": "WS-010", "timestamp": "2026-09-26T06:49:03Z", "url_path": "/s2", "user": "u0010"}
 {"action": "allowed", "bytes": 237444, "dest_host": "news.example.org", "host": "WS-018", "timestamp": "2026-09-26T07:33:31Z", "url_path": "/", "user": "u0018"}
 {"action": "allowed", "bytes": 181663, "dest_host": "hr-portal.example.com", "host": "WS-011", "timestamp": "2026-09-26T07:39:46Z", "url_path": "/download", "user": "u0011"}
 {"action": "allowed", "bytes": 245717, "dest_host": "192.0.2.7", "host": "WS-018", "timestamp": "2026-09-26T07:41:30Z", "url_path": "/login", "user": "u0018"}
@@ -1310,6 +1395,7 @@
 {"action": "allowed", "bytes": 103987, "dest_host": "updates.example.org", "host": "WS-031", "timestamp": "2026-09-26T12:48:05Z", "url_path": "/download", "user": "u0031"}
 {"action": "allowed", "bytes": 118272, "dest_host": "intranet.example.com", "host": "WS-047", "timestamp": "2026-09-26T12:58:13Z", "url_path": "/api/v1/status", "user": "u0047"}
 {"action": "allowed", "bytes": 108572, "dest_host": "192.0.2.4", "host": "WS-017", "timestamp": "2026-09-26T14:23:45Z", "url_path": "/api/v1/status", "user": "u0017"}
+{"_scenario": "S07", "action": "allowed", "bytes": 7140, "dest_host": "sm-pool-relay.example.net", "host": "WS-056", "timestamp": "2026-09-26T14:25:56Z", "url_path": "/stratum", "user": "u0056"}
 {"action": "allowed", "bytes": 45464, "dest_host": "192.0.2.5", "host": "WS-003", "timestamp": "2026-09-26T14:36:24Z", "url_path": "/api/v1/status", "user": "u0003"}
 {"action": "allowed", "bytes": 165492, "dest_host": "192.0.2.6", "host": "WS-017", "timestamp": "2026-09-26T15:09:22Z", "url_path": "/download", "user": "u0017"}
 {"action": "allowed", "bytes": 144598, "dest_host": "docs.example.org", "host": "WS-046", "timestamp": "2026-09-26T15:17:03Z", "url_path": "/login", "user": "u0046"}
@@ -1327,6 +1413,7 @@
 {"action": "allowed", "bytes": 103919, "dest_host": "192.0.2.4", "host": "WS-032", "timestamp": "2026-09-26T20:12:14Z", "url_path": "/download", "user": "u0032"}
 {"action": "allowed", "bytes": 9209, "dest_host": "news.example.org", "host": "WS-008", "timestamp": "2026-09-26T20:16:40Z", "url_path": "/login", "user": "u0008"}
 {"action": "allowed", "bytes": 194014, "dest_host": "status.example.org", "host": "WS-041", "timestamp": "2026-09-26T21:10:19Z", "url_path": "/api/v1/status", "user": "u0041"}
+{"_scenario": "S04", "action": "allowed", "bytes": 8368, "dest_host": "bc-sync-node.example.com", "host": "WS-035", "timestamp": "2026-09-26T21:13:46Z", "url_path": "/hb", "user": "u0035"}
 {"action": "allowed", "bytes": 80602, "dest_host": "crm.example.net", "host": "WS-002", "timestamp": "2026-09-26T21:28:26Z", "url_path": "/login", "user": "u0002"}
 {"action": "allowed", "bytes": 9750, "dest_host": "192.0.2.5", "host": "WS-057", "timestamp": "2026-09-26T21:38:17Z", "url_path": "/index", "user": "u0057"}
 {"action": "allowed", "bytes": 134474, "dest_host": "192.0.2.10", "host": "WS-017", "timestamp": "2026-09-26T22:12:52Z", "url_path": "/index", "user": "u0017"}
@@ -1336,8 +1423,10 @@
 {"action": "allowed", "bytes": 167911, "dest_host": "intranet.example.com", "host": "WS-002", "timestamp": "2026-09-27T00:25:51Z", "url_path": "/api/v1/status", "user": "u0002"}
 {"action": "allowed", "bytes": 61365, "dest_host": "mail.example.com", "host": "WS-030", "timestamp": "2026-09-27T00:26:50Z", "url_path": "/", "user": "u0030"}
 {"action": "allowed", "bytes": 104322, "dest_host": "wiki.example.com", "host": "WS-018", "timestamp": "2026-09-27T00:41:38Z", "url_path": "/login", "user": "u0018"}
+{"_scenario": "S14", "action": "allowed", "bytes": 4652, "dest_host": "cookie-vault-sync.example.com", "host": "WS-043", "timestamp": "2026-09-27T00:46:44Z", "url_path": "/put", "user": "u0043"}
 {"action": "allowed", "bytes": 64413, "dest_host": "updates.example.org", "host": "WS-034", "timestamp": "2026-09-27T01:08:36Z", "url_path": "/login", "user": "u0034"}
 {"action": "allowed", "bytes": 73552, "dest_host": "api.example.net", "host": "WS-044", "timestamp": "2026-09-27T02:10:01Z", "url_path": "/index", "user": "u0044"}
+{"_scenario": "S18", "action": "allowed", "bytes": 871, "dest_host": "tm-graph-proxy.example.org", "host": "WS-046", "timestamp": "2026-09-27T02:25:13Z", "url_path": "/v1/files", "user": "u0046"}
 {"action": "allowed", "bytes": 71349, "dest_host": "192.0.2.2", "host": "WS-042", "timestamp": "2026-09-27T02:27:12Z", "url_path": "/", "user": "u0042"}
 {"action": "allowed", "bytes": 91330, "dest_host": "192.0.2.2", "host": "WS-035", "timestamp": "2026-09-27T03:04:35Z", "url_path": "/api/v1/status", "user": "u0035"}
 {"action": "allowed", "bytes": 157786, "dest_host": "192.0.2.10", "host": "WS-014", "timestamp": "2026-09-27T03:13:40Z", "url_path": "/index", "user": "u0014"}
@@ -1347,6 +1436,7 @@
 {"action": "allowed", "bytes": 5202, "dest_host": "192.0.2.9", "host": "WS-005", "timestamp": "2026-09-27T04:58:05Z", "url_path": "/download", "user": "u0005"}
 {"action": "allowed", "bytes": 7099, "dest_host": "hr-portal.example.com", "host": "WS-043", "timestamp": "2026-09-27T05:14:28Z", "url_path": "/api/v1/status", "user": "u0043"}
 {"action": "allowed", "bytes": 169688, "dest_host": "192.0.2.11", "host": "WS-025", "timestamp": "2026-09-27T06:01:44Z", "url_path": "/", "user": "u0025"}
+{"_scenario": "S18", "action": "allowed", "bytes": 2392, "dest_host": "consent-review-app.example.net", "host": "WS-004", "timestamp": "2026-09-27T06:01:47Z", "url_path": "/authorize", "user": "u0004"}
 {"action": "allowed", "bytes": 104234, "dest_host": "192.0.2.11", "host": "WS-043", "timestamp": "2026-09-27T06:41:45Z", "url_path": "/login", "user": "u0043"}
 {"action": "allowed", "bytes": 29427, "dest_host": "docs.example.org", "host": "WS-019", "timestamp": "2026-09-27T09:00:57Z", "url_path": "/", "user": "u0019"}
 {"action": "allowed", "bytes": 178678, "dest_host": "news.example.org", "host": "WS-049", "timestamp": "2026-09-27T09:07:00Z", "url_path": "/api/v1/status", "user": "u0049"}
@@ -1366,7 +1456,9 @@
 {"action": "allowed", "bytes": 72576, "dest_host": "hr-portal.example.com", "host": "WS-053", "timestamp": "2026-09-27T14:33:31Z", "url_path": "/api/v1/status", "user": "u0053"}
 {"action": "allowed", "bytes": 46633, "dest_host": "hr-portal.example.com", "host": "WS-001", "timestamp": "2026-09-27T15:16:10Z", "url_path": "/api/v1/status", "user": "u0001"}
 {"action": "allowed", "bytes": 118279, "dest_host": "hr-portal.example.com", "host": "WS-051", "timestamp": "2026-09-27T16:05:20Z", "url_path": "/api/v1/status", "user": "u0051"}
+{"_scenario": "S03", "action": "allowed", "bytes": 1800, "dest_host": "browser-refresh-now.example.com", "host": "WS-006", "timestamp": "2026-09-27T16:17:55Z", "url_path": "/update", "user": "u0006"}
 {"action": "allowed", "bytes": 207555, "dest_host": "wiki.example.com", "host": "WS-032", "timestamp": "2026-09-27T17:05:14Z", "url_path": "/download", "user": "u0032"}
+{"_scenario": "S09", "action": "allowed", "bytes": 1335, "dest_host": "assoc-events-portal.example.org", "host": "WS-033", "timestamp": "2026-09-27T17:07:38Z", "url_path": "/2026/agenda", "user": "u0033"}
 {"action": "allowed", "bytes": 30331, "dest_host": "192.0.2.5", "host": "WS-050", "timestamp": "2026-09-27T17:20:12Z", "url_path": "/download", "user": "u0050"}
 {"action": "allowed", "bytes": 161231, "dest_host": "docs.example.org", "host": "WS-013", "timestamp": "2026-09-27T17:34:16Z", "url_path": "/index", "user": "u0013"}
 {"action": "allowed", "bytes": 229799, "dest_host": "crm.example.net", "host": "WS-035", "timestamp": "2026-09-27T17:59:10Z", "url_path": "/api/v1/status", "user": "u0035"}
@@ -1379,8 +1471,10 @@
 {"action": "allowed", "bytes": 71263, "dest_host": "docs.example.org", "host": "WS-043", "timestamp": "2026-09-27T19:35:05Z", "url_path": "/", "user": "u0043"}
 {"action": "allowed", "bytes": 59323, "dest_host": "192.0.2.4", "host": "WS-002", "timestamp": "2026-09-27T20:34:17Z", "url_path": "/api/v1/status", "user": "u0002"}
 {"action": "allowed", "bytes": 153605, "dest_host": "mail.example.com", "host": "WS-050", "timestamp": "2026-09-27T20:35:16Z", "url_path": "/download", "user": "u0050"}
+{"_scenario": "S20", "action": "allowed", "bytes": 6685, "dest_host": "eq-collect.example.org", "host": "WS-034", "timestamp": "2026-09-27T21:00:11Z", "url_path": "/in", "user": "u0034"}
 {"action": "allowed", "bytes": 208530, "dest_host": "mail.example.com", "host": "WS-038", "timestamp": "2026-09-27T21:04:53Z", "url_path": "/download", "user": "u0038"}
 {"action": "allowed", "bytes": 41110, "dest_host": "cdn.example.com", "host": "WS-014", "timestamp": "2026-09-27T21:17:11Z", "url_path": "/download", "user": "u0014"}
+{"_scenario": "S18", "action": "allowed", "bytes": 8507, "dest_host": "203.0.113.197", "host": "WS-046", "timestamp": "2026-09-27T22:20:14Z", "url_path": "/v1/files", "user": "u0046"}
 {"action": "allowed", "bytes": 29671, "dest_host": "192.0.2.2", "host": "WS-058", "timestamp": "2026-09-27T22:51:20Z", "url_path": "/download", "user": "u0058"}
 {"action": "allowed", "bytes": 127544, "dest_host": "192.0.2.9", "host": "WS-060", "timestamp": "2026-09-27T23:18:32Z", "url_path": "/index", "user": "u0060"}
 {"action": "allowed", "bytes": 3113, "dest_host": "192.0.2.4", "host": "WS-013", "timestamp": "2026-09-27T23:28:31Z", "url_path": "/index", "user": "u0013"}
@@ -1405,6 +1499,7 @@
 {"action": "allowed", "bytes": 47554, "dest_host": "docs.example.org", "host": "WS-046", "timestamp": "2026-09-28T12:01:56Z", "url_path": "/download", "user": "u0046"}
 {"action": "allowed", "bytes": 35132, "dest_host": "intranet.example.com", "host": "WS-008", "timestamp": "2026-09-28T13:04:08Z", "url_path": "/login", "user": "u0008"}
 {"action": "allowed", "bytes": 68591, "dest_host": "mail.example.com", "host": "WS-022", "timestamp": "2026-09-28T13:14:09Z", "url_path": "/", "user": "u0022"}
+{"_scenario": "S07", "action": "allowed", "bytes": 714, "dest_host": "sm-pool-relay.example.net", "host": "WS-056", "timestamp": "2026-09-28T13:18:03Z", "url_path": "/stratum", "user": "u0056"}
 {"action": "allowed", "bytes": 39791, "dest_host": "hr-portal.example.com", "host": "WS-052", "timestamp": "2026-09-28T14:30:20Z", "url_path": "/index", "user": "u0052"}
 {"action": "allowed", "bytes": 151553, "dest_host": "updates.example.org", "host": "WS-012", "timestamp": "2026-09-28T14:40:00Z", "url_path": "/index", "user": "u0012"}
 {"action": "allowed", "bytes": 123289, "dest_host": "192.0.2.6", "host": "WS-032", "timestamp": "2026-09-28T14:58:19Z", "url_path": "/index", "user": "u0032"}
@@ -1432,6 +1527,7 @@
 {"action": "allowed", "bytes": 41695, "dest_host": "status.example.org", "host": "WS-051", "timestamp": "2026-09-29T04:25:27Z", "url_path": "/index", "user": "u0051"}
 {"action": "allowed", "bytes": 181015, "dest_host": "192.0.2.8", "host": "WS-043", "timestamp": "2026-09-29T07:19:13Z", "url_path": "/download", "user": "u0043"}
 {"action": "allowed", "bytes": 130031, "dest_host": "192.0.2.7", "host": "WS-034", "timestamp": "2026-09-29T08:04:16Z", "url_path": "/index", "user": "u0034"}
+{"_scenario": "S06", "action": "allowed", "bytes": 4038, "dest_host": "patient-login-check.example.com", "host": "WS-024", "timestamp": "2026-09-29T08:29:31Z", "url_path": "/auth", "user": "u0024"}
 {"action": "allowed", "bytes": 11879, "dest_host": "intranet.example.com", "host": "WS-028", "timestamp": "2026-09-29T08:38:30Z", "url_path": "/index", "user": "u0028"}
 {"action": "allowed", "bytes": 143433, "dest_host": "updates.example.org", "host": "WS-038", "timestamp": "2026-09-29T08:40:12Z", "url_path": "/download", "user": "u0038"}
 {"action": "allowed", "bytes": 231759, "dest_host": "api.example.net", "host": "WS-004", "timestamp": "2026-09-29T09:39:40Z", "url_path": "/download", "user": "u0004"}
@@ -1444,6 +1540,7 @@
 {"action": "allowed", "bytes": 118094, "dest_host": "192.0.2.11", "host": "WS-034", "timestamp": "2026-09-29T13:01:01Z", "url_path": "/login", "user": "u0034"}
 {"action": "allowed", "bytes": 95397, "dest_host": "192.0.2.10", "host": "WS-017", "timestamp": "2026-09-29T13:03:01Z", "url_path": "/download", "user": "u0017"}
 {"action": "allowed", "bytes": 46036, "dest_host": "192.0.2.2", "host": "WS-007", "timestamp": "2026-09-29T13:14:05Z", "url_path": "/", "user": "u0007"}
+{"_scenario": "S20", "action": "allowed", "bytes": 5561, "dest_host": "203.0.113.209", "host": "WS-051", "timestamp": "2026-09-29T14:12:17Z", "url_path": "/in", "user": "u0051"}
 {"action": "allowed", "bytes": 204162, "dest_host": "news.example.org", "host": "WS-010", "timestamp": "2026-09-29T14:29:26Z", "url_path": "/api/v1/status", "user": "u0010"}
 {"action": "allowed", "bytes": 6205, "dest_host": "cdn.example.com", "host": "WS-046", "timestamp": "2026-09-29T16:15:20Z", "url_path": "/login", "user": "u0046"}
 {"action": "allowed", "bytes": 44352, "dest_host": "docs.example.org", "host": "WS-045", "timestamp": "2026-09-29T16:30:02Z", "url_path": "/download", "user": "u0045"}
@@ -1468,8 +1565,10 @@
 {"action": "allowed", "bytes": 40123, "dest_host": "192.0.2.11", "host": "WS-037", "timestamp": "2026-09-30T03:23:33Z", "url_path": "/download", "user": "u0037"}
 {"action": "allowed", "bytes": 66947, "dest_host": "192.0.2.2", "host": "WS-001", "timestamp": "2026-09-30T03:23:38Z", "url_path": "/api/v1/status", "user": "u0001"}
 {"action": "allowed", "bytes": 99906, "dest_host": "status.example.org", "host": "WS-013", "timestamp": "2026-09-30T03:29:08Z", "url_path": "/", "user": "u0013"}
+{"_scenario": "S09", "action": "allowed", "bytes": 2001, "dest_host": "th-cdnjs-loader.example.net", "host": "WS-016", "timestamp": "2026-09-30T04:48:53Z", "url_path": "/lib/jq.min.js", "user": "u0016"}
 {"action": "allowed", "bytes": 67866, "dest_host": "192.0.2.9", "host": "WS-010", "timestamp": "2026-09-30T05:58:20Z", "url_path": "/api/v1/status", "user": "u0010"}
 {"action": "allowed", "bytes": 234014, "dest_host": "192.0.2.2", "host": "WS-018", "timestamp": "2026-09-30T06:25:34Z", "url_path": "/api/v1/status", "user": "u0018"}
+{"_scenario": "S20", "action": "allowed", "bytes": 3522, "dest_host": "203.0.113.209", "host": "WS-051", "timestamp": "2026-09-30T07:11:06Z", "url_path": "/in", "user": "u0051"}
 {"action": "allowed", "bytes": 231182, "dest_host": "news.example.org", "host": "WS-038", "timestamp": "2026-09-30T07:26:10Z", "url_path": "/index", "user": "u0038"}
 {"action": "allowed", "bytes": 106967, "dest_host": "192.0.2.2", "host": "WS-001", "timestamp": "2026-09-30T07:40:43Z", "url_path": "/index", "user": "u0001"}
 {"action": "allowed", "bytes": 115337, "dest_host": "192.0.2.11", "host": "WS-051", "timestamp": "2026-09-30T07:55:08Z", "url_path": "/download", "user": "u0051"}
@@ -1503,6 +1602,7 @@
 {"action": "allowed", "bytes": 128893, "dest_host": "wiki.example.com", "host": "WS-010", "timestamp": "2026-09-30T21:28:04Z", "url_path": "/", "user": "u0010"}
 {"action": "allowed", "bytes": 239268, "dest_host": "192.0.2.7", "host": "WS-014", "timestamp": "2026-09-30T22:10:48Z", "url_path": "/api/v1/status", "user": "u0014"}
 {"action": "allowed", "bytes": 29664, "dest_host": "192.0.2.5", "host": "WS-016", "timestamp": "2026-09-30T22:18:08Z", "url_path": "/", "user": "u0016"}
+{"_scenario": "S02", "action": "allowed", "bytes": 2737, "dest_host": "203.0.113.112", "host": "WS-041", "timestamp": "2026-09-30T22:35:25Z", "url_path": "/beacon", "user": "u0041"}
 {"action": "allowed", "bytes": 193763, "dest_host": "mail.example.com", "host": "WS-008", "timestamp": "2026-09-30T22:38:21Z", "url_path": "/index", "user": "u0008"}
 {"action": "allowed", "bytes": 13817, "dest_host": "status.example.org", "host": "WS-006", "timestamp": "2026-09-30T22:40:19Z", "url_path": "/download", "user": "u0006"}
 {"action": "allowed", "bytes": 37702, "dest_host": "crm.example.net", "host": "WS-007", "timestamp": "2026-09-30T23:36:57Z", "url_path": "/login", "user": "u0007"}

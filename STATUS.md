@@ -9,9 +9,9 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 - **Calibration** (`calibrate.py`, full grid, 24 cells) started 2026-10-17 in a separate minimized window
   (`cmd /c start "calibration" /min ... venv\Scripts\python.exe -u calibrate.py > runs\calibration.log`).
   Survives the Claude session. Progress: `runs\calibration.log`; results: `runs/calibration/summary.csv`.
-- **Until it finishes: do not touch `data/logs/` or `data/reports/rendered/`** (no `generate_logs.py`,
+- Runs on the **final** logs/reports (row 21). **Until it finishes: do not touch `data/logs/` or `data/reports/rendered/`** (no `generate_logs.py`,
   no `build_reports.py`, no other Ollama job). The running process reads them.
-- Restarted 2026-10-17 after the harness fixes in rows 17-19; previous cells archived in `runs/calibration_prefix/`.
+- Restarted 2026-10-17 (twice: after the harness fixes, rows 17-19, and on the final data, rows 20-22); earlier cells archived in `runs/calibration_prefix/`.
 
 ## 2026-10-17 — log
 
@@ -38,12 +38,27 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 | 18 | Harness fixes (same for all models/configs) | `search_logs`: description says one indicator per call, one substring; unknown collection lists the role's collections; empty query is an error (`*` still matches all); native calls with placeholder args are not executed (`invalid_args`). `test_smoke.py` 10/10. DESIGN §11.1 (2026-10-17). |
 | 19 | Calibration restarted from scratch | Old 16 cells moved to `runs/calibration_prefix/` (local, git-ignored). Full 24-cell grid restarted detached with the fixed harness. |
 
+| 20 | Ollama model store check | Store is **already on D:** (Machine env `OLLAMA_MODELS = D:dvanced_gpt`: blobs 13.0 GB, 5 manifests); `%USERPROFILE%\.ollama\models` does not exist. No copy, no delete, no `setx` (a user-level OLLAMA_MODELS would override the machine one and point Ollama at an empty folder). Ollama stopped and restarted: `ollama list` identical before/after (tags, IDs, sizes; saved in `runs/ollama_list_*.txt`). Free space: C: 11.12 GB, D: 152.97 GB. |
+| 21 | Final data generated | `generate_logs.py` run twice: byte-identical. `build_reports.py`: 100 short + 25 long rendered, identical on rebuild. `validate_scenarios.py` incl. **log checks: all 20 pass**. `test_smoke.py` pass. S01: planted rows identical to the S01-only logs; IOC hits = WS-009, WS-014, WS-022, WS-031 (all S01's own rows) = expected. |
+| 22 | Calibration restarted on final data | 4 cells made on the old logs archived to `runs/calibration_prefix/restart1_old_logs/`; full 24-cell grid restarted detached; watcher running. |
+
+### Current MANIFEST (20 scenarios, seed 2026)
+| Collection | Rows | sha256 |
+|---|---|---|
+| proxy_logs | 1610 | `62869225a173c8f44c04279489655379057ea74378c50d2118cbfd5cc13bb763` |
+| dns_logs | 1550 | `aa0bf38d65ecd3281fc1a42a52d96ffe9039e77be61637b4a2b5bc7c543cebd0` |
+| edr_alerts | 328 | `43041ef079c5e8837e7059619fa3407e247c0737014872d2e92993b650628bd9` |
+| vpn_auth_logs | 416 | `37b88fb4efc9ea04196e7ba44a26bd36ec25de4cc1e46e5d053d3c9facead9a9` |
+| hr_records | 120 | `42a165103280b664a35318d68c41d1dbb432a6fec528dba40777d463e11ba742` (unchanged, background only) |
+| payroll_ledger | 360 | `106e59fec392f67d16407f5c4c6b26dcb0aa1b4df41dc5a2c41ec9dbed7be135` (unchanged, background only) |
+
+The old S01-only proxy hash `b811d487...` is superseded.
+
 ## Open points for the user
-None right now.
+1. Optional: should the model store be moved from `D:dvanced_gpt` to a separate `D:ollamamodels` (tidier, same drive)? Not needed for disk space.
 
 ## Next steps
-1. Wait for the restarted calibration (24 cells, all 3 models). Do not regenerate logs/reports before it ends.
-2. After calibration finishes: `generate_logs.py`, `build_reports.py`, `validate_scenarios.py` (log checks),
-   re-verify S01 expected answer, run twice to confirm deterministic hashes, record new MANIFEST hashes here,
-   measure short and long report token counts with each model's tokenizer, `test_smoke.py`.
-3. ROADMAP 2: read `summary.csv`, choose prompt/temperature by the §11.1 rule, freeze, tag `harness-frozen`.
+1. Wait for calibration (24 cells on final data). Then ROADMAP 2: read `summary.csv`, choose prompt/temperature
+   by the §11.1 rule, set `DEFAULT_PROMPT`, record in DESIGN §11.1, tag `harness-frozen`, commit the calibration results.
+2. Measure short and long report token counts with each model's tokenizer (needs Ollama; after calibration).
+3. ROADMAP 3 is then done; ROADMAP 4 (gates C1–C4) starts only after the harness is frozen.

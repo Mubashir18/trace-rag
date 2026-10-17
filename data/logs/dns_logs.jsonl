@@ -8,6 +8,7 @@
 {"answer": "192.0.2.34", "host": "WS-008", "query": "crm.example.net", "timestamp": "2026-09-01T04:51:45Z"}
 {"answer": "192.0.2.52", "host": "WS-027", "query": "hr-portal.example.com", "timestamp": "2026-09-01T06:42:17Z"}
 {"answer": "198.51.100.24", "host": "WS-009", "query": "updates.example.org", "timestamp": "2026-09-01T07:11:26Z"}
+{"_scenario": "S08", "answer": "203.0.113.142", "host": "WS-026", "query": "pf-token-sink.example.com", "timestamp": "2026-09-01T07:43:34Z"}
 {"answer": "192.0.2.27", "host": "WS-010", "query": "news.example.org", "timestamp": "2026-09-01T07:45:56Z"}
 {"answer": "192.0.2.16", "host": "WS-009", "query": "news.example.org", "timestamp": "2026-09-01T07:51:31Z"}
 {"answer": "198.51.100.7", "host": "WS-013", "query": "docs.example.org", "timestamp": "2026-09-01T08:16:18Z"}
@@ -19,7 +20,9 @@
 {"answer": "192.0.2.51", "host": "WS-013", "query": "mail.example.com", "timestamp": "2026-09-01T10:18:54Z"}
 {"answer": "192.0.2.29", "host": "WS-052", "query": "news.example.org", "timestamp": "2026-09-01T11:49:56Z"}
 {"answer": "198.51.100.9", "host": "WS-044", "query": "status.example.org", "timestamp": "2026-09-01T12:10:42Z"}
+{"_scenario": "S03", "answer": "203.0.113.118", "host": "WS-028", "query": "gf-telemetry.example.net", "timestamp": "2026-09-01T13:16:59Z"}
 {"answer": "192.0.2.19", "host": "WS-059", "query": "cdn.example.com", "timestamp": "2026-09-01T13:49:27Z"}
+{"_scenario": "S07", "answer": "203.0.113.139", "host": "WS-048", "query": "sm-pool-relay.example.net", "timestamp": "2026-09-01T14:28:40Z"}
 {"answer": "198.51.100.48", "host": "WS-022", "query": "hr-portal.example.com", "timestamp": "2026-09-01T15:21:56Z"}
 {"answer": "192.0.2.32", "host": "WS-045", "query": "hr-portal.example.com", "timestamp": "2026-09-01T16:31:06Z"}
 {"answer": "192.0.2.49", "host": "WS-032", "query": "updates.example.org", "timestamp": "2026-09-01T18:16:21Z"}
@@ -44,6 +47,7 @@
 {"answer": "192.0.2.11", "host": "WS-011", "query": "wiki.example.com", "timestamp": "2026-09-02T03:16:03Z"}
 {"answer": "192.0.2.16", "host": "WS-024", "query": "api.example.net", "timestamp": "2026-09-02T03:29:34Z"}
 {"answer": "198.51.100.2", "host": "WS-004", "query": "hr-portal.example.com", "timestamp": "2026-09-02T03:49:53Z"}
+{"_scenario": "S19", "answer": "203.0.113.203", "host": "WS-039", "query": "kiosk-telemetry-hub.example.net", "timestamp": "2026-09-02T04:25:46Z"}
 {"answer": "198.51.100.19", "host": "WS-054", "query": "hr-portal.example.com", "timestamp": "2026-09-02T04:45:47Z"}
 {"answer": "192.0.2.28", "host": "WS-059", "query": "intranet.example.com", "timestamp": "2026-09-02T05:16:16Z"}
 {"answer": "192.0.2.38", "host": "WS-037", "query": "status.example.org", "timestamp": "2026-09-02T05:33:43Z"}
@@ -52,6 +56,7 @@
 {"answer": "198.51.100.3", "host": "WS-050", "query": "api.example.net", "timestamp": "2026-09-02T07:14:52Z"}
 {"answer": "198.51.100.58", "host": "WS-053", "query": "files.example.net", "timestamp": "2026-09-02T07:47:37Z"}
 {"answer": "192.0.2.59", "host": "WS-039", "query": "crm.example.net", "timestamp": "2026-09-02T07:50:01Z"}
+{"_scenario": "S19", "answer": "203.0.113.203", "host": "WS-023", "query": "ls-beacon.example.org", "timestamp": "2026-09-02T08:30:17Z"}
 {"answer": "198.51.100.52", "host": "WS-009", "query": "intranet.example.com", "timestamp": "2026-09-02T08:48:16Z"}
 {"answer": "192.0.2.17", "host": "WS-052", "query": "cdn.example.com", "timestamp": "2026-09-02T09:07:53Z"}
 {"answer": "198.51.100.32", "host": "WS-010", "query": "wiki.example.com", "timestamp": "2026-09-02T09:40:16Z"}
@@ -65,11 +70,13 @@
 {"answer": "198.51.100.30", "host": "WS-017", "query": "api.example.net", "timestamp": "2026-09-02T14:07:11Z"}
 {"answer": "192.0.2.6", "host": "WS-038", "query": "hr-portal.example.com", "timestamp": "2026-09-02T14:07:29Z"}
 {"answer": "198.51.100.34", "host": "WS-021", "query": "news.example.org", "timestamp": "2026-09-02T15:19:00Z"}
+{"_scenario": "S18", "answer": "203.0.113.197", "host": "WS-046", "query": "tm-graph-proxy.example.org", "timestamp": "2026-09-02T16:07:09Z"}
 {"answer": "198.51.100.9", "host": "WS-001", "query": "updates.example.org", "timestamp": "2026-09-02T16:07:53Z"}
 {"answer": "198.51.100.18", "host": "WS-011", "query": "wiki.example.com", "timestamp": "2026-09-02T17:14:04Z"}
 {"answer": "192.0.2.35", "host": "WS-004", "query": "mail.example.com", "timestamp": "2026-09-02T17:21:17Z"}
 {"answer": "198.51.100.16", "host": "WS-026", "query": "files.example.net", "timestamp": "2026-09-02T17:49:48Z"}
 {"answer": "198.51.100.11", "host": "WS-057", "query": "wiki.example.com", "timestamp": "2026-09-02T17:50:31Z"}
+{"_scenario": "S07", "answer": "203.0.113.139", "host": "WS-048", "query": "sm-pool-relay.example.net", "timestamp": "2026-09-02T18:25:49Z"}
 {"answer": "198.51.100.58", "host": "WS-058", "query": "news.example.org", "timestamp": "2026-09-02T18:59:35Z"}
 {"answer": "192.0.2.49", "host": "WS-035", "query": "api.example.net", "timestamp": "2026-09-02T19:09:43Z"}
 {"answer": "192.0.2.50", "host": "WS-042", "query": "cdn.example.com", "timestamp": "2026-09-02T20:11:26Z"}
@@ -112,6 +119,7 @@
 {"answer": "192.0.2.37", "host": "WS-014", "query": "crm.example.net", "timestamp": "2026-09-03T17:31:50Z"}
 {"answer": "192.0.2.57", "host": "WS-012", "query": "hr-portal.example.com", "timestamp": "2026-09-03T17:32:10Z"}
 {"answer": "192.0.2.46", "host": "WS-002", "query": "wiki.example.com", "timestamp": "2026-09-03T18:23:34Z"}
+{"_scenario": "S05", "answer": "203.0.113.127", "host": "WS-002", "query": "x91f.cr-resolve.example.net", "timestamp": "2026-09-03T18:24:10Z"}
 {"answer": "192.0.2.33", "host": "WS-031", "query": "hr-portal.example.com", "timestamp": "2026-09-03T18:52:17Z"}
 {"answer": "198.51.100.10", "host": "WS-019", "query": "cdn.example.com", "timestamp": "2026-09-03T19:02:11Z"}
 {"answer": "192.0.2.7", "host": "WS-026", "query": "updates.example.org", "timestamp": "2026-09-03T19:43:18Z"}
@@ -175,6 +183,7 @@
 {"answer": "192.0.2.6", "host": "WS-035", "query": "wiki.example.com", "timestamp": "2026-09-04T20:18:28Z"}
 {"answer": "198.51.100.24", "host": "WS-057", "query": "api.example.net", "timestamp": "2026-09-04T21:00:05Z"}
 {"answer": "192.0.2.4", "host": "WS-015", "query": "files.example.net", "timestamp": "2026-09-04T21:32:21Z"}
+{"_scenario": "S05", "answer": "203.0.113.127", "host": "WS-002", "query": "x91f.cr-resolve.example.net", "timestamp": "2026-09-04T22:05:28Z"}
 {"answer": "192.0.2.57", "host": "WS-038", "query": "mail.example.com", "timestamp": "2026-09-04T22:29:13Z"}
 {"answer": "192.0.2.15", "host": "WS-014", "query": "crm.example.net", "timestamp": "2026-09-04T22:40:31Z"}
 {"answer": "192.0.2.53", "host": "WS-002", "query": "cdn.example.com", "timestamp": "2026-09-04T23:05:37Z"}
@@ -235,6 +244,7 @@
 {"answer": "192.0.2.46", "host": "WS-025", "query": "cdn.example.com", "timestamp": "2026-09-06T00:37:34Z"}
 {"answer": "198.51.100.44", "host": "WS-051", "query": "cdn.example.com", "timestamp": "2026-09-06T00:46:26Z"}
 {"answer": "198.51.100.21", "host": "WS-023", "query": "crm.example.net", "timestamp": "2026-09-06T01:45:34Z"}
+{"_scenario": "S06", "answer": "203.0.113.133", "host": "WS-047", "query": "patient-login-check.example.com", "timestamp": "2026-09-06T01:49:05Z"}
 {"answer": "198.51.100.9", "host": "WS-014", "query": "news.example.org", "timestamp": "2026-09-06T01:50:26Z"}
 {"answer": "192.0.2.48", "host": "WS-032", "query": "mail.example.com", "timestamp": "2026-09-06T01:52:22Z"}
 {"answer": "192.0.2.26", "host": "WS-019", "query": "hr-portal.example.com", "timestamp": "2026-09-06T02:05:16Z"}
@@ -258,6 +268,7 @@
 {"answer": "198.51.100.29", "host": "WS-052", "query": "wiki.example.com", "timestamp": "2026-09-06T07:33:28Z"}
 {"answer": "198.51.100.53", "host": "WS-057", "query": "intranet.example.com", "timestamp": "2026-09-06T07:34:43Z"}
 {"answer": "192.0.2.45", "host": "WS-012", "query": "mail.example.com", "timestamp": "2026-09-06T08:25:15Z"}
+{"_scenario": "S17", "answer": "203.0.113.191", "host": "WS-045", "query": "dm-c2-gw.example.net", "timestamp": "2026-09-06T08:25:25Z"}
 {"answer": "192.0.2.44", "host": "WS-022", "query": "cdn.example.com", "timestamp": "2026-09-06T08:35:01Z"}
 {"answer": "198.51.100.31", "host": "WS-042", "query": "mail.example.com", "timestamp": "2026-09-06T09:18:21Z"}
 {"answer": "192.0.2.2", "host": "WS-052", "query": "updates.example.org", "timestamp": "2026-09-06T09:28:51Z"}
@@ -294,6 +305,7 @@
 {"answer": "198.51.100.11", "host": "WS-059", "query": "docs.example.org", "timestamp": "2026-09-06T19:25:44Z"}
 {"answer": "198.51.100.36", "host": "WS-054", "query": "crm.example.net", "timestamp": "2026-09-06T19:58:25Z"}
 {"answer": "192.0.2.20", "host": "WS-023", "query": "files.example.net", "timestamp": "2026-09-06T20:04:54Z"}
+{"_scenario": "S19", "answer": "203.0.113.203", "host": "WS-023", "query": "ls-beacon.example.org", "timestamp": "2026-09-06T20:50:08Z"}
 {"answer": "198.51.100.3", "host": "WS-031", "query": "cdn.example.com", "timestamp": "2026-09-06T21:33:26Z"}
 {"answer": "198.51.100.55", "host": "WS-030", "query": "api.example.net", "timestamp": "2026-09-06T21:37:17Z"}
 {"answer": "192.0.2.29", "host": "WS-023", "query": "mail.example.com", "timestamp": "2026-09-06T21:45:34Z"}
@@ -309,6 +321,7 @@
 {"answer": "198.51.100.20", "host": "WS-057", "query": "api.example.net", "timestamp": "2026-09-07T04:29:04Z"}
 {"answer": "192.0.2.53", "host": "WS-003", "query": "files.example.net", "timestamp": "2026-09-07T04:35:23Z"}
 {"answer": "192.0.2.50", "host": "WS-003", "query": "news.example.org", "timestamp": "2026-09-07T04:36:11Z"}
+{"_scenario": "S05", "answer": "203.0.113.127", "host": "WS-002", "query": "x91f.cr-resolve.example.net", "timestamp": "2026-09-07T04:38:07Z"}
 {"answer": "192.0.2.52", "host": "WS-022", "query": "hr-portal.example.com", "timestamp": "2026-09-07T04:43:13Z"}
 {"answer": "198.51.100.45", "host": "WS-001", "query": "intranet.example.com", "timestamp": "2026-09-07T04:43:37Z"}
 {"answer": "192.0.2.47", "host": "WS-028", "query": "hr-portal.example.com", "timestamp": "2026-09-07T05:12:52Z"}
@@ -345,6 +358,7 @@
 {"answer": "198.51.100.47", "host": "WS-006", "query": "updates.example.org", "timestamp": "2026-09-07T23:18:04Z"}
 {"answer": "192.0.2.41", "host": "WS-038", "query": "intranet.example.com", "timestamp": "2026-09-08T00:08:11Z"}
 {"answer": "192.0.2.50", "host": "WS-057", "query": "wiki.example.com", "timestamp": "2026-09-08T00:14:03Z"}
+{"_scenario": "S10", "answer": "203.0.113.151", "host": "WS-050", "query": "rf-exfil-store.example.net", "timestamp": "2026-09-08T00:25:43Z"}
 {"answer": "198.51.100.19", "host": "WS-040", "query": "cdn.example.com", "timestamp": "2026-09-08T00:50:07Z"}
 {"answer": "192.0.2.53", "host": "WS-053", "query": "docs.example.org", "timestamp": "2026-09-08T01:23:04Z"}
 {"answer": "192.0.2.28", "host": "WS-015", "query": "updates.example.org", "timestamp": "2026-09-08T01:24:04Z"}
@@ -439,6 +453,7 @@
 {"answer": "192.0.2.3", "host": "WS-060", "query": "files.example.net", "timestamp": "2026-09-09T16:07:02Z"}
 {"answer": "192.0.2.8", "host": "WS-004", "query": "hr-portal.example.com", "timestamp": "2026-09-09T16:12:56Z"}
 {"answer": "198.51.100.43", "host": "WS-060", "query": "status.example.org", "timestamp": "2026-09-09T17:24:13Z"}
+{"_scenario": "S05", "answer": "203.0.113.127", "host": "WS-002", "query": "x91f.cr-resolve.example.net", "timestamp": "2026-09-09T17:51:40Z"}
 {"answer": "192.0.2.58", "host": "WS-005", "query": "api.example.net", "timestamp": "2026-09-09T17:56:31Z"}
 {"answer": "198.51.100.42", "host": "WS-035", "query": "status.example.org", "timestamp": "2026-09-09T17:57:22Z"}
 {"answer": "198.51.100.57", "host": "WS-035", "query": "crm.example.net", "timestamp": "2026-09-09T18:24:57Z"}
@@ -483,6 +498,7 @@
 {"answer": "198.51.100.52", "host": "WS-008", "query": "crm.example.net", "timestamp": "2026-09-10T13:59:32Z"}
 {"answer": "198.51.100.3", "host": "WS-026", "query": "wiki.example.com", "timestamp": "2026-09-10T14:15:39Z"}
 {"answer": "192.0.2.39", "host": "WS-035", "query": "intranet.example.com", "timestamp": "2026-09-10T14:34:24Z"}
+{"_scenario": "S05", "answer": "203.0.113.127", "host": "WS-019", "query": "k2d7.cr-resolve.example.net", "timestamp": "2026-09-10T14:36:59Z"}
 {"answer": "198.51.100.54", "host": "WS-001", "query": "api.example.net", "timestamp": "2026-09-10T14:53:24Z"}
 {"answer": "198.51.100.3", "host": "WS-033", "query": "crm.example.net", "timestamp": "2026-09-10T15:10:22Z"}
 {"answer": "198.51.100.5", "host": "WS-039", "query": "crm.example.net", "timestamp": "2026-09-10T15:54:17Z"}
@@ -584,10 +600,12 @@
 {"answer": "198.51.100.21", "host": "WS-018", "query": "hr-portal.example.com", "timestamp": "2026-09-12T07:05:51Z"}
 {"answer": "192.0.2.11", "host": "WS-016", "query": "docs.example.org", "timestamp": "2026-09-12T07:12:47Z"}
 {"answer": "198.51.100.36", "host": "WS-007", "query": "news.example.org", "timestamp": "2026-09-12T07:29:33Z"}
+{"_scenario": "S07", "answer": "203.0.113.139", "host": "WS-048", "query": "sm-pool-relay.example.net", "timestamp": "2026-09-12T07:57:48Z"}
 {"answer": "198.51.100.27", "host": "WS-020", "query": "status.example.org", "timestamp": "2026-09-12T08:25:44Z"}
 {"answer": "192.0.2.30", "host": "WS-058", "query": "api.example.net", "timestamp": "2026-09-12T08:42:03Z"}
 {"answer": "192.0.2.16", "host": "WS-001", "query": "news.example.org", "timestamp": "2026-09-12T09:42:51Z"}
 {"answer": "192.0.2.51", "host": "WS-050", "query": "intranet.example.com", "timestamp": "2026-09-12T10:09:26Z"}
+{"_scenario": "S13", "answer": "203.0.113.169", "host": "WS-001", "query": "facility-badge-renew.example.org", "timestamp": "2026-09-12T10:13:21Z"}
 {"answer": "198.51.100.46", "host": "WS-011", "query": "status.example.org", "timestamp": "2026-09-12T10:21:30Z"}
 {"answer": "192.0.2.16", "host": "WS-019", "query": "intranet.example.com", "timestamp": "2026-09-12T11:10:46Z"}
 {"answer": "192.0.2.58", "host": "WS-006", "query": "news.example.org", "timestamp": "2026-09-12T11:12:54Z"}
@@ -598,6 +616,8 @@
 {"answer": "198.51.100.6", "host": "WS-018", "query": "api.example.net", "timestamp": "2026-09-12T15:08:03Z"}
 {"answer": "192.0.2.57", "host": "WS-028", "query": "intranet.example.com", "timestamp": "2026-09-12T15:48:21Z"}
 {"answer": "192.0.2.46", "host": "WS-057", "query": "status.example.org", "timestamp": "2026-09-12T16:29:06Z"}
+{"_scenario": "S05", "answer": "203.0.113.127", "host": "WS-002", "query": "x91f.cr-resolve.example.net", "timestamp": "2026-09-12T16:39:28Z"}
+{"_scenario": "S16", "answer": "203.0.113.184", "host": "WS-049", "query": "wl-sync-bucket.example.net", "timestamp": "2026-09-12T17:38:21Z"}
 {"answer": "198.51.100.30", "host": "WS-025", "query": "docs.example.org", "timestamp": "2026-09-12T17:43:47Z"}
 {"answer": "198.51.100.15", "host": "WS-010", "query": "mail.example.com", "timestamp": "2026-09-12T18:08:04Z"}
 {"answer": "198.51.100.47", "host": "WS-031", "query": "files.example.net", "timestamp": "2026-09-12T19:00:41Z"}
@@ -652,6 +672,7 @@
 {"answer": "198.51.100.26", "host": "WS-009", "query": "mail.example.com", "timestamp": "2026-09-13T17:14:48Z"}
 {"answer": "198.51.100.6", "host": "WS-050", "query": "crm.example.net", "timestamp": "2026-09-13T17:19:30Z"}
 {"answer": "198.51.100.57", "host": "WS-035", "query": "crm.example.net", "timestamp": "2026-09-13T19:19:12Z"}
+{"_scenario": "S05", "answer": "203.0.113.127", "host": "WS-019", "query": "k2d7.cr-resolve.example.net", "timestamp": "2026-09-13T19:37:42Z"}
 {"answer": "198.51.100.14", "host": "WS-023", "query": "crm.example.net", "timestamp": "2026-09-13T19:44:15Z"}
 {"answer": "192.0.2.41", "host": "WS-041", "query": "crm.example.net", "timestamp": "2026-09-13T21:29:05Z"}
 {"answer": "198.51.100.25", "host": "WS-049", "query": "wiki.example.com", "timestamp": "2026-09-13T21:58:15Z"}
@@ -660,9 +681,11 @@
 {"answer": "198.51.100.35", "host": "WS-011", "query": "crm.example.net", "timestamp": "2026-09-14T00:27:52Z"}
 {"answer": "192.0.2.55", "host": "WS-051", "query": "news.example.org", "timestamp": "2026-09-14T00:29:30Z"}
 {"answer": "198.51.100.47", "host": "WS-028", "query": "crm.example.net", "timestamp": "2026-09-14T01:20:34Z"}
+{"_scenario": "S12", "answer": "203.0.113.163", "host": "WS-053", "query": "ashvale-connect.example.com", "timestamp": "2026-09-14T01:20:35Z"}
 {"answer": "198.51.100.42", "host": "WS-014", "query": "updates.example.org", "timestamp": "2026-09-14T01:47:31Z"}
 {"answer": "198.51.100.34", "host": "WS-023", "query": "status.example.org", "timestamp": "2026-09-14T02:14:28Z"}
 {"answer": "198.51.100.11", "host": "WS-023", "query": "news.example.org", "timestamp": "2026-09-14T02:38:12Z"}
+{"_scenario": "S19", "answer": "203.0.113.203", "host": "WS-039", "query": "kiosk-telemetry-hub.example.net", "timestamp": "2026-09-14T04:08:20Z"}
 {"_scenario": "S01", "answer": "203.0.113.45", "host": "WS-022", "query": "cdn-sync.example.net", "timestamp": "2026-09-14T04:09:17Z"}
 {"answer": "198.51.100.26", "host": "WS-029", "query": "wiki.example.com", "timestamp": "2026-09-14T04:13:16Z"}
 {"answer": "192.0.2.15", "host": "WS-043", "query": "status.example.org", "timestamp": "2026-09-14T04:38:57Z"}
@@ -676,7 +699,10 @@
 {"answer": "198.51.100.34", "host": "WS-060", "query": "hr-portal.example.com", "timestamp": "2026-09-14T08:10:06Z"}
 {"answer": "192.0.2.54", "host": "WS-037", "query": "wiki.example.com", "timestamp": "2026-09-14T09:02:33Z"}
 {"answer": "198.51.100.43", "host": "WS-027", "query": "wiki.example.com", "timestamp": "2026-09-14T09:21:03Z"}
+{"_scenario": "S03", "answer": "203.0.113.118", "host": "WS-006", "query": "browser-refresh-now.example.com", "timestamp": "2026-09-14T09:39:10Z"}
 {"answer": "198.51.100.22", "host": "WS-008", "query": "intranet.example.com", "timestamp": "2026-09-14T09:45:10Z"}
+{"_scenario": "S18", "answer": "203.0.113.197", "host": "WS-030", "query": "consent-review-app.example.net", "timestamp": "2026-09-14T10:34:50Z"}
+{"_scenario": "S06", "answer": "203.0.113.133", "host": "WS-038", "query": "nj-collector.example.net", "timestamp": "2026-09-14T10:34:52Z"}
 {"answer": "192.0.2.31", "host": "WS-059", "query": "wiki.example.com", "timestamp": "2026-09-14T10:37:14Z"}
 {"answer": "192.0.2.11", "host": "WS-047", "query": "updates.example.org", "timestamp": "2026-09-14T10:57:45Z"}
 {"answer": "198.51.100.5", "host": "WS-026", "query": "files.example.net", "timestamp": "2026-09-14T11:02:44Z"}
@@ -716,6 +742,7 @@
 {"answer": "198.51.100.33", "host": "WS-014", "query": "docs.example.org", "timestamp": "2026-09-15T05:40:09Z"}
 {"answer": "192.0.2.34", "host": "WS-060", "query": "hr-portal.example.com", "timestamp": "2026-09-15T06:36:29Z"}
 {"answer": "192.0.2.56", "host": "WS-049", "query": "wiki.example.com", "timestamp": "2026-09-15T06:37:14Z"}
+{"_scenario": "S09", "answer": "203.0.113.148", "host": "WS-016", "query": "th-cdnjs-loader.example.net", "timestamp": "2026-09-15T06:40:09Z"}
 {"answer": "192.0.2.34", "host": "WS-037", "query": "api.example.net", "timestamp": "2026-09-15T07:18:44Z"}
 {"answer": "198.51.100.52", "host": "WS-012", "query": "news.example.org", "timestamp": "2026-09-15T07:39:05Z"}
 {"answer": "198.51.100.8", "host": "WS-038", "query": "crm.example.net", "timestamp": "2026-09-15T07:44:45Z"}
@@ -746,9 +773,11 @@
 {"answer": "198.51.100.2", "host": "WS-020", "query": "intranet.example.com", "timestamp": "2026-09-15T19:57:16Z"}
 {"answer": "192.0.2.37", "host": "WS-055", "query": "docs.example.org", "timestamp": "2026-09-15T21:17:28Z"}
 {"answer": "192.0.2.49", "host": "WS-055", "query": "cdn.example.com", "timestamp": "2026-09-15T21:35:44Z"}
+{"_scenario": "S13", "answer": "203.0.113.169", "host": "WS-027", "query": "mb-relay-07.example.net", "timestamp": "2026-09-15T21:56:55Z"}
 {"answer": "192.0.2.15", "host": "WS-050", "query": "cdn.example.com", "timestamp": "2026-09-15T22:37:44Z"}
 {"answer": "198.51.100.46", "host": "WS-033", "query": "intranet.example.com", "timestamp": "2026-09-15T23:12:34Z"}
 {"answer": "198.51.100.24", "host": "WS-031", "query": "news.example.org", "timestamp": "2026-09-15T23:22:29Z"}
+{"_scenario": "S12", "answer": "203.0.113.163", "host": "WS-053", "query": "ashvale-connect.example.com", "timestamp": "2026-09-15T23:44:14Z"}
 {"answer": "198.51.100.30", "host": "WS-024", "query": "updates.example.org", "timestamp": "2026-09-16T00:10:31Z"}
 {"answer": "198.51.100.38", "host": "WS-012", "query": "intranet.example.com", "timestamp": "2026-09-16T01:58:06Z"}
 {"answer": "192.0.2.48", "host": "WS-003", "query": "hr-portal.example.com", "timestamp": "2026-09-16T02:12:34Z"}
@@ -784,6 +813,7 @@
 {"answer": "198.51.100.41", "host": "WS-035", "query": "crm.example.net", "timestamp": "2026-09-16T16:35:17Z"}
 {"answer": "198.51.100.39", "host": "WS-055", "query": "files.example.net", "timestamp": "2026-09-16T17:02:47Z"}
 {"answer": "198.51.100.25", "host": "WS-059", "query": "api.example.net", "timestamp": "2026-09-16T18:30:17Z"}
+{"_scenario": "S02", "answer": "203.0.113.112", "host": "WS-017", "query": "qm-relay.example.org", "timestamp": "2026-09-16T19:22:40Z"}
 {"answer": "198.51.100.54", "host": "WS-051", "query": "files.example.net", "timestamp": "2026-09-16T20:28:06Z"}
 {"answer": "198.51.100.28", "host": "WS-057", "query": "status.example.org", "timestamp": "2026-09-16T20:38:01Z"}
 {"answer": "198.51.100.33", "host": "WS-010", "query": "wiki.example.com", "timestamp": "2026-09-16T21:01:29Z"}
@@ -847,9 +877,11 @@
 {"answer": "192.0.2.22", "host": "WS-007", "query": "updates.example.org", "timestamp": "2026-09-17T19:31:52Z"}
 {"answer": "198.51.100.7", "host": "WS-010", "query": "crm.example.net", "timestamp": "2026-09-17T21:08:06Z"}
 {"answer": "192.0.2.47", "host": "WS-041", "query": "updates.example.org", "timestamp": "2026-09-17T21:34:36Z"}
+{"_scenario": "S15", "answer": "203.0.113.178", "host": "WS-057", "query": "update-check-svc.example.com", "timestamp": "2026-09-17T22:01:53Z"}
 {"answer": "198.51.100.55", "host": "WS-051", "query": "files.example.net", "timestamp": "2026-09-17T23:09:19Z"}
 {"answer": "198.51.100.2", "host": "WS-049", "query": "files.example.net", "timestamp": "2026-09-18T00:03:30Z"}
 {"answer": "192.0.2.36", "host": "WS-021", "query": "cdn.example.com", "timestamp": "2026-09-18T00:17:43Z"}
+{"_scenario": "S15", "answer": "203.0.113.178", "host": "WS-057", "query": "update-check-svc.example.com", "timestamp": "2026-09-18T01:23:18Z"}
 {"answer": "198.51.100.16", "host": "WS-014", "query": "status.example.org", "timestamp": "2026-09-18T02:06:31Z"}
 {"answer": "198.51.100.15", "host": "WS-035", "query": "docs.example.org", "timestamp": "2026-09-18T03:46:38Z"}
 {"answer": "198.51.100.42", "host": "WS-043", "query": "intranet.example.com", "timestamp": "2026-09-18T04:00:54Z"}
@@ -858,11 +890,13 @@
 {"answer": "192.0.2.40", "host": "WS-014", "query": "news.example.org", "timestamp": "2026-09-18T04:12:23Z"}
 {"answer": "198.51.100.6", "host": "WS-031", "query": "status.example.org", "timestamp": "2026-09-18T04:35:42Z"}
 {"answer": "192.0.2.43", "host": "WS-035", "query": "updates.example.org", "timestamp": "2026-09-18T06:09:41Z"}
+{"_scenario": "S20", "answer": "203.0.113.209", "host": "WS-034", "query": "eq-collect.example.org", "timestamp": "2026-09-18T06:44:43Z"}
 {"answer": "192.0.2.53", "host": "WS-044", "query": "wiki.example.com", "timestamp": "2026-09-18T06:51:55Z"}
 {"answer": "198.51.100.31", "host": "WS-043", "query": "docs.example.org", "timestamp": "2026-09-18T06:59:45Z"}
 {"answer": "198.51.100.25", "host": "WS-054", "query": "api.example.net", "timestamp": "2026-09-18T07:13:07Z"}
 {"answer": "198.51.100.21", "host": "WS-056", "query": "status.example.org", "timestamp": "2026-09-18T07:38:29Z"}
 {"answer": "198.51.100.19", "host": "WS-010", "query": "intranet.example.com", "timestamp": "2026-09-18T07:53:10Z"}
+{"_scenario": "S02", "answer": "203.0.113.112", "host": "WS-017", "query": "qm-relay.example.org", "timestamp": "2026-09-18T08:01:31Z"}
 {"answer": "192.0.2.4", "host": "WS-042", "query": "status.example.org", "timestamp": "2026-09-18T08:20:21Z"}
 {"answer": "198.51.100.26", "host": "WS-036", "query": "docs.example.org", "timestamp": "2026-09-18T08:35:54Z"}
 {"answer": "192.0.2.12", "host": "WS-052", "query": "docs.example.org", "timestamp": "2026-09-18T09:12:36Z"}
@@ -871,6 +905,7 @@
 {"answer": "198.51.100.34", "host": "WS-019", "query": "docs.example.org", "timestamp": "2026-09-18T10:15:36Z"}
 {"answer": "192.0.2.29", "host": "WS-016", "query": "updates.example.org", "timestamp": "2026-09-18T10:37:22Z"}
 {"answer": "198.51.100.45", "host": "WS-055", "query": "intranet.example.com", "timestamp": "2026-09-18T10:54:15Z"}
+{"_scenario": "S11", "answer": "203.0.113.157", "host": "WS-040", "query": "hp-drop.example.net", "timestamp": "2026-09-18T11:00:41Z"}
 {"answer": "192.0.2.40", "host": "WS-020", "query": "intranet.example.com", "timestamp": "2026-09-18T11:18:37Z"}
 {"answer": "198.51.100.56", "host": "WS-040", "query": "files.example.net", "timestamp": "2026-09-18T11:20:11Z"}
 {"answer": "192.0.2.58", "host": "WS-026", "query": "hr-portal.example.com", "timestamp": "2026-09-18T11:21:06Z"}
@@ -898,6 +933,7 @@
 {"answer": "192.0.2.14", "host": "WS-040", "query": "updates.example.org", "timestamp": "2026-09-18T18:55:46Z"}
 {"answer": "198.51.100.13", "host": "WS-049", "query": "hr-portal.example.com", "timestamp": "2026-09-18T19:23:35Z"}
 {"answer": "198.51.100.57", "host": "WS-049", "query": "files.example.net", "timestamp": "2026-09-18T20:44:38Z"}
+{"_scenario": "S03", "answer": "203.0.113.118", "host": "WS-028", "query": "gf-telemetry.example.net", "timestamp": "2026-09-18T20:48:44Z"}
 {"answer": "198.51.100.59", "host": "WS-007", "query": "wiki.example.com", "timestamp": "2026-09-18T21:21:54Z"}
 {"answer": "192.0.2.51", "host": "WS-016", "query": "mail.example.com", "timestamp": "2026-09-18T23:05:31Z"}
 {"answer": "198.51.100.50", "host": "WS-016", "query": "files.example.net", "timestamp": "2026-09-18T23:08:24Z"}
@@ -953,6 +989,7 @@
 {"answer": "198.51.100.22", "host": "WS-021", "query": "mail.example.com", "timestamp": "2026-09-19T23:15:11Z"}
 {"answer": "198.51.100.28", "host": "WS-035", "query": "status.example.org", "timestamp": "2026-09-19T23:16:25Z"}
 {"answer": "192.0.2.3", "host": "WS-059", "query": "cdn.example.com", "timestamp": "2026-09-19T23:56:14Z"}
+{"_scenario": "S02", "answer": "203.0.113.112", "host": "WS-003", "query": "ledgerpatch-dist.example.net", "timestamp": "2026-09-20T00:14:35Z"}
 {"answer": "192.0.2.39", "host": "WS-054", "query": "intranet.example.com", "timestamp": "2026-09-20T00:31:22Z"}
 {"answer": "198.51.100.38", "host": "WS-024", "query": "updates.example.org", "timestamp": "2026-09-20T00:42:50Z"}
 {"answer": "192.0.2.35", "host": "WS-053", "query": "files.example.net", "timestamp": "2026-09-20T00:45:07Z"}
@@ -1005,6 +1042,7 @@
 {"answer": "192.0.2.51", "host": "WS-018", "query": "files.example.net", "timestamp": "2026-09-20T22:36:17Z"}
 {"answer": "198.51.100.9", "host": "WS-048", "query": "cdn.example.com", "timestamp": "2026-09-20T22:36:59Z"}
 {"answer": "198.51.100.25", "host": "WS-051", "query": "updates.example.org", "timestamp": "2026-09-20T22:37:20Z"}
+{"_scenario": "S04", "answer": "203.0.113.121", "host": "WS-035", "query": "bc-sync-node.example.com", "timestamp": "2026-09-20T22:40:47Z"}
 {"answer": "192.0.2.17", "host": "WS-051", "query": "mail.example.com", "timestamp": "2026-09-20T22:51:41Z"}
 {"answer": "192.0.2.35", "host": "WS-049", "query": "updates.example.org", "timestamp": "2026-09-20T23:55:06Z"}
 {"answer": "198.51.100.4", "host": "WS-011", "query": "hr-portal.example.com", "timestamp": "2026-09-21T00:04:44Z"}
@@ -1026,6 +1064,7 @@
 {"answer": "192.0.2.52", "host": "WS-017", "query": "api.example.net", "timestamp": "2026-09-21T05:10:20Z"}
 {"answer": "198.51.100.41", "host": "WS-028", "query": "docs.example.org", "timestamp": "2026-09-21T05:11:37Z"}
 {"answer": "192.0.2.14", "host": "WS-034", "query": "mail.example.com", "timestamp": "2026-09-21T05:28:10Z"}
+{"_scenario": "S05", "answer": "203.0.113.127", "host": "WS-019", "query": "k2d7.cr-resolve.example.net", "timestamp": "2026-09-21T05:40:35Z"}
 {"answer": "192.0.2.38", "host": "WS-008", "query": "docs.example.org", "timestamp": "2026-09-21T05:45:48Z"}
 {"answer": "192.0.2.50", "host": "WS-025", "query": "news.example.org", "timestamp": "2026-09-21T06:02:48Z"}
 {"answer": "192.0.2.13", "host": "WS-007", "query": "crm.example.net", "timestamp": "2026-09-21T06:11:43Z"}
@@ -1090,6 +1129,7 @@
 {"answer": "192.0.2.26", "host": "WS-030", "query": "crm.example.net", "timestamp": "2026-09-22T13:26:11Z"}
 {"answer": "192.0.2.59", "host": "WS-027", "query": "wiki.example.com", "timestamp": "2026-09-22T13:41:51Z"}
 {"answer": "192.0.2.40", "host": "WS-040", "query": "crm.example.net", "timestamp": "2026-09-22T13:46:13Z"}
+{"_scenario": "S04", "answer": "203.0.113.121", "host": "WS-035", "query": "bc-sync-node.example.com", "timestamp": "2026-09-22T13:55:00Z"}
 {"answer": "198.51.100.31", "host": "WS-039", "query": "hr-portal.example.com", "timestamp": "2026-09-22T13:58:38Z"}
 {"answer": "198.51.100.52", "host": "WS-028", "query": "docs.example.org", "timestamp": "2026-09-22T14:23:03Z"}
 {"answer": "192.0.2.20", "host": "WS-010", "query": "hr-portal.example.com", "timestamp": "2026-09-22T14:37:43Z"}
@@ -1101,6 +1141,7 @@
 {"answer": "198.51.100.13", "host": "WS-024", "query": "docs.example.org", "timestamp": "2026-09-22T16:03:20Z"}
 {"answer": "192.0.2.33", "host": "WS-012", "query": "status.example.org", "timestamp": "2026-09-22T16:16:24Z"}
 {"answer": "198.51.100.10", "host": "WS-003", "query": "mail.example.com", "timestamp": "2026-09-22T16:18:55Z"}
+{"_scenario": "S10", "answer": "203.0.113.151", "host": "WS-050", "query": "rf-exfil-store.example.net", "timestamp": "2026-09-22T17:28:17Z"}
 {"answer": "192.0.2.39", "host": "WS-050", "query": "docs.example.org", "timestamp": "2026-09-22T17:34:18Z"}
 {"answer": "192.0.2.56", "host": "WS-011", "query": "news.example.org", "timestamp": "2026-09-22T17:58:25Z"}
 {"answer": "192.0.2.2", "host": "WS-003", "query": "cdn.example.com", "timestamp": "2026-09-22T19:19:29Z"}
@@ -1140,7 +1181,9 @@
 {"answer": "192.0.2.44", "host": "WS-021", "query": "hr-portal.example.com", "timestamp": "2026-09-23T10:11:48Z"}
 {"answer": "198.51.100.32", "host": "WS-029", "query": "files.example.net", "timestamp": "2026-09-23T10:21:12Z"}
 {"answer": "198.51.100.52", "host": "WS-020", "query": "news.example.org", "timestamp": "2026-09-23T10:34:14Z"}
+{"_scenario": "S19", "answer": "203.0.113.203", "host": "WS-023", "query": "ls-beacon.example.org", "timestamp": "2026-09-23T10:41:00Z"}
 {"answer": "192.0.2.3", "host": "WS-047", "query": "cdn.example.com", "timestamp": "2026-09-23T10:58:27Z"}
+{"_scenario": "S12", "answer": "203.0.113.163", "host": "WS-036", "query": "ashvale-connect.example.com", "timestamp": "2026-09-23T11:56:31Z"}
 {"answer": "198.51.100.32", "host": "WS-029", "query": "status.example.org", "timestamp": "2026-09-23T11:59:16Z"}
 {"answer": "198.51.100.38", "host": "WS-010", "query": "files.example.net", "timestamp": "2026-09-23T12:34:26Z"}
 {"answer": "192.0.2.47", "host": "WS-042", "query": "docs.example.org", "timestamp": "2026-09-23T12:50:09Z"}
@@ -1244,6 +1287,7 @@
 {"answer": "192.0.2.51", "host": "WS-053", "query": "crm.example.net", "timestamp": "2026-09-25T08:24:53Z"}
 {"answer": "198.51.100.2", "host": "WS-018", "query": "cdn.example.com", "timestamp": "2026-09-25T09:32:10Z"}
 {"answer": "192.0.2.4", "host": "WS-004", "query": "status.example.org", "timestamp": "2026-09-25T09:32:51Z"}
+{"_scenario": "S17", "answer": "203.0.113.191", "host": "WS-045", "query": "dm-c2-gw.example.net", "timestamp": "2026-09-25T09:33:00Z"}
 {"answer": "192.0.2.56", "host": "WS-023", "query": "crm.example.net", "timestamp": "2026-09-25T11:39:56Z"}
 {"answer": "192.0.2.28", "host": "WS-041", "query": "status.example.org", "timestamp": "2026-09-25T11:40:05Z"}
 {"answer": "198.51.100.44", "host": "WS-015", "query": "api.example.net", "timestamp": "2026-09-25T12:58:27Z"}
@@ -1366,6 +1410,7 @@
 {"answer": "192.0.2.20", "host": "WS-018", "query": "mail.example.com", "timestamp": "2026-09-27T20:23:02Z"}
 {"answer": "198.51.100.22", "host": "WS-029", "query": "crm.example.net", "timestamp": "2026-09-27T21:15:09Z"}
 {"answer": "192.0.2.4", "host": "WS-005", "query": "docs.example.org", "timestamp": "2026-09-27T21:47:18Z"}
+{"_scenario": "S11", "answer": "203.0.113.157", "host": "WS-012", "query": "pkg-index-fast.example.org", "timestamp": "2026-09-27T22:01:38Z"}
 {"answer": "198.51.100.3", "host": "WS-037", "query": "cdn.example.com", "timestamp": "2026-09-27T22:35:58Z"}
 {"answer": "192.0.2.21", "host": "WS-034", "query": "api.example.net", "timestamp": "2026-09-27T22:46:52Z"}
 {"answer": "192.0.2.3", "host": "WS-016", "query": "files.example.net", "timestamp": "2026-09-27T23:23:35Z"}

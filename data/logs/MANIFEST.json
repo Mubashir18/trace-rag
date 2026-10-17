@@ -1,24 +1,43 @@
 {
   "seed": 2026,
   "scenarios": [
-    "S01"
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18",
+    "S19",
+    "S20"
   ],
   "collections": {
     "proxy_logs": {
-      "rows": 1510,
-      "sha256": "b811d487017eb0cc69019fef874fa57ae9aa28f46e38d2a8e0674eff7b9c6de1"
+      "rows": 1610,
+      "sha256": "62869225a173c8f44c04279489655379057ea74378c50d2118cbfd5cc13bb763"
     },
     "dns_logs": {
-      "rows": 1505,
-      "sha256": "6274692bc6be91d8cb24f8d97a4506ed0b99855dd4539f2624f26e71f7c79525"
+      "rows": 1550,
+      "sha256": "aa0bf38d65ecd3281fc1a42a52d96ffe9039e77be61637b4a2b5bc7c543cebd0"
     },
     "edr_alerts": {
-      "rows": 301,
-      "sha256": "db93774bebd729b06c85b5e218adfdaf3f9fe62d48ff77b9c596b7f10f230ba6"
+      "rows": 328,
+      "sha256": "43041ef079c5e8837e7059619fa3407e247c0737014872d2e92993b650628bd9"
     },
     "vpn_auth_logs": {
-      "rows": 403,
-      "sha256": "518292a2e6358f65c838ae9ddea092db84febc16287cce8b3ada614c7fbb4550"
+      "rows": 416,
+      "sha256": "37b88fb4efc9ea04196e7ba44a26bd36ec25de4cc1e46e5d053d3c9facead9a9"
     },
     "hr_records": {
       "rows": 120,

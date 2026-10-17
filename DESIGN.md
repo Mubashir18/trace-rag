@@ -222,6 +222,14 @@ If results contradict these, we report them honestly — a null/negative result 
   tags** so PC and Kaggle produce comparable results.
 - **Colab:** fallback if Kaggle quota runs out. **Hugging Face:** final dataset + code release.
 - One model in RAM at a time.
+- **Model store (checked 2026-10-17):** the Ollama model store is on D:, not C: — the system-level variable
+  `OLLAMA_MODELS = D:\advanced_gpt` (blobs 13.0 GB, 5 manifests). No move was needed. Ollama was stopped and
+  restarted with the same store; `ollama list` before and after shows identical tags, IDs and sizes
+  (mistral:7b-instruct-v0.3-q4_K_M `6577803aa9a0`, qwen2.5:7b-instruct-q4_K_M `845dbda0ea48`,
+  llama3.1:8b-instruct-q4_K_M `46e0c10c039e`), so the weights are unchanged.
+- **Calibration data (2026-10-17):** the calibration grid runs on the **final** logs and reports (all 20
+  scenarios; MANIFEST hashes in STATUS.md). The 4 cells produced on the earlier S01-only logs were archived
+  locally (`runs/calibration_prefix/restart1_old_logs/`) and the grid restarted from scratch.
 - **Decoding (decided 2026-10-17):** repeats are only informative if decoding is stochastic, so every
   run uses `temperature = 0.7` with fixed seeds {1, 2, 3}. We report means with 95% confidence
   intervals across repeats. A single deterministic `temperature = 0` run per cell is also recorded
