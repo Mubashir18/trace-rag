@@ -219,6 +219,13 @@ If results contradict these, we report them honestly — a null/negative result 
 
 ## 12. Decision points (go / no-go)
 
+0. **Report-length check (before the full matrix).** Five scenarios are written in both a short
+   (~700–1,100 tokens) and a long (~2,500–3,500 tokens) form. All five versions of those scenarios
+   are run under every configuration with one model, both lengths, 3 repeats. If any primary metric
+   (benign utility, utility under attack, ASR, over-block rate) differs between lengths by more than
+   **5 percentage points**, or the difference is statistically significant, **all** runs use the long
+   form. Otherwise the short form is used and the check is reported in the paper as a robustness
+   result. Report length is never cut to save time.
 1. **Calibration gate (after Phase 4).** Undefended (C0) benign utility must be high enough
    (target ≥ ~60%) that a defense's effect is measurable. If a model is below that, we make
    the *tasks* simpler for all models equally — we never quietly drop that model or shrink the set.
