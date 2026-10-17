@@ -308,6 +308,24 @@ harness problem, not a finding, so the harness is calibrated before any gate is 
   The 11 cells already finished were **kept**: none of their replies exceeded 640 tokens, and the cap only
   stops generation without changing sampling, so with the same seed they are identical under the new
   harness. The grid resumed at cell 12.
+- **Argument check (decided 2026-10-17).** The completed 24-cell grid (V1/C0 only) gave host recall
+  Qwen P0 0.75 / P1 0.5, Mistral 0 everywhere, Llama 0 everywhere. Trace reading showed one more
+  interface bug that affects every model the same way: argument names were not checked. Llama with P1
+  read the report and then searched each IOC correctly, but as `search_logs(log_type=..., indicator=...)`;
+  the tool silently ignored the unknown names and answered "unknown collection ''" / "empty query", so the
+  model never learned the real names. Fix, identical for all models and configurations: before the gate,
+  a known tool's arguments are checked against its schema; unknown names or missing/empty required
+  arguments → not executed, decision `invalid_args`, and the error lists the expected arguments. The
+  placeholder rule also covers a value wholly in square brackets (`[REDACTED_INDICATOR]`; defanged `[.]`
+  inside a value is unaffected). Tested in `test_smoke.py` (12/12).
+  Only the 6 cells containing a call that the new check treats differently were re-run (Llama P1 t0 s1,
+  t0 s2, t0.7 s2; Mistral P1 t0 s1, t0 s2, t0.7 s2); the other 18 cells contain no such call, so their
+  traces are identical under the new harness and were kept. Old versions archived locally in
+  `runs/calibration_prefix/argcheck_affected/`.
+  **Not changed (open option for the user):** Mistral and Llama often send all calls in the first turn,
+  before the report has been read, with invented values (`indicator1`, `indicator from TR-001`). Executing
+  only one call per turn would change the agent protocol (and slow down Qwen's correct batching), so it is
+  not done without the user's decision.
 - The chosen harness is then **frozen** before gates C1–C4 are written.
 - S01 is marked as the **development scenario**; headline results are reported both with and
   without S01.

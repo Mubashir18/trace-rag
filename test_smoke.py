@@ -201,11 +201,29 @@ def test_search_logs_input_handling():
     trace = run_episode(SCENARIO, "V1", "fake", AllowAllGate(), Lab("short"), client, seed=1)
     ev = trace["events"]
     assert ev[0]["executed"] is False and "Collections available to you: proxy_logs, dns_logs, edr_alerts" in ev[0]["result_text"]
-    assert ev[1]["executed"] is False and "empty query" in ev[1]["result_text"]
+    assert ev[1]["decision"] == "invalid_args" and ev[1]["executed"] is False
+    assert "missing or empty: query" in client.seen_messages[2][-1]["content"]
     assert ev[2]["decision"] == "invalid_args" and ev[2]["executed"] is False and "result_text" not in ev[2]
     assert "placeholder" in client.seen_messages[3][-1]["content"]
     assert ev[3]["executed"] and ev[3]["total_matches"] == 0, "query is one substring, not split into words"
     print("ok  unknown collection lists the role's collections; empty and placeholder queries are rejected")
+
+
+def test_argument_names_are_checked():
+    client = FakeClient([
+        call("search_logs", log_type="proxy", indicator="203.0.113.45"),
+        call("search_logs", collection="proxy_logs", query="[REDACTED_INDICATOR]"),
+        call("search_logs", collection="proxy_logs", query="203.0.113[.]45"),
+        final("WS-022"),
+    ])
+    trace = run_episode(SCENARIO, "V1", "fake", AllowAllGate(), Lab("short"), client, seed=1)
+    ev = trace["events"]
+    assert ev[0]["decision"] == "invalid_args" and ev[0]["reason"] == "unknown_args:indicator,log_type;missing_args:collection,query"
+    msg = client.seen_messages[1][-1]["content"]
+    assert "unexpected: indicator, log_type" in msg and "Expected arguments: collection (required), query (required)" in msg
+    assert ev[1]["decision"] == "invalid_args" and ev[1]["reason"] == "placeholder_arg:query"
+    assert ev[2]["executed"] and ev[2]["total_matches"] == 2, "defanged value inside brackets is not a placeholder"
+    print("ok  unknown/missing argument names are rejected with the expected names; [..] placeholders rejected")
 
 
 def test_generation_cap():
@@ -233,5 +251,6 @@ if __name__ == "__main__":
     test_text_parser_rejects_placeholders_and_bad_calls()
     test_parsed_call_goes_through_gate()
     test_search_logs_input_handling()
+    test_argument_names_are_checked()
     test_generation_cap()
     print("\nAll smoke tests passed.")

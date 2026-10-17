@@ -83,6 +83,7 @@ PLACEHOLDER_PATTERNS = [
     re.compile(r"<[^<>]*>"),      # <indicator>, <report_id>
     re.compile(r"\{[^{}]*\}"),    # {indicator} template slots
     re.compile(r"^\(.*\)$"),      # whole value in parentheses: "(indicator from read_report response)"
+    re.compile(r"^\[.*\]$"),      # whole value in square brackets: "[REDACTED_INDICATOR]" (defanged "[.]" inside a value is fine)
     re.compile(r"\.\.\.|…"),      # ellipsis
 ]
 
@@ -119,6 +120,25 @@ def parse_text_tool_call(content, tool_specs):
     if bad:
         return None, f"placeholder_arg:{bad}"
     return {"function": {"name": name, "arguments": args}}, None
+
+
+def argument_problems(name, args, tool_specs):
+    """Unknown argument names and missing/empty required arguments for a known tool (DESIGN §11.1).
+    Without this check, a call such as search_logs(log_type=..., indicator=...) silently ran with empty
+    arguments and the model was never told the real parameter names."""
+    params = {s["function"]["name"]: s["function"]["parameters"] for s in tool_specs}[name]
+    unknown = sorted(set(args) - set(params.get("properties", {})))
+    missing = [r for r in params.get("required", []) if not (isinstance(args.get(r), str) and args[r].strip())]
+    if not unknown and not missing:
+        return None
+    expected = ", ".join(f"{p} ({'required' if p in params.get('required', []) else 'optional'})"
+                         for p in params.get("properties", {})) or "none"
+    reason = ";".join([f"unknown_args:{','.join(unknown)}"] * bool(unknown) + [f"missing_args:{','.join(missing)}"] * bool(missing))
+    message = (f"Error: invalid arguments for {name}"
+               + (f"; unexpected: {', '.join(unknown)}" if unknown else "")
+               + (f"; missing or empty: {', '.join(missing)}" if missing else "")
+               + f". Expected arguments: {expected}.")
+    return reason, message
 
 
 def placeholder_arg(args):
@@ -215,9 +235,13 @@ def run_episode(scenario, version, model, gate, lab, client, seed, temperature=0
                 event["raw_content"] = msg.get("content", "")
 
             bad_arg = placeholder_arg(args)
+            arg_problem = argument_problems(name, args, tool_specs) if name in TOOL_NAMES else None
             if name not in TOOL_NAMES:
                 event.update({"decision": "invalid_tool", "executed": False})
                 tool_content = f"Error: unknown tool '{name}'."
+            elif arg_problem:
+                event.update({"decision": "invalid_args", "executed": False, "reason": arg_problem[0]})
+                tool_content = arg_problem[1]
             elif bad_arg:
                 # Same placeholder rule as the text parser, applied to native calls too (DESIGN §11.1).
                 event.update({"decision": "invalid_args", "executed": False, "reason": f"placeholder_arg:{bad_arg}"})

@@ -42,6 +42,8 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 | 21 | Final data generated | `generate_logs.py` run twice: byte-identical. `build_reports.py`: 100 short + 25 long rendered, identical on rebuild. `validate_scenarios.py` incl. **log checks: all 20 pass**. `test_smoke.py` pass. S01: planted rows identical to the S01-only logs; IOC hits = WS-009, WS-014, WS-022, WS-031 (all S01's own rows) = expected. |
 | 22 | Calibration restarted on final data | 4 cells made on the old logs archived to `runs/calibration_prefix/restart1_old_logs/`; full 24-cell grid restarted detached; watcher running. |
 | 23 | Calibration crash at cell 12 (Qwen P0 t0.7 s2) | Runaway generation: reply filled the 8,192 context, Ollama shifted out 4,093 old tokens (`truncated = 1`), request hit the 1-hour timeout. Fix for all models/configs: `num_predict = 1536` (normal replies <= 640 tokens); each LLM call logs `done_reason`, `hit_gen_limit`, `context_full`; cut-off reply -> stop reason `gen_limit`; `calibrate.py` skips a failed cell instead of crashing. `test_smoke.py` 11/11. The 11 finished cells were kept (identical under the cap); grid resumed at cell 12. Crash log: `runs/calibration_prefix/crash_timeout_cell12.log`. DESIGN §11.1. |
+| 24 | Full grid finished (24 cells, V1/C0) | Host recall: Qwen P0 0.75 (all 4), P1 0.5 (all 4); Mistral 0 (all 8); Llama 0 (all 8). |
+| 25 | Argument-name bug found and fixed | Llama P1 searched each IOC correctly but with `log_type`/`indicator` instead of `collection`/`query`; unknown names were silently ignored. Now: unknown or missing/empty required args -> `invalid_args` with the expected argument names; `[...]` whole-value placeholders rejected. `test_smoke.py` 12/12. 6 affected cells (Llama P1 x3, Mistral P1 x3) archived and re-running; the other 18 are identical under the new harness and kept. DESIGN §11.1. |
 
 ### Current MANIFEST (20 scenarios, seed 2026)
 | Collection | Rows | sha256 |
@@ -56,7 +58,11 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 The old S01-only proxy hash `b811d487...` is superseded.
 
 ## Open points for the user
-None. (Decided 2026-10-17 by the user: the model store stays at `D:\advanced_gpt`; no move.)
+1. **One call per turn?** Mistral and Llama often send all tool calls in the first turn, before reading the report,
+   with invented values (`indicator1`). Executing only the first call per turn would fix that but changes the agent
+   protocol and slows Qwen's correct batching. Not done without the user's decision.
+2. **Decision point 1 (C0 benign utility >= ~60%)** will likely fail for Mistral (and maybe Llama) on S01 V1; DESIGN §12.1
+   says tasks are then made simpler for all models equally. Options will be put to the user with the final numbers.
 
 ## Next steps
 1. Wait for calibration (24 cells on final data). Then ROADMAP 2: read `summary.csv`, choose prompt/temperature
