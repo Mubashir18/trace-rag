@@ -55,7 +55,7 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 The old S01-only proxy hash `b811d487...` is superseded.
 
 ## Open points for the user
-1. Optional: should the model store be moved from `D:\advanced_gpt` to a separate `D:\ollama\models` (tidier, same drive)? Not needed for disk space.
+None. (Decided 2026-10-17 by the user: the model store stays at `D:dvanced_gpt`; no move.)
 
 ## Next steps
 1. Wait for calibration (24 cells on final data). Then ROADMAP 2: read `summary.csv`, choose prompt/temperature
