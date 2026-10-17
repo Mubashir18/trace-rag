@@ -60,10 +60,13 @@ def main():
     print(f"\nUser request: {trace['user_request']}\n")
     for e in trace["events"]:
         extra = f" -> {e.get('total_matches')} matches" if e.get("tool") == "search_logs" and e.get("executed") else ""
-        print(f"  step {e['step']}: {e['tool']}({json.dumps(e['args'])}) [{e['decision']}]{extra}")
+        print(f"  step {e['step']}: {e['tool']}({json.dumps(e['args'])}) [{e['decision']}] <{e['call_source']}>{extra}")
     print(f"\nFinal answer ({trace['stop_reason']}):\n{trace['final_answer']}\n")
     print("Quick check:", json.dumps(quick_check(trace, scenario), indent=2))
-    print(f"Tool calls: {trace['tool_calls_total']} | stop: {trace['stop_reason']}")
+    print(f"Tool calls: {trace['tool_calls_total']} (native {trace['tool_calls_native']}, "
+          f"parsed_from_text {trace['tool_calls_parsed_from_text']}) | stop: {trace['stop_reason']}")
+    if trace["text_parse_rejections"]:
+        print("Text parse rejections:", trace["text_parse_rejections"])
     print(f"Time: {trace['wall_seconds']}s over {len(trace['llm_calls'])} LLM calls. Trace saved: {out}")
 
 

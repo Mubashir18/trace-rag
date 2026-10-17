@@ -7,6 +7,7 @@ which the scoring step reads later. Nothing is scored here.
 """
 
 import json
+import re
 import time
 import urllib.request
 
@@ -63,6 +64,59 @@ def _parse_args(raw):
     return {}
 
 
+# Text fallback parser (DESIGN.md §11.1, decided 2026-10-17).
+# Some models (Mistral) sometimes write a tool call as text instead of a native tool call, and
+# Ollama then returns it as plain content. The parser below recovers such a call ONLY when it is
+# strict, valid JSON at the start of the reply, in one of two shapes:
+#   [TOOL_CALLS] [{"name": ..., "arguments": {...}}, ...]   (marker optional)
+#   {"name": ..., "arguments": {...}}
+# Only the FIRST call is taken (one tool at a time). It is rejected unless the tool exists, every
+# required argument is a non-empty string, and no argument looks like a placeholder. Prose and
+# pseudo-code such as read_report(report_id='TR-001') are never parsed. The same parser is used
+# for every model and configuration, and parsed calls go through the same gate as native calls.
+TOOL_CALLS_MARKER = "[TOOL_CALLS]"
+PLACEHOLDER_PATTERNS = [
+    re.compile(r"<[^<>]*>"),      # <indicator>, <report_id>
+    re.compile(r"\{[^{}]*\}"),    # {indicator} template slots
+    re.compile(r"^\(.*\)$"),      # whole value in parentheses: "(indicator from read_report response)"
+    re.compile(r"\.\.\.|…"),      # ellipsis
+]
+
+
+def parse_text_tool_call(content, tool_specs):
+    """Return (call, reason). call is {"function": {"name", "arguments"}} or None.
+    reason is None on success; otherwise why nothing was parsed."""
+    text = (content or "").strip()
+    if text.startswith(TOOL_CALLS_MARKER):
+        text = text[len(TOOL_CALLS_MARKER):].lstrip()
+    if not text or text[0] not in "[{":
+        return None, "no_json"
+    try:
+        value, _ = json.JSONDecoder().raw_decode(text)
+    except json.JSONDecodeError:
+        return None, "invalid_json"
+    if isinstance(value, list):
+        if not value:
+            return None, "empty_list"
+        value = value[0]
+    if not isinstance(value, dict) or not isinstance(value.get("name"), str) \
+            or not isinstance(value.get("arguments"), dict):
+        return None, "not_a_tool_call"
+
+    specs = {s["function"]["name"]: s["function"] for s in tool_specs}
+    name, args = value["name"], value["arguments"]
+    if name not in specs:
+        return None, f"unknown_tool:{name}"
+    for req in specs[name]["parameters"].get("required", []):
+        v = args.get(req)
+        if not isinstance(v, str) or not v.strip():
+            return None, f"missing_arg:{req}"
+    for k, v in args.items():
+        if isinstance(v, str) and any(p.search(v.strip()) for p in PLACEHOLDER_PATTERNS):
+            return None, f"placeholder_arg:{k}"
+    return {"function": {"name": name, "arguments": args}}, None
+
+
 def build_user_request(scenario, version):
     request = scenario["task"]["request"]
     request += scenario["versions"][version].get("request_addition", "")
@@ -93,6 +147,7 @@ def run_episode(scenario, version, model, gate, lab, client, seed, temperature=0
         "seed": seed, "temperature": temperature, "num_ctx": num_ctx, "length": lab.length,
         "prompt_id": prompt_id,
         "user_request": user_request, "llm_calls": [], "events": ctx["events"],
+        "text_parse_rejections": [],       # JSON-looking replies the fallback parser refused
         "final_answer": None, "stop_reason": None,
     }
     started = time.time()
@@ -106,19 +161,36 @@ def run_episode(scenario, version, model, gate, lab, client, seed, temperature=0
             "prompt_tokens": resp.get("prompt_eval_count"), "gen_tokens": resp.get("eval_count"),
         })
         calls = msg.get("tool_calls") or []
+        call_source = "native"
         if not calls:
-            trace["final_answer"] = msg.get("content", "")
-            # Distinguish "answered without ever using a tool" (harness/capability failure)
-            # from a normal final answer after investigating.
-            trace["stop_reason"] = "final_answer" if ctx["events"] else "no_tool_call"
-            break
+            parsed, reason = parse_text_tool_call(msg.get("content", ""), tool_specs)
+            if parsed:
+                calls, call_source = [parsed], "parsed_from_text"
+            else:
+                trace["final_answer"] = msg.get("content", "")
+                if reason != "no_json":
+                    # The reply looked like a tool call but failed the strict checks.
+                    trace["text_parse_rejections"].append({"step": step, "reason": reason})
+                    trace["stop_reason"] = "rejected_text_call"
+                else:
+                    # Distinguish "answered without ever using a tool" (harness/capability failure)
+                    # from a normal final answer after investigating.
+                    trace["stop_reason"] = "final_answer" if ctx["events"] else "no_tool_call"
+                break
 
-        messages.append({"role": "assistant", "content": msg.get("content", ""), "tool_calls": calls})
+        if call_source == "native":
+            messages.append({"role": "assistant", "content": msg.get("content", ""), "tool_calls": calls})
+        else:
+            # Store the recovered call in native form, so the chat history looks the same as
+            # for a native call (the raw text is kept in the event).
+            messages.append({"role": "assistant", "content": "", "tool_calls": calls})
         for call in calls:
             fn = call.get("function", {})
             name = fn.get("name", "")
             args = _parse_args(fn.get("arguments", {}))
-            event = {"step": step, "tool": name, "args": args}
+            event = {"step": step, "tool": name, "args": args, "call_source": call_source}
+            if call_source == "parsed_from_text":
+                event["raw_content"] = msg.get("content", "")
 
             if name not in TOOL_NAMES:
                 event.update({"decision": "invalid_tool", "executed": False})
@@ -152,4 +224,6 @@ def run_episode(scenario, version, model, gate, lab, client, seed, temperature=0
 
     trace["wall_seconds"] = round(time.time() - started, 2)
     trace["tool_calls_total"] = len(ctx["events"])
+    trace["tool_calls_native"] = sum(1 for e in ctx["events"] if e["call_source"] == "native")
+    trace["tool_calls_parsed_from_text"] = sum(1 for e in ctx["events"] if e["call_source"] == "parsed_from_text")
     return trace

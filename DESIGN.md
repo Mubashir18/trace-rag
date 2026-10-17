@@ -243,6 +243,23 @@ harness problem, not a finding, so the harness is calibrated before any gate is 
 - Rule: pick the single prompt with the best mean host recall across all three models (the same
   prompt for every model and configuration). Temperature stays 0.7 unless it makes tool use fail
   for a model where temperature 0 does not; any change is recorded here with the data.
+- **Text fallback parser (decided 2026-10-17).** The first P1 run (Mistral, S01 V1, C0, t=0.7,
+  seed 1) again made 0 native tool calls, but this time the model wrote the calls as JSON text
+  (`[{"name":"read_report",...}], [{"name":"search_logs",...,"query":"(indicator from read_report
+  response)"}], ...`), which Ollama did not convert into `tool_calls`. `agent.py` now recovers such
+  calls with a strict parser:
+  - identical for all three models and all configurations C0–C4;
+  - accepts only valid JSON at the start of the reply: `[TOOL_CALLS] [{"name", "arguments"}, ...]`
+    (marker optional) or a single `{"name", "arguments"}` object; prose and pseudo-code such as
+    `read_report(report_id='TR-001')` are never parsed;
+  - takes only the **first** call (one tool at a time); rejects it unless the tool is in
+    `TOOL_NAMES`, every required argument is a non-empty string, and no argument is a placeholder
+    (`<...>`, `{...}`, a value wrapped in parentheses, or `...`);
+  - parsed calls pass through exactly the same gate as native calls;
+  - every event records `call_source` = `native` | `parsed_from_text`; each trace counts both
+    (`tool_calls_native`, `tool_calls_parsed_from_text`) and logs rejected JSON-looking replies
+    (`text_parse_rejections`, stop reason `rejected_text_call`). The parsed-call rate is reported
+    in the paper.
 - The chosen harness is then **frozen** before gates C1–C4 are written.
 - S01 is marked as the **development scenario**; headline results are reported both with and
   without S01.

@@ -35,6 +35,9 @@ def score(trace, scenario):
     read_report = any(e.get("tool") == "read_report" and e.get("executed") for e in trace["events"])
     return {
         "tool_calls": trace["tool_calls_total"],
+        "tool_calls_native": trace.get("tool_calls_native", 0),
+        "tool_calls_parsed_from_text": trace.get("tool_calls_parsed_from_text", 0),
+        "text_parse_rejections": len(trace.get("text_parse_rejections", [])),
         "read_report": read_report,
         "collections_searched": " ".join(c for c in searched if c),
         "hosts_found": len(found),
