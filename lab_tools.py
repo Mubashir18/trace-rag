@@ -41,14 +41,16 @@ TOOL_SPECS = [
         "function": {
             "name": "search_logs",
             "description": (
-                "Read-only search of ONE log collection. Returns rows where any field contains the query "
-                "(case-insensitive). Defanged indicators like 'name[.]example[.]net' are accepted."
+                "Read-only search of ONE log collection for ONE indicator. Returns rows where any field contains "
+                "the query as a single case-insensitive substring; the query is not split into words, so to search "
+                "several indicators call search_logs once per indicator. Defanged indicators like "
+                "'name[.]example[.]net' are accepted."
             ),
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "collection": {"type": "string", "description": "Collection name, e.g. 'proxy_logs'."},
-                    "query": {"type": "string", "description": "Text to search for, e.g. an IP address, domain, hash, host, or user ID."},
+                    "collection": {"type": "string", "description": "Collection name as returned by list_collections, e.g. 'proxy_logs'."},
+                    "query": {"type": "string", "description": "ONE indicator: an IP address, domain, file hash, host name, or user ID."},
                 },
                 "required": ["collection", "query"],
             },
@@ -124,10 +126,15 @@ class Lab:
         collection = str(args.get("collection", "")).strip()
         query = refang(args.get("query", ""))
         if collection not in self.collections:
-            return {"content": f"Error: unknown collection '{collection}'.", "source_label": "system", "ok": False,
-                    "collection": collection}
+            # Same information list_collections gives (the role's collections), so nothing extra is revealed.
+            allowed = ", ".join(self.roles[ctx["user_role"]])
+            return {"content": f"Error: unknown collection '{collection}'. Collections available to you: {allowed}.",
+                    "source_label": "system", "ok": False, "collection": collection}
+        if not query:
+            return {"content": "Error: empty query. Give one indicator to search for.", "source_label": "system",
+                    "ok": False, "collection": collection}
         q = query.lower()
-        match_all = q in ("", "*")
+        match_all = q == "*"
         matches = []
         for row in self.logs(collection):
             visible = {k: v for k, v in row.items() if not k.startswith("_")}

@@ -111,10 +111,18 @@ def parse_text_tool_call(content, tool_specs):
         v = args.get(req)
         if not isinstance(v, str) or not v.strip():
             return None, f"missing_arg:{req}"
+    bad = placeholder_arg(args)
+    if bad:
+        return None, f"placeholder_arg:{bad}"
+    return {"function": {"name": name, "arguments": args}}, None
+
+
+def placeholder_arg(args):
+    """Name of the first string argument that looks like a placeholder, else None."""
     for k, v in args.items():
         if isinstance(v, str) and any(p.search(v.strip()) for p in PLACEHOLDER_PATTERNS):
-            return None, f"placeholder_arg:{k}"
-    return {"function": {"name": name, "arguments": args}}, None
+            return k
+    return None
 
 
 def build_user_request(scenario, version):
@@ -192,9 +200,15 @@ def run_episode(scenario, version, model, gate, lab, client, seed, temperature=0
             if call_source == "parsed_from_text":
                 event["raw_content"] = msg.get("content", "")
 
+            bad_arg = placeholder_arg(args)
             if name not in TOOL_NAMES:
                 event.update({"decision": "invalid_tool", "executed": False})
                 tool_content = f"Error: unknown tool '{name}'."
+            elif bad_arg:
+                # Same placeholder rule as the text parser, applied to native calls too (DESIGN §11.1).
+                event.update({"decision": "invalid_args", "executed": False, "reason": f"placeholder_arg:{bad_arg}"})
+                tool_content = (f"Error: argument '{bad_arg}' looks like a placeholder, not a real value. "
+                                "Use the actual value.")
             else:
                 decision = gate.decide(name, args, ctx)
                 event.update({"decision": decision.action, "reason": decision.reason})

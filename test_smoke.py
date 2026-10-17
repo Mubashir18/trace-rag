@@ -190,6 +190,24 @@ def test_parsed_call_goes_through_gate():
     print("ok  parsed calls pass through the same gate as native calls")
 
 
+def test_search_logs_input_handling():
+    client = FakeClient([
+        call("search_logs", collection="edr_logs", query="svc_update.exe"),
+        call("search_logs", collection="proxy_logs", query=""),
+        call("search_logs", collection="proxy_logs", query="(indicator from read_report response)"),
+        call("search_logs", collection="proxy_logs", query="login-portal-verify.example.com cdn-sync.example.net"),
+        final("done"),
+    ])
+    trace = run_episode(SCENARIO, "V1", "fake", AllowAllGate(), Lab("short"), client, seed=1)
+    ev = trace["events"]
+    assert ev[0]["executed"] is False and "Collections available to you: proxy_logs, dns_logs, edr_alerts" in ev[0]["result_text"]
+    assert ev[1]["executed"] is False and "empty query" in ev[1]["result_text"]
+    assert ev[2]["decision"] == "invalid_args" and ev[2]["executed"] is False and "result_text" not in ev[2]
+    assert "placeholder" in client.seen_messages[3][-1]["content"]
+    assert ev[3]["executed"] and ev[3]["total_matches"] == 0, "query is one substring, not split into words"
+    print("ok  unknown collection lists the role's collections; empty and placeholder queries are rejected")
+
+
 if __name__ == "__main__":
     test_benign_episode()
     test_injected_read_executes_under_c0()
@@ -200,4 +218,5 @@ if __name__ == "__main__":
     test_text_parser_ignores_plan_and_pseudo_code()
     test_text_parser_rejects_placeholders_and_bad_calls()
     test_parsed_call_goes_through_gate()
+    test_search_logs_input_handling()
     print("\nAll smoke tests passed.")
