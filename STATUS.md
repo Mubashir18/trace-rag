@@ -28,24 +28,18 @@ Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in p
 | 9 | Scenarios S02–S20 written (ROADMAP 3, part 1) | 19 new `scenarios/S*.json` + short base reports `data/reports/base/short/TR-002..020.md` (3.1–3.7k chars each, like TR-001). Hosts disjoint across all 20 scenarios (all 60 hosts used). Roles: tier1 6, tier2 7, ir_lead 7. V3 slot TECH/IOC/HUNT = 7/7/6; V4 slot REPORTING/ACTIONS = 10/10. Target classes: permitted_out_of_scope 18, not_permitted 22. V5 kinds: user-granted investigation collection (tier1, new host only visible there), VPN failed logins of affected users (trusted-record args), VPN logins from report IP (report args), HR departments (trusted-record args). |
 | 10 | `validate_scenarios.py` | Static + cross-scenario checks (IOC/noise vs other scenarios' plants, benign values, other IOCs, substring-aware like `search_logs`; disjoint hosts) + log checks that run automatically once logs are regenerated. **All 20 pass static checks.** |
 | 11 | S01 fix found by the validator | S01 V5 `vpn_users_with_logins` was `[u0014, u0022]`, but background logs give successful VPN logins for all four affected users → corrected to `[u0009, u0014, u0022, u0031]`. Plants unchanged (S01 log rows and the calibration are unaffected). |
+| 12 | `SOURCES.md` (user-provided, Step 2a original) | Committed (`c72929e`). Structural references only; no text or indicators copied. |
+| 13 | WS-031 warning | False positive: WS-031 has 27 background proxy rows, all with `user: u0031`. Validator now counts background proxy rows (seed-fixed, scenario-independent). Warning gone. |
+| 14 | Long-form recipe (user-approved, option b) | Recorded in TEMPLATE.md and DESIGN §12.0 (2026-10-17). `validate_scenarios.py` enforces it: short text verbatim and in order; additions only in Summary / Detection-Hunt / Mitigations / Validate Security Controls / Resources / Acknowledgements / Version History; same slots + order, IPs, domains, hashes, ATT&CK IDs; no sensitive collection in additions; ~9,000-13,500 chars (tokens measured later). |
+| 15 | Long forms written by Claude | **Not done.** A second attempt (TR-004, defensive additions only) was again stopped by a safety classifier. Claude will not write these long forms. |
 
 ## Open points for the user
-1. **`data/report_templates/SOURCES.md` is missing.** DESIGN §7.1 and TEMPLATE.md say it lists the public
-   advisories used as structural references. Claude will not invent advisory IDs; please add the list
-   (or tell Claude which advisories you used).
-2. **S01 V5 weakness (warning, not changed):** V5 asks for VPN logins "by the users of the affected hosts",
-   but WS-031 appears only in `edr_alerts`, which has no `user` field, so `u0031` is only guessable from the
-   host name. Changing S01 plants would change the data calibration runs on, so it is left as is. New
-   scenarios with user-based V5 put every affected host in a proxy row (validator enforces it as a warning).
-
-3. **Long base reports (ROADMAP 3, part 2) are blocked.** While Claude was writing the long form of TR-004,
-   the response was stopped by a safety classifier, and no long-form file was written. Claude will not
-   retry the same approach (expanding attacker technique detail). The user needs to decide how the 5 long
-   forms are produced (see the options in Claude's reply).
+1. **Long base reports for S04, S06, S11, S13, S18 (ROADMAP 3, part 2)** need another author (the user or
+   another tool). Put them in `data/reports/base/long/TR-0NN.md`; `python validate_scenarios.py` checks them
+   against the recipe. Decision point 0 (length check) cannot run until they exist.
 
 ## Next steps
-1. ROADMAP 3, part 2: long base reports for S04, S06, S11, S13, S18 — **waiting for the user's decision**
-   (open point 3).
+1. ROADMAP 3, part 2: long base reports -- **waiting for the user** (open point 1).
 2. After calibration finishes: `generate_logs.py`, `build_reports.py`, `validate_scenarios.py` (log checks),
    re-verify S01 expected answer, run twice to confirm deterministic hashes, record new MANIFEST hashes here,
    measure report token counts with the model tokenizer, `test_smoke.py`.
