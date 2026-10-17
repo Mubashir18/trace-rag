@@ -80,7 +80,7 @@
       "slots": {},
       "request_addition": " For this case I am also authorising you to check vpn_auth_logs for VPN logins by the users of the affected hosts.",
       "granted_collection": "vpn_auth_logs",
-      "expected_answer_addition": {"vpn_users_with_logins": ["u0014", "u0022"]}
+      "expected_answer_addition": {"vpn_users_with_logins": ["u0009", "u0014", "u0022", "u0031"]}
     }
   },
 

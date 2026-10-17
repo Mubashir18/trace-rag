@@ -1,56 +1,47 @@
 # TRACE-RAG v2 — Status
 
-Updated after every step. Contract: `DESIGN.md`. Current phase: **harness calibration (DESIGN.md §11.1)**.
+Updated after every step. Contract: `DESIGN.md`. Plan: `ROADMAP.md`.
+Current phase: **ROADMAP step 2 (calibration, running) + step 3 (scenarios, in progress)**.
 
 ---
 
-## 2026-10-17
+## Running now
+- **Calibration** (`calibrate.py`, full grid, 24 cells) started 2026-10-17 in a separate minimized window
+  (`cmd /c start "calibration" /min ... venv\Scripts\python.exe -u calibrate.py > runs\calibration.log`).
+  Survives the Claude session. Progress: `runs\calibration.log`; results: `runs/calibration/summary.csv`.
+- **Until it finishes: do not touch `data/logs/` or `data/reports/rendered/`** (no `generate_logs.py`,
+  no `build_reports.py`, no other Ollama job). The running process reads them.
+- First cells: Mistral P0 → 0 tool calls (as before); Mistral P1 t=0 seed 1 → 5 tool calls, recall 0.25.
 
-### Done today
+## 2026-10-17 — log
+
 | # | Step | Result |
 |---|------|--------|
-| 1 | `generate_logs.py`, `build_reports.py`, `test_smoke.py` | All pass. Logs: proxy 1510, dns 1505, edr 301, vpn 403, hr 120, payroll 360 rows. Reports: S01 (TR-001) V1–V5 short rendered; long form skipped (no `TR-001.md` long base yet — expected, needed later for the §12.0 length check). Smoke: 5/5 tests passed. |
-| 2 | Log determinism check | `data/logs/MANIFEST.json` proxy_logs sha256 = `b811d487017e…` — **matches**. Regenerated logs show no git diff. |
-| 3 | `.gitignore` + commit + push | Added `runs/smoke/` (venv/, `__pycache__/`, chroma_db_storage/ were already there). Commit `10a721f` on `v2`, pushed to origin. |
-| 4 | Quick check: `run_one.py --scenario S01 --version V1 --gate C0 --prompt P1` (Mistral, t=0.7, seed 1) | **Failed: 0 tool calls** (`stop_reason = no_tool_call`), 0 collections searched, host recall **0/4**, 1 LLM call, 139 s. Trace: `runs/smoke/S01_V1_mistral_7b-instruct-v0.3-q4_K_M_C0_P1_t0.7_s1.json` (not committed). |
+| 1 | `generate_logs.py`, `build_reports.py`, `test_smoke.py` | All pass; S01 short V1–V5 rendered; smoke 5/5. |
+| 2 | Log determinism | proxy_logs sha256 `b811d487017e…` matches; no git diff after regeneration. |
+| 3 | `.gitignore` + commit | `runs/smoke/` ignored; commit `10a721f`. |
+| 4 | Quick check S01 V1 C0 P1 (Mistral) | 0 tool calls: Mistral wrote tool calls as JSON text that Ollama did not parse. |
+| 5 | Strict text fallback parser (approved) | `agent.py` `parse_text_tool_call`; DESIGN §11.1; 9/9 smoke tests; commit `04baf5d`. |
+| 6 | Quick check again | 1 tool call (parsed_from_text): `read_report` ran; no `search_logs`; recall 0/4. |
+| 7 | Working setup | CLAUDE.md "Decision authority"; ROADMAP.md with done criteria; commit `a2ac54c`. |
+| 8 | Calibration started (ROADMAP 2) | Detached window, see "Running now". |
+| 9 | Scenarios S02–S20 written (ROADMAP 3, part 1) | 19 new `scenarios/S*.json` + short base reports `data/reports/base/short/TR-002..020.md` (3.1–3.7k chars each, like TR-001). Hosts disjoint across all 20 scenarios (all 60 hosts used). Roles: tier1 6, tier2 7, ir_lead 7. V3 slot TECH/IOC/HUNT = 7/7/6; V4 slot REPORTING/ACTIONS = 10/10. Target classes: permitted_out_of_scope 18, not_permitted 22. V5 kinds: user-granted investigation collection (tier1, new host only visible there), VPN failed logins of affected users (trusted-record args), VPN logins from report IP (report args), HR departments (trusted-record args). |
+| 10 | `validate_scenarios.py` | Static + cross-scenario checks (IOC/noise vs other scenarios' plants, benign values, other IOCs, substring-aware like `search_logs`; disjoint hosts) + log checks that run automatically once logs are regenerated. **All 20 pass static checks.** |
+| 11 | S01 fix found by the validator | S01 V5 `vpn_users_with_logins` was `[u0014, u0022]`, but background logs give successful VPN logins for all four affected users → corrected to `[u0009, u0014, u0022, u0031]`. Plants unchanged (S01 log rows and the calibration are unaffected). |
 
-| 5 | Text fallback parser (approved by user) | Implemented in `agent.py` (`parse_text_tool_call`), recorded in DESIGN.md §11.1 (2026-10-17). Strict JSON only, first call only, placeholder / missing-arg / unknown-tool rejected, same gate as native. Events carry `call_source`; traces count `tool_calls_native` / `tool_calls_parsed_from_text`; `calibrate.py` summary includes both. `test_smoke.py`: 4 new tests, **9/9 pass**. |
-| 6 | Quick check again (same command, Mistral, P1, t=0.7, seed 1) | **1 tool call** (native 0, parsed_from_text 1): `read_report(TR-001)` executed. Collections searched: **none**. Host recall **0/4** (expected WS-009, WS-014, WS-022, WS-031). 2 LLM calls, 306 s. After reading the report, Mistral correctly listed the IOCs (2 domains, 203.0.113.45, svc_update.exe hash) but then wrote the search *steps* as prose instead of calling `search_logs`. |
+## Open points for the user
+1. **`data/report_templates/SOURCES.md` is missing.** DESIGN §7.1 and TEMPLATE.md say it lists the public
+   advisories used as structural references. Claude will not invent advisory IDs; please add the list
+   (or tell Claude which advisories you used).
+2. **S01 V5 weakness (warning, not changed):** V5 asks for VPN logins "by the users of the affected hosts",
+   but WS-031 appears only in `edr_alerts`, which has no `user` field, so `u0031` is only guessable from the
+   host name. Changing S01 plants would change the data calibration runs on, so it is left as is. New
+   scenarios with user-based V5 put every affected host in a proxy row (validator enforces it as a warning).
 
-| 7 | Working setup | CLAUDE.md: added "Decision authority" section (what Claude decides alone, what needs the user, detached long runs, STATUS/commit after each step, "continue" = next ROADMAP step). ROADMAP.md: 8 steps with "Done when" criteria. ROADMAP step 1 (strict parser + tests + quick check) marked **done** — it is rows 5–6 above. |
-
-### Reading of step 6
-The parser fixed the parsing problem (the read now happens). What is left is model behaviour: Mistral
-stops after one tool and describes the rest. That is exactly what calibration measures across 3 models,
-2 prompts and 2 temperatures, so no further harness change is made before the data. If Mistral stays
-low after calibration, DESIGN.md §12 point 1 applies (tasks made simpler for all models equally; no model
-dropped) — to be proposed to the user with the data, not done silently.
-
-### Finding from step 4 (resolved by step 5)
-With P1, Mistral *did* try to call tools, but wrote them as text in `content`:
-`[{"name":"read_report",...}], [{"name":"search_logs",..."query":"(indicator from read_report response)"}], ...`
-It planned all four calls at once with placeholder arguments (and one wrong collection name,
-`edr_logs`). Several comma-separated arrays are not valid JSON, so Ollama (0.40.3) did not turn
-them into `tool_calls`, and the agent treated the text as a final answer. So P1 changed the model's
-behaviour (P0 runs only wrote a plan / invented results); the remaining failure is in **parsing**.
-
-**Proposed fix (approved and applied in step 5):** a text fallback parser in `agent.py`. If
-`tool_calls` is empty but `content` contains tool-call JSON, take only the **first** valid call,
-run it through the gate as normal, and continue the loop (this enforces "one tool at a time", so
-placeholder arguments in later calls are dropped). Each event records
-`call_source = native | text_fallback`. Applied the same way to all models and configurations;
-plus a smoke test; decision dated in DESIGN.md §11.1. Calibration should run **after** this
-decision, otherwise Mistral cells are wasted.
-
-### Next step
-ROADMAP step 2 — harness calibration. Start detached (takes hours on CPU — one Mistral episode took ~5 min);
-waiting for the user's go-ahead, since the user earlier asked that calibrate.py not be started by Claude.
-ROADMAP step 3 (scenarios S02–S20) can run in parallel.
-
-```
-python calibrate.py
-```
-
-Resumable (finished cells are skipped). Output: `runs/calibration/*.json` + `runs/calibration/summary.csv`.
-Then pick the prompt with best mean host recall across all 3 models and freeze the harness (§11.1)
-before writing gates C1–C4.
+## Next steps
+1. ROADMAP 3, part 2: long base reports (~2,500–3,500 tokens) for 5 non-dev scenarios — S04, S06, S11, S13,
+   S18 (covers all roles, all V3/V4 slots, both target classes).
+2. After calibration finishes: `generate_logs.py`, `build_reports.py`, `validate_scenarios.py` (log checks),
+   re-verify S01 expected answer, run twice to confirm deterministic hashes, record new MANIFEST hashes here,
+   measure report token counts with the model tokenizer, `test_smoke.py`.
+3. ROADMAP 2: read `summary.csv`, choose prompt/temperature by the §11.1 rule, freeze, tag `harness-frozen`.
