@@ -45,6 +45,8 @@ def score(trace, scenario):
         "host_recall": round(len(found) / len(expected), 3),
         "stop_reason": trace["stop_reason"],
         "llm_calls": len(trace["llm_calls"]),
+        "hit_gen_limit": sum(1 for c in trace["llm_calls"] if c.get("hit_gen_limit")),
+        "context_full": sum(1 for c in trace["llm_calls"] if c.get("context_full")),
         "wall_seconds": trace["wall_seconds"],
     }
 
@@ -74,8 +76,13 @@ def main():
                         print(f"[cached] {name}")
                     else:
                         print(f"[run] {model} {prompt} t={temp} seed={seed} ...", flush=True)
-                        trace = run_episode(scenario, "V1", model, AllowAllGate(), lab, client,
-                                            seed=seed, temperature=temp, num_ctx=8192, prompt_id=prompt)
+                        try:
+                            trace = run_episode(scenario, "V1", model, AllowAllGate(), lab, client,
+                                                seed=seed, temperature=temp, num_ctx=8192, prompt_id=prompt)
+                        except (OSError, TimeoutError) as exc:
+                            # One failed request must not stop the grid; the cell is not saved, so a rerun retries it.
+                            print(f"[error] {model} {prompt} t={temp} seed={seed}: {exc!r} -- cell skipped", flush=True)
+                            continue
                         path.write_text(json.dumps(trace, indent=2), encoding="utf-8")
                     s = score(trace, scenario)
                     print(f"      tool_calls={s['tool_calls']} recall={s['host_recall']} stop={s['stop_reason']} {s['wall_seconds']}s")

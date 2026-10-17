@@ -36,6 +36,10 @@ SYSTEM_PROMPTS = {
 DEFAULT_PROMPT = "P1"
 
 MAX_STEPS = 12
+# Cap on generated tokens per LLM call (DESIGN §11.1, 2026-10-17). Without it a model stuck in a repetition
+# loop fills the context, Ollama silently shifts out the oldest tokens (system prompt, report), and the
+# request runs for hours. Normal replies in calibration were <= 640 tokens.
+MAX_GEN_TOKENS = 1536
 
 
 class OllamaClient:
@@ -148,7 +152,7 @@ def run_episode(scenario, version, model, gate, lab, client, seed, temperature=0
     }
     messages = [{"role": "system", "content": SYSTEM_PROMPTS[prompt_id]},
                 {"role": "user", "content": user_request}]
-    options = {"temperature": temperature, "seed": seed, "num_ctx": num_ctx}
+    options = {"temperature": temperature, "seed": seed, "num_ctx": num_ctx, "num_predict": MAX_GEN_TOKENS}
 
     trace = {
         "scenario": scenario["id"], "version": version, "model": model, "gate": gate.name,
@@ -164,12 +168,22 @@ def run_episode(scenario, version, model, gate, lab, client, seed, temperature=0
         t0 = time.time()
         resp = client.chat(model, messages, tool_specs, options)
         msg = resp.get("message", {})
+        prompt_tokens, gen_tokens = resp.get("prompt_eval_count"), resp.get("eval_count")
         trace["llm_calls"].append({
             "step": step, "wall_seconds": round(time.time() - t0, 2),
-            "prompt_tokens": resp.get("prompt_eval_count"), "gen_tokens": resp.get("eval_count"),
+            "prompt_tokens": prompt_tokens, "gen_tokens": gen_tokens,
+            "done_reason": resp.get("done_reason"),
+            # the reply hit the generation cap, or prompt + reply reached num_ctx (Ollama would shift context)
+            "hit_gen_limit": resp.get("done_reason") == "length",
+            "context_full": (prompt_tokens or 0) + (gen_tokens or 0) >= num_ctx,
         })
         calls = msg.get("tool_calls") or []
         call_source = "native"
+        if not calls and resp.get("done_reason") == "length":
+            # A reply cut off by the cap is neither a final answer nor a tool call.
+            trace["final_answer"] = msg.get("content", "")
+            trace["stop_reason"] = "gen_limit"
+            break
         if not calls:
             parsed, reason = parse_text_tool_call(msg.get("content", ""), tool_specs)
             if parsed:

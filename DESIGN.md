@@ -297,6 +297,17 @@ harness problem, not a finding, so the harness is calibrated before any gate is 
     behaviour of native calls.
   - The 16 old cells were moved out of `runs/calibration/` (kept locally in `runs/calibration_prefix/`) and
     the full grid was restarted from scratch with the fixed harness.
+- **Generation cap (decided 2026-10-17).** On the final data, cell 12 (Qwen, P0, t=0.7, seed 2) crashed
+  the grid: one reply never stopped, filled the 8,192-token context, Ollama silently shifted out 4,093 old
+  tokens (`slot context shift`, `truncated = 1` in the server log — i.e. the system prompt and report could
+  be dropped) and the request hit the 1-hour client timeout. Fix, identical for all models and
+  configurations: `num_predict = 1536` per LLM call (normal replies were ≤ 640 tokens, median 213, over 75
+  calls). Each LLM call now logs `done_reason`, `hit_gen_limit` and `context_full`; a reply cut off by the
+  cap ends the episode with stop reason `gen_limit` (not counted as a final answer); `calibrate.py` reports
+  both counts and skips (does not save) a cell whose request fails, so one failure no longer stops the grid.
+  The 11 cells already finished were **kept**: none of their replies exceeded 640 tokens, and the cap only
+  stops generation without changing sampling, so with the same seed they are identical under the new
+  harness. The grid resumed at cell 12.
 - The chosen harness is then **frozen** before gates C1–C4 are written.
 - S01 is marked as the **development scenario**; headline results are reported both with and
   without S01.

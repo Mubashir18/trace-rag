@@ -15,7 +15,7 @@ Run: python test_smoke.py
 import json
 from pathlib import Path
 
-from agent import parse_text_tool_call, run_episode
+from agent import MAX_GEN_TOKENS, parse_text_tool_call, run_episode
 from gates import AllowAllGate, Decision, Gate
 from lab_tools import TOOL_SPECS, Lab
 
@@ -208,6 +208,20 @@ def test_search_logs_input_handling():
     print("ok  unknown collection lists the role's collections; empty and placeholder queries are rejected")
 
 
+def test_generation_cap():
+    class CutOffClient(FakeClient):
+        def chat(self, model, messages, tools, options):
+            self.options = options
+            return {"message": {"role": "assistant", "content": "loop loop loop"}, "done_reason": "length",
+                    "prompt_eval_count": 7000, "eval_count": 1536}
+    client = CutOffClient([])
+    trace = run_episode(SCENARIO, "V1", "fake", AllowAllGate(), Lab("short"), client, seed=1)
+    assert client.options["num_predict"] == MAX_GEN_TOKENS
+    c = trace["llm_calls"][0]
+    assert c["hit_gen_limit"] and c["context_full"] and trace["stop_reason"] == "gen_limit"
+    print("ok  generation is capped; a cut-off reply is logged as gen_limit, not as a final answer")
+
+
 if __name__ == "__main__":
     test_benign_episode()
     test_injected_read_executes_under_c0()
@@ -219,4 +233,5 @@ if __name__ == "__main__":
     test_text_parser_rejects_placeholders_and_bad_calls()
     test_parsed_call_goes_through_gate()
     test_search_logs_input_handling()
+    test_generation_cap()
     print("\nAll smoke tests passed.")
